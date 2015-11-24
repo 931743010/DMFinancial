@@ -87,7 +87,6 @@
 		3EBC04611C0457AB006F1C35 /* AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC030D1C0457AB006F1C35 /* AnimatedGIFImageSerialization.m */; };
 		3EBC04621C0457AB006F1C35 /* CLParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03101C0457AB006F1C35 /* CLParallaxView.m */; };
 		3EBC04631C0457AB006F1C35 /* CLParallaxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03121C0457AB006F1C35 /* CLParallaxViewController.m */; };
-		3EBC04641C0457AB006F1C35 /* CLProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03151C0457AB006F1C35 /* CLProgressHUD.m */; };
 		3EBC04651C0457AB006F1C35 /* JFReminderSwitchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03191C0457AB006F1C35 /* JFReminderSwitchController.m */; };
 		3EBC04661C0457AB006F1C35 /* JFReminderSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC031B1C0457AB006F1C35 /* JFReminderSwitchView.m */; };
 		3EBC04671C0457AB006F1C35 /* UIView+JFAddSeperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC031D1C0457AB006F1C35 /* UIView+JFAddSeperator.m */; };
@@ -214,6 +213,7 @@
 		3EBC04E11C0457AC006F1C35 /* DMMyAttentionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04151C0457AB006F1C35 /* DMMyAttentionCell.m */; };
 		3EBC04E21C0457AC006F1C35 /* DMMyMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04171C0457AB006F1C35 /* DMMyMoneyCell.m */; };
 		3EBC04E31C0457AC006F1C35 /* DMUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04191C0457AB006F1C35 /* DMUserInfoView.m */; };
+		3EBC04F31C045C7E006F1C35 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04F21C045C7E006F1C35 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -375,8 +375,6 @@
 		3EBC03101C0457AB006F1C35 /* CLParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLParallaxView.m; sourceTree = "<group>"; };
 		3EBC03111C0457AB006F1C35 /* CLParallaxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLParallaxViewController.h; sourceTree = "<group>"; };
 		3EBC03121C0457AB006F1C35 /* CLParallaxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLParallaxViewController.m; sourceTree = "<group>"; };
-		3EBC03141C0457AB006F1C35 /* CLProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLProgressHUD.h; sourceTree = "<group>"; };
-		3EBC03151C0457AB006F1C35 /* CLProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLProgressHUD.m; sourceTree = "<group>"; };
 		3EBC03181C0457AB006F1C35 /* JFReminderSwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFReminderSwitchController.h; sourceTree = "<group>"; };
 		3EBC03191C0457AB006F1C35 /* JFReminderSwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFReminderSwitchController.m; sourceTree = "<group>"; };
 		3EBC031A1C0457AB006F1C35 /* JFReminderSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFReminderSwitchView.h; sourceTree = "<group>"; };
@@ -595,6 +593,8 @@
 		3EBC04181C0457AB006F1C35 /* DMUserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserInfoView.h; sourceTree = "<group>"; };
 		3EBC04191C0457AB006F1C35 /* DMUserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserInfoView.m; sourceTree = "<group>"; };
 		3EBC04E41C045807006F1C35 /* DMFinancial-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DMFinancial-Prefix.pch"; sourceTree = "<group>"; };
+		3EBC04F11C045C7E006F1C35 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3EBC04F21C045C7E006F1C35 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1053,10 +1053,10 @@
 		3EBC02F61C0457AB006F1C35 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				3EBC04F01C045C7E006F1C35 /* MBProgressHUD */,
 				3EBC02F71C0457AB006F1C35 /* AFNetworking */,
 				3EBC030B1C0457AB006F1C35 /* AnimatedGIFImageSerialization */,
 				3EBC030E1C0457AB006F1C35 /* CLParallax */,
-				3EBC03131C0457AB006F1C35 /* CLProgressHUD */,
 				3EBC03161C0457AB006F1C35 /* iRate */,
 				3EBC03171C0457AB006F1C35 /* JFReminderSwitchController */,
 				3EBC03291C0457AB006F1C35 /* SDWebImage */,
@@ -1113,15 +1113,6 @@
 				3EBC03121C0457AB006F1C35 /* CLParallaxViewController.m */,
 			);
 			path = CLParallax;
-			sourceTree = "<group>";
-		};
-		3EBC03131C0457AB006F1C35 /* CLProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				3EBC03141C0457AB006F1C35 /* CLProgressHUD.h */,
-				3EBC03151C0457AB006F1C35 /* CLProgressHUD.m */,
-			);
-			path = CLProgressHUD;
 			sourceTree = "<group>";
 		};
 		3EBC03161C0457AB006F1C35 /* iRate */ = {
@@ -1587,6 +1578,15 @@
 			path = UserCenter;
 			sourceTree = "<group>";
 		};
+		3EBC04F01C045C7E006F1C35 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3EBC04F11C045C7E006F1C35 /* MBProgressHUD.h */,
+				3EBC04F21C045C7E006F1C35 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1746,6 +1746,7 @@
 				3EBC04B51C0457AC006F1C35 /* DMMyMoneyViewController.m in Sources */,
 				3EBC023A1C0447BE006F1C35 /* SecondViewController.m in Sources */,
 				3EBC04AF1C0457AC006F1C35 /* DMExpertsOnlineViewController.m in Sources */,
+				3EBC04F31C045C7E006F1C35 /* MBProgressHUD.m in Sources */,
 				3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */,
 				3EBC042C1C0457AB006F1C35 /* DMRecords.m in Sources */,
 				3EBC042A1C0457AB006F1C35 /* NSObject+Mapping.m in Sources */,
@@ -1821,7 +1822,6 @@
 				3EBC04781C0457AB006F1C35 /* UIView+WebCacheOperation.m in Sources */,
 				3EBC04471C0457AB006F1C35 /* NSDataHelper.m in Sources */,
 				3EBC046A1C0457AB006F1C35 /* NSData+ImageContentType.m in Sources */,
-				3EBC04641C0457AB006F1C35 /* CLProgressHUD.m in Sources */,
 				3EBC04D71C0457AC006F1C35 /* DMChatDateTransformer.m in Sources */,
 				3EBC04D81C0457AC006F1C35 /* DMChatEnterView.m in Sources */,
 				3EBC04CF1C0457AC006F1C35 /* DMTableViewCell.m in Sources */,

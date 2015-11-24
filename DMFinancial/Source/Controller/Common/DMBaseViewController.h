@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CLProgressHUD.h"
+#import "MBProgressHUD.h"
 
 typedef void(^TapBlock)();
 /**
@@ -19,7 +19,7 @@ typedef void(^TapBlock)();
 }
 
 
-@property (nonatomic, weak) CLProgressHUD *hud;
+@property (nonatomic, weak)MBProgressHUD *hud;
 @property (nonatomic, copy) TapBlock block;
 @property (nonatomic, readonly, weak) UIViewController *rootController;
 @property (nonatomic, assign) BOOL hideBackButton;

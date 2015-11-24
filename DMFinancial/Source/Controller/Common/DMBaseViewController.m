@@ -8,7 +8,6 @@
 
 #import "DMBaseViewController.h"
 #import "AppDelegate.h"
-#import "CLProgressHUD.h"
 #import "DMAlertView.h"
 
 #define kTouchBackgroundTag 200
@@ -68,17 +67,17 @@
 
 - (void)showLoadingViewWithText:(NSString *)text {
     [self hideLoadingView];
-    self.hud.text = text;
-    [self.hud showWithAnimation:YES];
+    self.hud.labelText = text;
+    [self.hud show:YES];
 }
 
 - (void)hideLoadingView {
-    [self.hud dismiss];
+    [self.hud hide:YES];
 }
 
-- (CLProgressHUD *)hud {
+- (MBProgressHUD *)hud {
     if (_hud == nil) {
-        CLProgressHUD *hud = [[CLProgressHUD alloc] initWithView:self.view];
+        MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
         [self.view addSubview:hud];
         _hud = hud;
     }
