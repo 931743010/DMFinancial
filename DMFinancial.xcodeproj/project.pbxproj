@@ -67,10 +67,7 @@
 				3EBC02361C0447BE006F1C35 /* FirstViewController.m */,
 				3EBC02381C0447BE006F1C35 /* SecondViewController.h */,
 				3EBC02391C0447BE006F1C35 /* SecondViewController.m */,
-				3EBC023B1C0447BE006F1C35 /* Main.storyboard */,
 				3EBC023E1C0447BE006F1C35 /* Assets.xcassets */,
-				3EBC02401C0447BE006F1C35 /* LaunchScreen.storyboard */,
-				3EBC02431C0447BE006F1C35 /* Info.plist */,
 				3EBC022F1C0447BE006F1C35 /* Supporting Files */,
 			);
 			path = DMFinancial;
@@ -79,6 +76,9 @@
 		3EBC022F1C0447BE006F1C35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3EBC023B1C0447BE006F1C35 /* Main.storyboard */,
+				3EBC02401C0447BE006F1C35 /* LaunchScreen.storyboard */,
+				3EBC02431C0447BE006F1C35 /* Info.plist */,
 				3EBC02301C0447BE006F1C35 /* main.m */,
 			);
 			name = "Supporting Files";
