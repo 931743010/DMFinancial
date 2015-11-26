@@ -207,6 +207,8 @@
 		3EDDC4DF1C07069D008AAF91 /* DMFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4DE1C07069D008AAF91 /* DMFeedBackViewController.m */; };
 		3EDDC4E71C0707D7008AAF91 /* DMUserCollectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4E61C0707D7008AAF91 /* DMUserCollectionListViewController.m */; };
 		3EDDC4EA1C070973008AAF91 /* DMFeedBackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4E91C070973008AAF91 /* DMFeedBackService.m */; };
+		3EDDC4ED1C070CCE008AAF91 /* DMProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4EC1C070CCE008AAF91 /* DMProjectListCell.m */; };
+		3EDDC4F11C070D75008AAF91 /* DMProjectListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4F01C070D75008AAF91 /* DMProjectListItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -574,6 +576,10 @@
 		3EDDC4E61C0707D7008AAF91 /* DMUserCollectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserCollectionListViewController.m; sourceTree = "<group>"; };
 		3EDDC4E81C070973008AAF91 /* DMFeedBackService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedBackService.h; sourceTree = "<group>"; };
 		3EDDC4E91C070973008AAF91 /* DMFeedBackService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFeedBackService.m; sourceTree = "<group>"; };
+		3EDDC4EB1C070CCE008AAF91 /* DMProjectListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMProjectListCell.h; path = IndexPage/DMProjectListCell.h; sourceTree = "<group>"; };
+		3EDDC4EC1C070CCE008AAF91 /* DMProjectListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMProjectListCell.m; path = IndexPage/DMProjectListCell.m; sourceTree = "<group>"; };
+		3EDDC4EF1C070D75008AAF91 /* DMProjectListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMProjectListItem.h; path = IndexPage/DMProjectListItem.h; sourceTree = "<group>"; };
+		3EDDC4F01C070D75008AAF91 /* DMProjectListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMProjectListItem.m; path = IndexPage/DMProjectListItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -693,6 +699,7 @@
 		3EBC02701C0457AB006F1C35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3EDDC4EE1C070D49008AAF91 /* IndexPage */,
 				3EBC05011C056251006F1C35 /* Management */,
 				3EBC02711C0457AB006F1C35 /* Common */,
 				3EBC02801C0457AB006F1C35 /* DMActivity.h */,
@@ -1529,6 +1536,8 @@
 		3EBC04FC1C055AA7006F1C35 /* IndexPage */ = {
 			isa = PBXGroup;
 			children = (
+				3EDDC4EB1C070CCE008AAF91 /* DMProjectListCell.h */,
+				3EDDC4EC1C070CCE008AAF91 /* DMProjectListCell.m */,
 			);
 			name = IndexPage;
 			sourceTree = "<group>";
@@ -1582,6 +1591,15 @@
 				3EDDC4E61C0707D7008AAF91 /* DMUserCollectionListViewController.m */,
 			);
 			name = Collection;
+			sourceTree = "<group>";
+		};
+		3EDDC4EE1C070D49008AAF91 /* IndexPage */ = {
+			isa = PBXGroup;
+			children = (
+				3EDDC4EF1C070D75008AAF91 /* DMProjectListItem.h */,
+				3EDDC4F01C070D75008AAF91 /* DMProjectListItem.m */,
+			);
+			name = IndexPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1698,6 +1716,7 @@
 			files = (
 				3EBC04231C0457AB006F1C35 /* NSDictionary+Addition.m in Sources */,
 				3EBC04B91C0457AC006F1C35 /* DMSettingViewController.m in Sources */,
+				3EDDC4ED1C070CCE008AAF91 /* DMProjectListCell.m in Sources */,
 				3EBC04BE1C0457AC006F1C35 /* AMBlurView.m in Sources */,
 				3EBC04D91C0457AC006F1C35 /* DMChatMineCell.m in Sources */,
 				3EBC04351C0457AB006F1C35 /* DMRecordsService.m in Sources */,
@@ -1808,6 +1827,7 @@
 				3EBC046D1C0457AB006F1C35 /* SDWebImageDecoder.m in Sources */,
 				3EBC04DC1C0457AC006F1C35 /* DMCategoryItemView.m in Sources */,
 				3EBC04DF1C0457AC006F1C35 /* DMExpertsOnlineConsultCell.m in Sources */,
+				3EDDC4F11C070D75008AAF91 /* DMProjectListItem.m in Sources */,
 				3EBC04751C0457AB006F1C35 /* UIImage+WebP.m in Sources */,
 				3EBC04731C0457AB006F1C35 /* UIImage+GIF.m in Sources */,
 				3EBC04781C0457AB006F1C35 /* UIView+WebCacheOperation.m in Sources */,
