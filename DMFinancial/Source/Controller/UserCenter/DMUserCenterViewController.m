@@ -10,10 +10,19 @@
 #import "DMSettingViewController.h"
 #import "DMUserCenterService.h"
 #import "DMUserInfo.h"
+#import "DMFeedBackViewController.h"
+#import "DMUserCollectionListViewController.h"
 
-#define KMineActivitySection @"我的镖银" //活动section
-#define KMineSponsorSection @"我的关注"   //主办section
-#define KSettingSection @"设置"         //明星section
+#define KShoucangCell @"我的收藏"
+#define KBaoliaoCell @"我的爆料"
+
+
+#define KXiugaimimaCell @"修改账户密码"
+
+
+#define KHaopingCell @"给我们好评"
+#define KYijianfankuiCell @"意见反馈"
+#define KTuijianCell @"推荐给朋友"
 
 @interface DMUserCenterViewController () <UITableViewDataSource, UITableViewDelegate>{
     UIView *_userInfoView;
@@ -28,7 +37,6 @@
     UILabel *_huifuCountLabel;
     
     DMUserInfo *_userInfo;
-
 }
 
 @end
@@ -37,53 +45,26 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"个人中心";
-    _tableViewScetion = @[KMineActivitySection, KMineSponsorSection,KSettingSection];
-
+    _tableViewScetion = @[@[KShoucangCell, KBaoliaoCell], @[KXiugaimimaCell], @[KHaopingCell, KYijianfankuiCell, KTuijianCell]];
     [self createUserInfoViews];
     [self createSubViews];
     [self requestUserInfo];
-
 }
+
+#pragma mark ========== Private Method ==========
 
 #pragma mark -------------createSubViews----------
 
 -(void)createUserInfoViews {
     _userInfoView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, AUTOSIZE(140))];
     _userInfoView.backgroundColor = kDMPinkColor;
-    DMButton *zixunButton = [[DMButton alloc] initWithFrame:CGRectMake(0, _userInfoView.bottom - AUTOSIZE(35), kScreenWidth/3, AUTOSIZE(35))];
-    zixunButton.backgroundColor = [UIColor colorWithHexString:@"3a444f"];
-    [zixunButton setTitle:@"咨询" forState:UIControlStateNormal];
-    [zixunButton.titleLabel setFont:FONT(AUTOSIZE(12))];
-    [zixunButton buttonClickedcompletion:^(id returnData) {
-        
-    }];
-    [zixunButton drawSolidLineWithFrame:CGRectMake(zixunButton.width - 0.5, 0, 0.5, zixunButton.height) color:[UIColor whiteColor]];
-    [_userInfoView addSubview:zixunButton];
-    
-    DMButton *zhutiButton = [[DMButton alloc] initWithFrame:CGRectMake(zixunButton.right, _userInfoView.bottom - AUTOSIZE(35), kScreenWidth/3, AUTOSIZE(35))];
-    zhutiButton.backgroundColor = [UIColor colorWithHexString:@"3a444f"];
-    [zhutiButton setTitle:@"主题" forState:UIControlStateNormal];
-    [zhutiButton.titleLabel setFont:FONT(AUTOSIZE(12))];
-    [zhutiButton buttonClickedcompletion:^(id returnData) {
-        
-    }];
-    [zhutiButton drawSolidLineWithFrame:CGRectMake(zixunButton.width - 0.5, 0, 0.5, zixunButton.height) color:[UIColor whiteColor]];
-    [_userInfoView addSubview:zhutiButton];
 
-    DMButton *huifuButton = [[DMButton alloc] initWithFrame:CGRectMake(zhutiButton.right, _userInfoView.bottom - AUTOSIZE(35), kScreenWidth/3, AUTOSIZE(35))];
-    huifuButton.backgroundColor = [UIColor colorWithHexString:@"3a444f"];
-    [huifuButton setTitle:@"回复" forState:UIControlStateNormal];
-    [huifuButton.titleLabel setFont:FONT(AUTOSIZE(12))];
-    [huifuButton buttonClickedcompletion:^(id returnData) {
-        
-    }];
-    [_userInfoView addSubview:huifuButton];
-
-    _userHeadImageView = [[UIImageView alloc] initWithFrame:CGRectMake(AUTOSIZE(50), (_userInfoView.height - zixunButton.height - AUTOSIZE(65))/2, AUTOSIZE(64), AUTOSIZE(64))];
+    _userHeadImageView = [[UIImageView alloc] initWithFrame:CGRectMake(AUTOSIZE(50), 0, AUTOSIZE(64), AUTOSIZE(64))];
     _userHeadImageView.backgroundColor = kDMDefaultBlackStringColor;
     _userHeadImageView.layer.cornerRadius = AUTOSIZE(64)/2;
     _userHeadImageView.clipsToBounds = YES;
@@ -97,45 +78,6 @@
     _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(_userHeadImageView.right + AUTOSIZE(24), _userHeadImageView.top + 15, kScreenWidth - _userHeadImageView.right - AUTOSIZE(24 - AUTOSIZE(10)), AUTOSIZE(14))];
     _userNameLabel.font = FONT(12);
     [_userInfoView addSubview:_userNameLabel];
-    
-    _iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_userNameLabel.left, _userNameLabel.bottom + AUTOSIZE(8), AUTOSIZE(12), AUTOSIZE(12))];
-    _iconImageView.backgroundColor = kDMDefaultBlackStringColor;
-    [_userInfoView addSubview:_iconImageView];
-
-    //称谓
-    _chengweiLabel = [[UILabel alloc] initWithFrame:CGRectMake(_iconImageView.right + AUTOSIZE(2), _iconImageView.top + AUTOSIZE(5), kScreenWidth - _userHeadImageView.right - AUTOSIZE(24 - AUTOSIZE(10)), AUTOSIZE(7))];
-    _chengweiLabel.font = FONT(10);
-    [_userInfoView addSubview:_chengweiLabel];
-
-    //咨询数量
-    _zixunCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(zhutiButton.width - AUTOSIZE(40) - AUTOSIZE(8), AUTOSIZE(5), 0, AUTOSIZE(14))];
-    _zixunCountLabel.font = FONT(10);
-    _zixunCountLabel.backgroundColor = [UIColor colorWithHexString:@"f46c6b"];
-    _zixunCountLabel.clipsToBounds = YES;
-    _zixunCountLabel.textAlignment = NSTextAlignmentCenter;
-    _zixunCountLabel.textColor = [UIColor whiteColor];
-    _zixunCountLabel.layer.cornerRadius = AUTOSIZE(14)/2;
-    [zixunButton addSubview:_zixunCountLabel];
-    
-    //主题数量
-    _zhutiCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(zhutiButton.width - AUTOSIZE(40) - AUTOSIZE(8), AUTOSIZE(5), 0, AUTOSIZE(14))];
-    _zhutiCountLabel.font = FONT(10);
-    _zhutiCountLabel.backgroundColor = [UIColor colorWithHexString:@"f46c6b"];
-    _zhutiCountLabel.clipsToBounds = YES;
-    _zhutiCountLabel.textAlignment = NSTextAlignmentCenter;
-    _zhutiCountLabel.textColor = [UIColor whiteColor];
-    _zhutiCountLabel.layer.cornerRadius = AUTOSIZE(14)/2;
-    [zhutiButton addSubview:_zhutiCountLabel];
-    
-    //回复数量
-    _huifuCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(zhutiButton.width - AUTOSIZE(40) - AUTOSIZE(8), AUTOSIZE(5), 0, AUTOSIZE(14))];
-    _huifuCountLabel.font = FONT(10);
-    _huifuCountLabel.backgroundColor = [UIColor colorWithHexString:@"f46c6b"];
-    _huifuCountLabel.clipsToBounds = YES;
-    _huifuCountLabel.textAlignment = NSTextAlignmentCenter;
-    _huifuCountLabel.textColor = [UIColor whiteColor];
-    _huifuCountLabel.layer.cornerRadius = AUTOSIZE(14)/2;
-    [huifuButton addSubview:_huifuCountLabel];
 
 }
 
@@ -144,14 +86,16 @@
                                                                0,
                                                                self.view.width,
                                                                self.view.height)
-                                              style:UITableViewStylePlain];
+                                              style:UITableViewStyleGrouped];
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.userInteractionEnabled = YES;
+    _tableView.sectionFooterHeight = 0.1;
 //    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_tableView setSeparatorInset:UIEdgeInsetsZero];
+    _tableView.contentInset = UIEdgeInsetsMake(80, 0, 0, 0);
+    [_tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self.view addSubview:_tableView];
     
     if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
@@ -166,14 +110,6 @@
 }
 
 #pragma mark-----------------私有方法-------------------
-
-
-//- (void)gotoUserDetailInfo {
-//    DMUserDetailInfoViewController *controller = [[DMUserDetailInfoViewController alloc] init];
-//    controller.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:controller animated:YES];
-//
-//}
 
 - (void)updateUserInfoView {
     _userNameLabel.text = _userInfo.name;
@@ -226,29 +162,48 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return _tableViewScetion.count;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _tableViewScetion.count;
+    NSArray *array = [_tableViewScetion objectAt:section];
+    return array.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSArray *section = [_tableViewScetion objectAt:indexPath.section];
     DMTableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"DMTableViewCell"];
     if (!cell) {
         cell = [[DMTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DMTableViewCell"];
     }
-    cell.textLabel.text = [_tableViewScetion objectAt:indexPath.row];
+    cell.textLabel.text = [section objectAt:indexPath.row];
     cell.textLabel.textColor = kDMDefaultBlackStringColor;
-    cell.textLabel.font = FONT(AUTOSIZE(15));
+    cell.textLabel.font = FONT(14);
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return _userInfoView.height;
+    return 40;
+}
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"   我的";
+            break;
+        case 1:
+            return @"   账户安全";
+            break;
+        case 2:
+            return @"   其他";
+            break;
+
+        default:
+            return @"";
+            break;
+    }
 }
 #pragma mark----------------UITableViewDelegate---------------------
 
@@ -264,11 +219,6 @@
     }
 }
 
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return _userInfoView;
-}
-
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return AUTOSIZE(50);
@@ -276,9 +226,41 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSString *key = [_tableViewScetion objectAtIndex:indexPath.section];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+    NSArray *section = [_tableViewScetion objectAt:indexPath.section];
+    NSString *string = [section objectAt:indexPath.row];
+
+    if ([string isEqualToString:KShoucangCell]) {
+        DMUserCollectionListViewController *controller =[[DMUserCollectionListViewController alloc]init];
+        [controller setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if ([string isEqualToString:KBaoliaoCell]) {
+    
+    } else if ([string isEqualToString:KXiugaimimaCell]) {
+        
+    } else if ([string isEqualToString:KHaopingCell]) {
+        [WCAlertView showAlertWithTitle:@"陛下，赏本宫五颗❤️？"
+                                message:nil
+                     customizationBlock:nil
+                        completionBlock:^(NSUInteger buttonIndex, WCAlertView *alertView) {
+                            if (buttonIndex != alertView.cancelButtonIndex) {
+                                if ([UIDevice currentDevice].systemVersion.floatValue >=7.0) {
+                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id962201805"]];
+                                }
+                            }
+                        } cancelButtonTitle:@"退下" otherButtonTitles:@"恩准", nil];
+
+    } else if ([string isEqualToString:KYijianfankuiCell]) {
+        DMFeedBackViewController *controller =[[DMFeedBackViewController alloc]init];
+        [controller setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:controller animated:YES];
+
+    } else if ([string isEqualToString:KTuijianCell]) {
+        
+    } else {
+        
+    }
 }
 
 @end
