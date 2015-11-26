@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "FirstViewController.h"
-#import "SecondViewController.h"
+#import "DMIndexPageViewController.h"
+#import "DMManagementViewController.h"
+#import "DMUserCenterViewController.h"
+
 @interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
@@ -49,21 +51,21 @@
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.delegate = self;
     self.tabBarController.tabBar.translucent = NO;
-//    NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-//                                               [UIColor colorWithHexString:@"3e3030"],NSForegroundColorAttributeName,
-//                                               FONT(17), NSFontAttributeName, nil];
-//    
-//    [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
-//    [[UINavigationBar appearance] setTintColor:kDMDefaultBlackStringColor];
-//    
-//    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kDMDefaultGrayStringColor}
-//                                             forState:UIControlStateNormal];
-//    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kDMDefaultBlackStringColor}
-//                                             forState:UIControlStateSelected];
+    NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                               [UIColor colorWithHexString:@"3e3030"],NSForegroundColorAttributeName,
+                                               FONT(17), NSFontAttributeName, nil];
     
-    FirstViewController *activityPageController = [[FirstViewController alloc] init];
+    [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
+    [[UINavigationBar appearance] setTintColor:kDMDefaultBlackStringColor];
     
-    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:activityPageController];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kDMDefaultGrayStringColor}
+                                             forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kDMDefaultBlackStringColor}
+                                             forState:UIControlStateSelected];
+    
+    DMIndexPageViewController *indexPageController = [[DMIndexPageViewController alloc] init];
+    indexPageController.hideBackButton = YES;
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:indexPageController];
 //    [nav1.navigationBar drawSolidLineWithFrame:CGRectMake(0, nav1.navigationBar.bottom - 0.5, nav1.navigationBar.width, 0.5)];
 //    for (UIView *view in nav1.navigationBar.subviews) {
 //        for (UIView *view2 in view.subviews) {
@@ -76,9 +78,9 @@
 //        }
 //    }
     
-    SecondViewController *categoryViewController = [[SecondViewController alloc] init];
-//    categoryViewController.hideBackButton = YES;
-    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:categoryViewController];
+    DMManagementViewController *managementViewController = [[DMManagementViewController alloc] init];
+    managementViewController.hideBackButton = YES;
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:managementViewController];
 //    //    [nav2.navigationBar drawSolidLineWithFrame:CGRectMake(0, nav1.navigationBar.bottom - 0.5, nav1.navigationBar.width, 0.5)];
 //    for (UIView *view in nav2.navigationBar.subviews) {
 //        for (UIView *view2 in view.subviews) {
@@ -91,33 +93,36 @@
 //        }
 //    }
     
-    
-    NSArray *controllers = @[nav1, nav2];
+    DMUserCenterViewController *userCenterViewController = [[DMUserCenterViewController alloc] init];
+    userCenterViewController.hideBackButton = YES;
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:userCenterViewController];
+
+    NSArray *controllers = @[nav1, nav2, nav3];
     [self.tabBarController setViewControllers:controllers];
     
     
-    NSArray *titles = @[@"首页", @"分类", @"消息", @"我"];
+    NSArray *titles = @[@"值得买", @"管理", @"我"];
     
     int i = 0;
     for (UITabBarItem *item in self.tabBarController.tabBar.items) {
         UIImage *selectedImage = [UIImage imageNamed:@""];
         UIImage *unselectedImage = [UIImage imageNamed:@""];
-//        if (i == DMIndexPageIndex) {
-//            unselectedImage = [[UIImage imageNamed:@"icon_tab1_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//            selectedImage = [[UIImage imageNamed:@"icon_tab1_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        } else if (i == DMFindPageIndex) {
-//            unselectedImage = [[UIImage imageNamed:@"icon_tab2_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//            selectedImage = [[UIImage imageNamed:@"icon_tab2_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        } else if (i == DMChatPageIndex) {
-//            unselectedImage = [[UIImage imageNamed:@"icon_tab3_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//            selectedImage = [[UIImage imageNamed:@"icon_tab3_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        } else if (i == DMUserCenterPageIndex) {
-//            unselectedImage = [[UIImage imageNamed:@"icon_tab4_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//            selectedImage = [[UIImage imageNamed:@"icon_tab4_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        } else {
-//            unselectedImage = [[UIImage imageNamed:@"icon_tab1_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//            selectedImage = [[UIImage imageNamed:@"icon_tab1_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        }
+        if (i == DMIndexPageIndex) {
+            unselectedImage = [[UIImage imageNamed:@"icon_tab1_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            selectedImage = [[UIImage imageNamed:@"icon_tab1_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        } else if (i == DMManagementPageIndex) {
+            unselectedImage = [[UIImage imageNamed:@"icon_tab2_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            selectedImage = [[UIImage imageNamed:@"icon_tab2_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        } else if (i == DMChatPageIndex) {
+            unselectedImage = [[UIImage imageNamed:@"icon_tab3_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            selectedImage = [[UIImage imageNamed:@"icon_tab3_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        } else if (i == DMUserCenterPageIndex) {
+            unselectedImage = [[UIImage imageNamed:@"icon_tab4_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            selectedImage = [[UIImage imageNamed:@"icon_tab4_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        } else {
+            unselectedImage = [[UIImage imageNamed:@"icon_tab1_normal.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            selectedImage = [[UIImage imageNamed:@"icon_tab1_press.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        }
         item.image = unselectedImage;
         item.selectedImage = selectedImage;
         //        CGFloat offset = 6.0;

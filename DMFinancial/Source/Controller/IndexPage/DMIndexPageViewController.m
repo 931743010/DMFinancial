@@ -1,22 +1,22 @@
 //
-//  DMMyEducationViewController.m
-//  DMJobGuarder
+//  DMIndexPageViewController.m
+//  DMFinancial
 //
-//  Created by 陈彦岐 on 15/5/31.
-//  Copyright (c) 2015年 陈彦岐. All rights reserved.
+//  Created by 陈彦岐 on 15/11/24.
+//  Copyright © 2015年 陈彦岐. All rights reserved.
 //
 
-#import "DMMyEducationViewController.h"
+#import "DMIndexPageViewController.h"
 
-@interface DMMyEducationViewController ()
+@interface DMIndexPageViewController ()
 
 @end
 
-@implementation DMMyEducationViewController
+@implementation DMIndexPageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"值得买";
 }
 
 - (void)didReceiveMemoryWarning {

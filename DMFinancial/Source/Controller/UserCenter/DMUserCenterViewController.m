@@ -7,10 +7,7 @@
 //
 
 #import "DMUserCenterViewController.h"
-#import "DMMyMoneyViewController.h"
-#import "DMMyAttentionViewController.h"
 #import "DMSettingViewController.h"
-#import "DMUserDetailInfoViewController.h"
 #import "DMUserCenterService.h"
 #import "DMUserInfo.h"
 
@@ -171,12 +168,12 @@
 #pragma mark-----------------私有方法-------------------
 
 
-- (void)gotoUserDetailInfo {
-    DMUserDetailInfoViewController *controller = [[DMUserDetailInfoViewController alloc] init];
-    controller.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:controller animated:YES];
-
-}
+//- (void)gotoUserDetailInfo {
+//    DMUserDetailInfoViewController *controller = [[DMUserDetailInfoViewController alloc] init];
+//    controller.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:controller animated:YES];
+//
+//}
 
 - (void)updateUserInfoView {
     _userNameLabel.text = _userInfo.name;
@@ -282,20 +279,6 @@
 //    NSString *key = [_tableViewScetion objectAtIndex:indexPath.section];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    if (indexPath.row == 0)
-    {
-        DMMyMoneyViewController *controller = [[DMMyMoneyViewController alloc] init];
-        controller.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:controller animated:YES];
-    } else if (indexPath.row == 1) {
-        DMMyAttentionViewController *controller = [[DMMyAttentionViewController alloc] init];
-        controller.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:controller animated:YES];
-    } else if (indexPath.row == 2) {
-        DMSettingViewController *controller = [[DMSettingViewController alloc] init];
-        controller.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:controller animated:YES];
-    }
 }
 
 @end

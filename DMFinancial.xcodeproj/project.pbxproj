@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3EBC02311C0447BE006F1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02301C0447BE006F1C35 /* main.m */; };
 		3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02331C0447BE006F1C35 /* AppDelegate.m */; };
-		3EBC02371C0447BE006F1C35 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02361C0447BE006F1C35 /* FirstViewController.m */; };
-		3EBC023A1C0447BE006F1C35 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02391C0447BE006F1C35 /* SecondViewController.m */; };
 		3EBC023D1C0447BE006F1C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC023B1C0447BE006F1C35 /* Main.storyboard */; };
 		3EBC023F1C0447BE006F1C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC023E1C0447BE006F1C35 /* Assets.xcassets */; };
 		3EBC02421C0447BE006F1C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC02401C0447BE006F1C35 /* LaunchScreen.storyboard */; };
@@ -153,28 +151,16 @@
 		3EBC04A51C0457AC006F1C35 /* icon_userCenter_setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC03871C0457AB006F1C35 /* icon_userCenter_setting@3x.png */; };
 		3EBC04A61C0457AC006F1C35 /* icons_back_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC03891C0457AB006F1C35 /* icons_back_dark@2x.png */; };
 		3EBC04A71C0457AC006F1C35 /* icons_back_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC038A1C0457AB006F1C35 /* icons_back_dark@3x.png */; };
-		3EBC04A81C0457AC006F1C35 /* DMActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03961C0457AB006F1C35 /* DMActivityViewController.m */; };
 		3EBC04A91C0457AC006F1C35 /* DMBaseViewController+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03991C0457AB006F1C35 /* DMBaseViewController+Addition.m */; };
 		3EBC04AA1C0457AC006F1C35 /* DMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC039B1C0457AB006F1C35 /* DMBaseViewController.m */; };
 		3EBC04AB1C0457AC006F1C35 /* DMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC039D1C0457AB006F1C35 /* DMTabBarViewController.m */; };
 		3EBC04AC1C0457AC006F1C35 /* DMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC039F1C0457AB006F1C35 /* DMWebViewController.m */; };
-		3EBC04AD1C0457AC006F1C35 /* DMDiscussionGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03A21C0457AB006F1C35 /* DMDiscussionGroupsViewController.m */; };
-		3EBC04AE1C0457AC006F1C35 /* DMExperstsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03A51C0457AB006F1C35 /* DMExperstsInfoViewController.m */; };
-		3EBC04AF1C0457AC006F1C35 /* DMExpertsOnlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03A71C0457AB006F1C35 /* DMExpertsOnlineViewController.m */; };
-		3EBC04B01C0457AC006F1C35 /* DMExpertsReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03A91C0457AB006F1C35 /* DMExpertsReportViewController.m */; };
-		3EBC04B11C0457AC006F1C35 /* DMRecordsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03AB1C0457AB006F1C35 /* DMRecordsListViewController.m */; };
-		3EBC04B21C0457AC006F1C35 /* DMRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03AD1C0457AB006F1C35 /* DMRecordsViewController.m */; };
 		3EBC04B31C0457AC006F1C35 /* DMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03B01C0457AB006F1C35 /* DMLoginViewController.m */; };
-		3EBC04B41C0457AC006F1C35 /* DMMyAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03B21C0457AB006F1C35 /* DMMyAttentionViewController.m */; };
-		3EBC04B51C0457AC006F1C35 /* DMMyMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03B41C0457AB006F1C35 /* DMMyMoneyViewController.m */; };
 		3EBC04B61C0457AC006F1C35 /* DMRegistCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03B61C0457AB006F1C35 /* DMRegistCompleteViewController.m */; };
 		3EBC04B71C0457AC006F1C35 /* DMRegistPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03B81C0457AB006F1C35 /* DMRegistPwdViewController.m */; };
 		3EBC04B81C0457AC006F1C35 /* DMRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03BA1C0457AB006F1C35 /* DMRegistViewController.m */; };
 		3EBC04B91C0457AC006F1C35 /* DMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03BC1C0457AB006F1C35 /* DMSettingViewController.m */; };
 		3EBC04BA1C0457AC006F1C35 /* DMUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03BE1C0457AB006F1C35 /* DMUserCenterViewController.m */; };
-		3EBC04BB1C0457AC006F1C35 /* DMMyEducationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03C11C0457AB006F1C35 /* DMMyEducationViewController.m */; };
-		3EBC04BC1C0457AC006F1C35 /* DMUserDetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03C31C0457AB006F1C35 /* DMUserDetailInfoViewController.m */; };
-		3EBC04BD1C0457AC006F1C35 /* DMUserWorksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03C51C0457AB006F1C35 /* DMUserWorksViewController.m */; };
 		3EBC04BE1C0457AC006F1C35 /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03CD1C0457AB006F1C35 /* AMBlurView.m */; };
 		3EBC04BF1C0457AC006F1C35 /* DMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03CF1C0457AB006F1C35 /* DMAlertView.m */; };
 		3EBC04C01C0457AC006F1C35 /* DMBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03D11C0457AB006F1C35 /* DMBarItem.m */; };
@@ -214,6 +200,10 @@
 		3EBC04E21C0457AC006F1C35 /* DMMyMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04171C0457AB006F1C35 /* DMMyMoneyCell.m */; };
 		3EBC04E31C0457AC006F1C35 /* DMUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04191C0457AB006F1C35 /* DMUserInfoView.m */; };
 		3EBC04F31C045C7E006F1C35 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04F21C045C7E006F1C35 /* MBProgressHUD.m */; };
+		3EBC04F61C0461AD006F1C35 /* DMManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04F51C0461AD006F1C35 /* DMManagementViewController.m */; };
+		3EBC04FB1C04623C006F1C35 /* DMIndexPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04FA1C04623C006F1C35 /* DMIndexPageViewController.m */; };
+		3EBC05001C055B87006F1C35 /* DMManagementItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04FF1C055B87006F1C35 /* DMManagementItemCell.m */; };
+		3EBC05041C056283006F1C35 /* DMManagementItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC05031C056283006F1C35 /* DMManagementItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,10 +211,6 @@
 		3EBC02301C0447BE006F1C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EBC02321C0447BE006F1C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EBC02331C0447BE006F1C35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3EBC02351C0447BE006F1C35 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		3EBC02361C0447BE006F1C35 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		3EBC02381C0447BE006F1C35 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		3EBC02391C0447BE006F1C35 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		3EBC023C1C0447BE006F1C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EBC023E1C0447BE006F1C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EBC02411C0447BE006F1C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -472,8 +458,6 @@
 		3EBC03901C0457AB006F1C35 /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
 		3EBC03911C0457AB006F1C35 /* Function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Function.h; sourceTree = "<group>"; };
 		3EBC03921C0457AB006F1C35 /* Struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Struct.h; sourceTree = "<group>"; };
-		3EBC03951C0457AB006F1C35 /* DMActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMActivityViewController.h; sourceTree = "<group>"; };
-		3EBC03961C0457AB006F1C35 /* DMActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMActivityViewController.m; sourceTree = "<group>"; };
 		3EBC03981C0457AB006F1C35 /* DMBaseViewController+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DMBaseViewController+Addition.h"; sourceTree = "<group>"; };
 		3EBC03991C0457AB006F1C35 /* DMBaseViewController+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DMBaseViewController+Addition.m"; sourceTree = "<group>"; };
 		3EBC039A1C0457AB006F1C35 /* DMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaseViewController.h; sourceTree = "<group>"; };
@@ -482,24 +466,8 @@
 		3EBC039D1C0457AB006F1C35 /* DMTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBarViewController.m; sourceTree = "<group>"; };
 		3EBC039E1C0457AB006F1C35 /* DMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebViewController.h; sourceTree = "<group>"; };
 		3EBC039F1C0457AB006F1C35 /* DMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebViewController.m; sourceTree = "<group>"; };
-		3EBC03A11C0457AB006F1C35 /* DMDiscussionGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDiscussionGroupsViewController.h; sourceTree = "<group>"; };
-		3EBC03A21C0457AB006F1C35 /* DMDiscussionGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMDiscussionGroupsViewController.m; sourceTree = "<group>"; };
-		3EBC03A41C0457AB006F1C35 /* DMExperstsInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMExperstsInfoViewController.h; sourceTree = "<group>"; };
-		3EBC03A51C0457AB006F1C35 /* DMExperstsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMExperstsInfoViewController.m; sourceTree = "<group>"; };
-		3EBC03A61C0457AB006F1C35 /* DMExpertsOnlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMExpertsOnlineViewController.h; sourceTree = "<group>"; };
-		3EBC03A71C0457AB006F1C35 /* DMExpertsOnlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMExpertsOnlineViewController.m; sourceTree = "<group>"; };
-		3EBC03A81C0457AB006F1C35 /* DMExpertsReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMExpertsReportViewController.h; sourceTree = "<group>"; };
-		3EBC03A91C0457AB006F1C35 /* DMExpertsReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMExpertsReportViewController.m; sourceTree = "<group>"; };
-		3EBC03AA1C0457AB006F1C35 /* DMRecordsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRecordsListViewController.h; sourceTree = "<group>"; };
-		3EBC03AB1C0457AB006F1C35 /* DMRecordsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRecordsListViewController.m; sourceTree = "<group>"; };
-		3EBC03AC1C0457AB006F1C35 /* DMRecordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRecordsViewController.h; sourceTree = "<group>"; };
-		3EBC03AD1C0457AB006F1C35 /* DMRecordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRecordsViewController.m; sourceTree = "<group>"; };
 		3EBC03AF1C0457AB006F1C35 /* DMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoginViewController.h; sourceTree = "<group>"; };
 		3EBC03B01C0457AB006F1C35 /* DMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoginViewController.m; sourceTree = "<group>"; };
-		3EBC03B11C0457AB006F1C35 /* DMMyAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMyAttentionViewController.h; sourceTree = "<group>"; };
-		3EBC03B21C0457AB006F1C35 /* DMMyAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMyAttentionViewController.m; sourceTree = "<group>"; };
-		3EBC03B31C0457AB006F1C35 /* DMMyMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMyMoneyViewController.h; sourceTree = "<group>"; };
-		3EBC03B41C0457AB006F1C35 /* DMMyMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMyMoneyViewController.m; sourceTree = "<group>"; };
 		3EBC03B51C0457AB006F1C35 /* DMRegistCompleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRegistCompleteViewController.h; sourceTree = "<group>"; };
 		3EBC03B61C0457AB006F1C35 /* DMRegistCompleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRegistCompleteViewController.m; sourceTree = "<group>"; };
 		3EBC03B71C0457AB006F1C35 /* DMRegistPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRegistPwdViewController.h; sourceTree = "<group>"; };
@@ -510,12 +478,6 @@
 		3EBC03BC1C0457AB006F1C35 /* DMSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSettingViewController.m; sourceTree = "<group>"; };
 		3EBC03BD1C0457AB006F1C35 /* DMUserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserCenterViewController.h; sourceTree = "<group>"; };
 		3EBC03BE1C0457AB006F1C35 /* DMUserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserCenterViewController.m; sourceTree = "<group>"; };
-		3EBC03C01C0457AB006F1C35 /* DMMyEducationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMyEducationViewController.h; sourceTree = "<group>"; };
-		3EBC03C11C0457AB006F1C35 /* DMMyEducationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMyEducationViewController.m; sourceTree = "<group>"; };
-		3EBC03C21C0457AB006F1C35 /* DMUserDetailInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserDetailInfoViewController.h; sourceTree = "<group>"; };
-		3EBC03C31C0457AB006F1C35 /* DMUserDetailInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserDetailInfoViewController.m; sourceTree = "<group>"; };
-		3EBC03C41C0457AB006F1C35 /* DMUserWorksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserWorksViewController.h; sourceTree = "<group>"; };
-		3EBC03C51C0457AB006F1C35 /* DMUserWorksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserWorksViewController.m; sourceTree = "<group>"; };
 		3EBC03CC1C0457AB006F1C35 /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBlurView.h; sourceTree = "<group>"; };
 		3EBC03CD1C0457AB006F1C35 /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBlurView.m; sourceTree = "<group>"; };
 		3EBC03CE1C0457AB006F1C35 /* DMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMAlertView.h; sourceTree = "<group>"; };
@@ -595,6 +557,14 @@
 		3EBC04E41C045807006F1C35 /* DMFinancial-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DMFinancial-Prefix.pch"; sourceTree = "<group>"; };
 		3EBC04F11C045C7E006F1C35 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		3EBC04F21C045C7E006F1C35 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		3EBC04F41C0461AD006F1C35 /* DMManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMManagementViewController.h; path = Management/DMManagementViewController.h; sourceTree = "<group>"; };
+		3EBC04F51C0461AD006F1C35 /* DMManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMManagementViewController.m; path = Management/DMManagementViewController.m; sourceTree = "<group>"; };
+		3EBC04F91C04623C006F1C35 /* DMIndexPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMIndexPageViewController.h; path = IndexPage/DMIndexPageViewController.h; sourceTree = "<group>"; };
+		3EBC04FA1C04623C006F1C35 /* DMIndexPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMIndexPageViewController.m; path = IndexPage/DMIndexPageViewController.m; sourceTree = "<group>"; };
+		3EBC04FE1C055B87006F1C35 /* DMManagementItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMManagementItemCell.h; path = Management/DMManagementItemCell.h; sourceTree = "<group>"; };
+		3EBC04FF1C055B87006F1C35 /* DMManagementItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMManagementItemCell.m; path = Management/DMManagementItemCell.m; sourceTree = "<group>"; };
+		3EBC05021C056283006F1C35 /* DMManagementItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMManagementItem.h; path = Management/DMManagementItem.h; sourceTree = "<group>"; };
+		3EBC05031C056283006F1C35 /* DMManagementItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMManagementItem.m; path = Management/DMManagementItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -635,10 +605,6 @@
 				3EBC038C1C0457AB006F1C35 /* Source */,
 				3EBC02321C0447BE006F1C35 /* AppDelegate.h */,
 				3EBC02331C0447BE006F1C35 /* AppDelegate.m */,
-				3EBC02351C0447BE006F1C35 /* FirstViewController.h */,
-				3EBC02361C0447BE006F1C35 /* FirstViewController.m */,
-				3EBC02381C0447BE006F1C35 /* SecondViewController.h */,
-				3EBC02391C0447BE006F1C35 /* SecondViewController.m */,
 				3EBC023E1C0447BE006F1C35 /* Assets.xcassets */,
 				3EBC022F1C0447BE006F1C35 /* Supporting Files */,
 			);
@@ -718,6 +684,7 @@
 		3EBC02701C0457AB006F1C35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3EBC05011C056251006F1C35 /* Management */,
 				3EBC02711C0457AB006F1C35 /* Common */,
 				3EBC02801C0457AB006F1C35 /* DMActivity.h */,
 				3EBC02811C0457AB006F1C35 /* DMActivity.m */,
@@ -1347,22 +1314,12 @@
 		3EBC03931C0457AB006F1C35 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3EBC03941C0457AB006F1C35 /* Activity */,
+				3EBC04F81C046221006F1C35 /* IndexPage */,
+				3EBC04F71C0461B5006F1C35 /* Management */,
 				3EBC03971C0457AB006F1C35 /* Common */,
-				3EBC03A01C0457AB006F1C35 /* DiscussionGroups */,
-				3EBC03A31C0457AB006F1C35 /* ExpertsOnline */,
 				3EBC03AE1C0457AB006F1C35 /* UserCenter */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		3EBC03941C0457AB006F1C35 /* Activity */ = {
-			isa = PBXGroup;
-			children = (
-				3EBC03951C0457AB006F1C35 /* DMActivityViewController.h */,
-				3EBC03961C0457AB006F1C35 /* DMActivityViewController.m */,
-			);
-			path = Activity;
 			sourceTree = "<group>";
 		};
 		3EBC03971C0457AB006F1C35 /* Common */ = {
@@ -1380,41 +1337,11 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		3EBC03A01C0457AB006F1C35 /* DiscussionGroups */ = {
-			isa = PBXGroup;
-			children = (
-				3EBC03A11C0457AB006F1C35 /* DMDiscussionGroupsViewController.h */,
-				3EBC03A21C0457AB006F1C35 /* DMDiscussionGroupsViewController.m */,
-			);
-			path = DiscussionGroups;
-			sourceTree = "<group>";
-		};
-		3EBC03A31C0457AB006F1C35 /* ExpertsOnline */ = {
-			isa = PBXGroup;
-			children = (
-				3EBC03A41C0457AB006F1C35 /* DMExperstsInfoViewController.h */,
-				3EBC03A51C0457AB006F1C35 /* DMExperstsInfoViewController.m */,
-				3EBC03A61C0457AB006F1C35 /* DMExpertsOnlineViewController.h */,
-				3EBC03A71C0457AB006F1C35 /* DMExpertsOnlineViewController.m */,
-				3EBC03A81C0457AB006F1C35 /* DMExpertsReportViewController.h */,
-				3EBC03A91C0457AB006F1C35 /* DMExpertsReportViewController.m */,
-				3EBC03AA1C0457AB006F1C35 /* DMRecordsListViewController.h */,
-				3EBC03AB1C0457AB006F1C35 /* DMRecordsListViewController.m */,
-				3EBC03AC1C0457AB006F1C35 /* DMRecordsViewController.h */,
-				3EBC03AD1C0457AB006F1C35 /* DMRecordsViewController.m */,
-			);
-			path = ExpertsOnline;
-			sourceTree = "<group>";
-		};
 		3EBC03AE1C0457AB006F1C35 /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
 				3EBC03AF1C0457AB006F1C35 /* DMLoginViewController.h */,
 				3EBC03B01C0457AB006F1C35 /* DMLoginViewController.m */,
-				3EBC03B11C0457AB006F1C35 /* DMMyAttentionViewController.h */,
-				3EBC03B21C0457AB006F1C35 /* DMMyAttentionViewController.m */,
-				3EBC03B31C0457AB006F1C35 /* DMMyMoneyViewController.h */,
-				3EBC03B41C0457AB006F1C35 /* DMMyMoneyViewController.m */,
 				3EBC03B51C0457AB006F1C35 /* DMRegistCompleteViewController.h */,
 				3EBC03B61C0457AB006F1C35 /* DMRegistCompleteViewController.m */,
 				3EBC03B71C0457AB006F1C35 /* DMRegistPwdViewController.h */,
@@ -1425,22 +1352,8 @@
 				3EBC03BC1C0457AB006F1C35 /* DMSettingViewController.m */,
 				3EBC03BD1C0457AB006F1C35 /* DMUserCenterViewController.h */,
 				3EBC03BE1C0457AB006F1C35 /* DMUserCenterViewController.m */,
-				3EBC03BF1C0457AB006F1C35 /* UserDetailInfo */,
 			);
 			path = UserCenter;
-			sourceTree = "<group>";
-		};
-		3EBC03BF1C0457AB006F1C35 /* UserDetailInfo */ = {
-			isa = PBXGroup;
-			children = (
-				3EBC03C01C0457AB006F1C35 /* DMMyEducationViewController.h */,
-				3EBC03C11C0457AB006F1C35 /* DMMyEducationViewController.m */,
-				3EBC03C21C0457AB006F1C35 /* DMUserDetailInfoViewController.h */,
-				3EBC03C31C0457AB006F1C35 /* DMUserDetailInfoViewController.m */,
-				3EBC03C41C0457AB006F1C35 /* DMUserWorksViewController.h */,
-				3EBC03C51C0457AB006F1C35 /* DMUserWorksViewController.m */,
-			);
-			path = UserDetailInfo;
 			sourceTree = "<group>";
 		};
 		3EBC03C61C0457AB006F1C35 /* Delegate */ = {
@@ -1474,6 +1387,8 @@
 		3EBC03CA1C0457AB006F1C35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3EBC04FC1C055AA7006F1C35 /* IndexPage */,
+				3EBC04FD1C055ABA006F1C35 /* Management */,
 				3EBC03CB1C0457AB006F1C35 /* Common */,
 				3EBC03FA1C0457AB006F1C35 /* DMActivityCell.h */,
 				3EBC03FB1C0457AB006F1C35 /* DMActivityCell.m */,
@@ -1585,6 +1500,49 @@
 				3EBC04F21C045C7E006F1C35 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		3EBC04F71C0461B5006F1C35 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				3EBC04F41C0461AD006F1C35 /* DMManagementViewController.h */,
+				3EBC04F51C0461AD006F1C35 /* DMManagementViewController.m */,
+			);
+			name = Management;
+			sourceTree = "<group>";
+		};
+		3EBC04F81C046221006F1C35 /* IndexPage */ = {
+			isa = PBXGroup;
+			children = (
+				3EBC04F91C04623C006F1C35 /* DMIndexPageViewController.h */,
+				3EBC04FA1C04623C006F1C35 /* DMIndexPageViewController.m */,
+			);
+			name = IndexPage;
+			sourceTree = "<group>";
+		};
+		3EBC04FC1C055AA7006F1C35 /* IndexPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = IndexPage;
+			sourceTree = "<group>";
+		};
+		3EBC04FD1C055ABA006F1C35 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				3EBC04FE1C055B87006F1C35 /* DMManagementItemCell.h */,
+				3EBC04FF1C055B87006F1C35 /* DMManagementItemCell.m */,
+			);
+			name = Management;
+			sourceTree = "<group>";
+		};
+		3EBC05011C056251006F1C35 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				3EBC05021C056283006F1C35 /* DMManagementItem.h */,
+				3EBC05031C056283006F1C35 /* DMManagementItem.m */,
+			);
+			name = Management;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1700,7 +1658,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EBC04231C0457AB006F1C35 /* NSDictionary+Addition.m in Sources */,
-				3EBC04B21C0457AC006F1C35 /* DMRecordsViewController.m in Sources */,
 				3EBC04B91C0457AC006F1C35 /* DMSettingViewController.m in Sources */,
 				3EBC04BE1C0457AC006F1C35 /* AMBlurView.m in Sources */,
 				3EBC04D91C0457AC006F1C35 /* DMChatMineCell.m in Sources */,
@@ -1710,6 +1667,7 @@
 				3EBC044B1C0457AB006F1C35 /* NSStringAdditions.m in Sources */,
 				3EBC04621C0457AB006F1C35 /* CLParallaxView.m in Sources */,
 				3EBC047F1C0457AC006F1C35 /* WCAlertView.m in Sources */,
+				3EBC05041C056283006F1C35 /* DMManagementItem.m in Sources */,
 				3EBC04B81C0457AC006F1C35 /* DMRegistViewController.m in Sources */,
 				3EBC04661C0457AB006F1C35 /* JFReminderSwitchView.m in Sources */,
 				3EBC046F1C0457AB006F1C35 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1725,7 +1683,6 @@
 				3EBC04C21C0457AC006F1C35 /* DMButton.m in Sources */,
 				3EBC04441C0457AB006F1C35 /* UIImage+LLDBQuickLook.m in Sources */,
 				3EBC04E01C0457AC006F1C35 /* DMInfoCell.m in Sources */,
-				3EBC04A81C0457AC006F1C35 /* DMActivityViewController.m in Sources */,
 				3EBC04251C0457AB006F1C35 /* DMGlobalVar.m in Sources */,
 				3EBC045E1C0457AB006F1C35 /* AFPropertyListRequestOperation.m in Sources */,
 				3EBC04CC1C0457AC006F1C35 /* DMSearchBar.m in Sources */,
@@ -1741,11 +1698,9 @@
 				3EBC04561C0457AB006F1C35 /* UIView+Extension.m in Sources */,
 				3EBC04741C0457AB006F1C35 /* UIImage+MultiFormat.m in Sources */,
 				3EBC04551C0457AB006F1C35 /* UIView+DebugQuickLook.m in Sources */,
+				3EBC04F61C0461AD006F1C35 /* DMManagementViewController.m in Sources */,
 				3EBC046C1C0457AB006F1C35 /* SDWebImageCompat.m in Sources */,
 				3EBC04531C0457AB006F1C35 /* UIImageHelper.m in Sources */,
-				3EBC04B51C0457AC006F1C35 /* DMMyMoneyViewController.m in Sources */,
-				3EBC023A1C0447BE006F1C35 /* SecondViewController.m in Sources */,
-				3EBC04AF1C0457AC006F1C35 /* DMExpertsOnlineViewController.m in Sources */,
 				3EBC04F31C045C7E006F1C35 /* MBProgressHUD.m in Sources */,
 				3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */,
 				3EBC042C1C0457AB006F1C35 /* DMRecords.m in Sources */,
@@ -1756,15 +1711,14 @@
 				3EBC04D21C0457AC006F1C35 /* DMVenue_Annotation.m in Sources */,
 				3EBC04AA1C0457AC006F1C35 /* DMBaseViewController.m in Sources */,
 				3EBC04DB1C0457AC006F1C35 /* DMPicker.m in Sources */,
-				3EBC04B11C0457AC006F1C35 /* DMRecordsListViewController.m in Sources */,
 				3EBC04521C0457AB006F1C35 /* UIImageAdditions.m in Sources */,
+				3EBC05001C055B87006F1C35 /* DMManagementItemCell.m in Sources */,
 				3EBC04671C0457AB006F1C35 /* UIView+JFAddSeperator.m in Sources */,
 				3EBC04C01C0457AC006F1C35 /* DMBarItem.m in Sources */,
 				3EBC04CD1C0457AC006F1C35 /* DMSelectorButton.m in Sources */,
 				3EBC04221C0457AB006F1C35 /* DMRequest.m in Sources */,
 				3EBC04DA1C0457AC006F1C35 /* DMChatOtherCell.m in Sources */,
 				3EBC04301C0457AB006F1C35 /* DMRecordsParser.m in Sources */,
-				3EBC04BB1C0457AC006F1C35 /* DMMyEducationViewController.m in Sources */,
 				3EBC04CA1C0457AC006F1C35 /* DMRoundedImageView.m in Sources */,
 				3EBC04B71C0457AC006F1C35 /* DMRegistPwdViewController.m in Sources */,
 				3EBC04711C0457AB006F1C35 /* SDWebImagePrefetcher.m in Sources */,
@@ -1773,7 +1727,6 @@
 				3EBC04B31C0457AC006F1C35 /* DMLoginViewController.m in Sources */,
 				3EBC04451C0457AB006F1C35 /* UIView+LLDBQuickLook.m in Sources */,
 				3EBC041F1C0457AB006F1C35 /* NSMutableArray+PageInfo.m in Sources */,
-				3EBC04B41C0457AC006F1C35 /* DMMyAttentionViewController.m in Sources */,
 				3EBC04381C0457AB006F1C35 /* DMUserCenterService.m in Sources */,
 				3EBC04591C0457AB006F1C35 /* AFHTTPRequestOperation.m in Sources */,
 				3EBC04DD1C0457AC006F1C35 /* DMChooseCategoryView.m in Sources */,
@@ -1781,7 +1734,6 @@
 				3EBC04721C0457AB006F1C35 /* UIButton+WebCache.m in Sources */,
 				3EBC044E1C0457AB006F1C35 /* UIColor+expanded.m in Sources */,
 				3EBC04771C0457AB006F1C35 /* UIImageView+WebCache.m in Sources */,
-				3EBC04BD1C0457AC006F1C35 /* DMUserWorksViewController.m in Sources */,
 				3EBC04C81C0457AC006F1C35 /* DMImageView.m in Sources */,
 				3EBC04261C0457AB006F1C35 /* DMUserLoginInfo.m in Sources */,
 				3EBC04E31C0457AC006F1C35 /* DMUserInfoView.m in Sources */,
@@ -1790,12 +1742,10 @@
 				3EBC04481C0457AB006F1C35 /* NSDate+convenience.m in Sources */,
 				3EBC04581C0457AB006F1C35 /* AFHTTPClient.m in Sources */,
 				3EBC044C1C0457AB006F1C35 /* NSStringHelper.m in Sources */,
-				3EBC04BC1C0457AC006F1C35 /* DMUserDetailInfoViewController.m in Sources */,
 				3EBC042F1C0457AB006F1C35 /* DMActivityParser.m in Sources */,
 				3EBC04D31C0457AC006F1C35 /* THLabel.m in Sources */,
 				3EBC041D1C0457AB006F1C35 /* DMRequestParser.m in Sources */,
 				3EBC043C1C0457AB006F1C35 /* JFDictionaryToStringTransformer.m in Sources */,
-				3EBC04AE1C0457AC006F1C35 /* DMExperstsInfoViewController.m in Sources */,
 				3EBC041B1C0457AB006F1C35 /* DMObject+JsonParser.m in Sources */,
 				3EBC04D61C0457AC006F1C35 /* DMBirthdayPicker.m in Sources */,
 				3EBC04281C0457AB006F1C35 /* NSMutableArray+Mapping.m in Sources */,
@@ -1836,7 +1786,6 @@
 				3EBC04A91C0457AC006F1C35 /* DMBaseViewController+Addition.m in Sources */,
 				3EBC045B1C0457AB006F1C35 /* AFImageRequestOperation.m in Sources */,
 				3EBC045A1C0457AB006F1C35 /* AFHTTPRequestOperationLogger.m in Sources */,
-				3EBC04B01C0457AC006F1C35 /* DMExpertsReportViewController.m in Sources */,
 				3EBC04461C0457AB006F1C35 /* NSArray+Additions.m in Sources */,
 				3EBC042D1C0457AB006F1C35 /* DMSplist.m in Sources */,
 				3EBC04651C0457AB006F1C35 /* JFReminderSwitchController.m in Sources */,
@@ -1845,7 +1794,6 @@
 				3EBC042E1C0457AB006F1C35 /* DMUserInfo.m in Sources */,
 				3EBC04D11C0457AC006F1C35 /* DMTextField.m in Sources */,
 				3EBC043B1C0457AB006F1C35 /* JFDataCache.m in Sources */,
-				3EBC04AD1C0457AC006F1C35 /* DMDiscussionGroupsViewController.m in Sources */,
 				3EBC043E1C0457AB006F1C35 /* CommonHelper.m in Sources */,
 				3EBC04D01C0457AC006F1C35 /* DMTextCell.m in Sources */,
 				3EBC043F1C0457AB006F1C35 /* DMHelper.m in Sources */,
@@ -1853,8 +1801,8 @@
 				3EBC04611C0457AB006F1C35 /* AnimatedGIFImageSerialization.m in Sources */,
 				3EBC04631C0457AB006F1C35 /* CLParallaxViewController.m in Sources */,
 				3EBC04761C0457AB006F1C35 /* UIImageView+HighlightedWebCache.m in Sources */,
-				3EBC02371C0447BE006F1C35 /* FirstViewController.m in Sources */,
 				3EBC04E11C0457AC006F1C35 /* DMMyAttentionCell.m in Sources */,
+				3EBC04FB1C04623C006F1C35 /* DMIndexPageViewController.m in Sources */,
 				3EBC046B1C0457AB006F1C35 /* SDImageCache.m in Sources */,
 				3EBC04D51C0457AC006F1C35 /* DMActivityCell.m in Sources */,
 				3EBC044A1C0457AB006F1C35 /* NSMutableDictionary+Addition.m in Sources */,
@@ -2029,6 +1977,7 @@
 				3EBC02481C0447BE006F1C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
