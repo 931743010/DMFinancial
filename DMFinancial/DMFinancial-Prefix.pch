@@ -37,6 +37,7 @@
 #import "DMTextField.h"
 #import "DMTableViewCell.h"
 #import "UIView+Extension.h"
+#import "DMPageDataInfo.h"
 
 //
 #import "UIView+Common.h"

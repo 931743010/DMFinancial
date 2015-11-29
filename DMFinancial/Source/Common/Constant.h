@@ -118,6 +118,8 @@ static NSString * const kMemberHeadPlaceholderImage        = @"bg_headPlaceHolde
 #define kSeperatorColor [UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]//分割线颜色(cecece)
 
 static float kSeperatorWidth = 0.5;
+static int const kPageSize = 20;
+
 #pragma mark-----------通知---------------------
 /**
  *  常用目录
