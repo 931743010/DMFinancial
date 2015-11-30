@@ -122,4 +122,17 @@
  */
 +(UIImage *)imageWithBaseImage:(UIImage *)baseImage superposedImage:(UIImage *)superposedImage;
 
+/**
+ *  画圆角矩形图片
+ *
+ *  @param image      原图片
+ *  @param cornerRadius      圆角大小
+ *  @param imageSize 输出的图片的大小
+ *
+ *  @return 处理后的图片
+ */
+
++ (UIImage *)imageWithBaseImage:(UIImage *)image roundedCornersSize:(float)cornerRadius imageSize:(CGSize)imageSize;
+
+
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5F4204F7-28AF-48A0-9C21-43810188F6E8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EB7F34DC64A407847B1553031BB7C4B8907E05F4</key>
+		<string>https://github.com/chenyanqi987/DMFinancial.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DMFinancial.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EB7F34DC64A407847B1553031BB7C4B8907E05F4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chenyanqi987/DMFinancial.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EB7F34DC64A407847B1553031BB7C4B8907E05F4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EB7F34DC64A407847B1553031BB7C4B8907E05F4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DMFinancial</string>
+		</dict>
+	</array>
+</dict>
+</plist>

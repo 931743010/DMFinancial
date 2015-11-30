@@ -18,6 +18,17 @@
 		3E7A56571C0B3A7B009AFA89 /* DMDiscoveryFilterActivityOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A56521C0B3A7B009AFA89 /* DMDiscoveryFilterActivityOrder.m */; };
 		3E7A56581C0B3A7B009AFA89 /* DMDiscoveryFilterTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A56541C0B3A7B009AFA89 /* DMDiscoveryFilterTime.m */; };
 		3E7A565B1C0B3AC5009AFA89 /* DMPageDataInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A565A1C0B3AC5009AFA89 /* DMPageDataInfo.m */; };
+		3E832E731C0C4FED00FE4C58 /* DMNewcomerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E721C0C4FED00FE4C58 /* DMNewcomerCell.m */; };
+		3E832E771C0C506E00FE4C58 /* DMNewcomerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E761C0C506E00FE4C58 /* DMNewcomerItem.m */; };
+		3E832E821C0C521100FE4C58 /* DMMessageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E811C0C521100FE4C58 /* DMMessageParser.m */; };
+		3E832E851C0C522A00FE4C58 /* DMHotListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E841C0C522A00FE4C58 /* DMHotListParser.m */; };
+		3E832E881C0C524100FE4C58 /* DMP2PLibParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E871C0C524100FE4C58 /* DMP2PLibParser.m */; };
+		3E832E8D1C0C528200FE4C58 /* DMYangmaoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E8C1C0C528200FE4C58 /* DMYangmaoParser.m */; };
+		3E832E901C0C529D00FE4C58 /* DMNewcomerParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E8F1C0C529D00FE4C58 /* DMNewcomerParser.m */; };
+		3E832E931C0C52CA00FE4C58 /* DMYangmaoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E921C0C52CA00FE4C58 /* DMYangmaoItem.m */; };
+		3E832E961C0C52DF00FE4C58 /* DMHotListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E951C0C52DF00FE4C58 /* DMHotListItem.m */; };
+		3E832E991C0C52FB00FE4C58 /* DMP2PLibObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E981C0C52FB00FE4C58 /* DMP2PLibObject.m */; };
+		3E832EB41C0C55B600FE4C58 /* DMIndexPageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */; };
 		3EBC02311C0447BE006F1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02301C0447BE006F1C35 /* main.m */; };
 		3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02331C0447BE006F1C35 /* AppDelegate.m */; };
 		3EBC023D1C0447BE006F1C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC023B1C0447BE006F1C35 /* Main.storyboard */; };
@@ -49,9 +60,6 @@
 		3EBC04311C0457AB006F1C35 /* DMSplistParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02911C0457AB006F1C35 /* DMSplistParser.m */; };
 		3EBC04321C0457AB006F1C35 /* DMUserCenterParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02941C0457AB006F1C35 /* DMUserCenterParser.m */; };
 		3EBC04331C0457AB006F1C35 /* DMUserLoginParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02961C0457AB006F1C35 /* DMUserLoginParser.m */; };
-		3EBC04341C0457AB006F1C35 /* DMInformationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02991C0457AB006F1C35 /* DMInformationService.m */; };
-		3EBC04351C0457AB006F1C35 /* DMRecordsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC029B1C0457AB006F1C35 /* DMRecordsService.m */; };
-		3EBC04361C0457AB006F1C35 /* DMSplistService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC029D1C0457AB006F1C35 /* DMSplistService.m */; };
 		3EBC04371C0457AB006F1C35 /* DMLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02A01C0457AB006F1C35 /* DMLoginService.m */; };
 		3EBC04381C0457AB006F1C35 /* DMUserCenterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02A21C0457AB006F1C35 /* DMUserCenterService.m */; };
 		3EBC04391C0457AB006F1C35 /* CLCachePolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02A61C0457AB006F1C35 /* CLCachePolicy.m */; };
@@ -215,6 +223,13 @@
 		3EBC04FB1C04623C006F1C35 /* DMIndexPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04FA1C04623C006F1C35 /* DMIndexPageViewController.m */; };
 		3EBC05001C055B87006F1C35 /* DMManagementItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC04FF1C055B87006F1C35 /* DMManagementItemCell.m */; };
 		3EBC05041C056283006F1C35 /* DMManagementItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC05031C056283006F1C35 /* DMManagementItem.m */; };
+		3EC62B9F1C0BF6D100D1F2B9 /* DMMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC62B9E1C0BF6D100D1F2B9 /* DMMessageListViewController.m */; };
+		3EC62BA71C0C2D8F00D1F2B9 /* DMMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC62BA61C0C2D8F00D1F2B9 /* DMMessageCell.m */; };
+		3EC62BAC1C0C2E1500D1F2B9 /* DMMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC62BAB1C0C2E1500D1F2B9 /* DMMessageItem.m */; };
+		3EC62BB31C0C409900D1F2B9 /* DMNewcomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC62BB21C0C409900D1F2B9 /* DMNewcomerViewController.m */; };
+		3EC62BB61C0C411700D1F2B9 /* DMYangmaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC62BB51C0C411700D1F2B9 /* DMYangmaoViewController.m */; };
+		3EC62BB91C0C444600D1F2B9 /* DMP2PViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC62BB81C0C444600D1F2B9 /* DMP2PViewController.m */; };
+		3EC62BC01C0C498300D1F2B9 /* DMHotListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC62BBF1C0C498300D1F2B9 /* DMHotListViewController.m */; };
 		3EDDC4DF1C07069D008AAF91 /* DMFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4DE1C07069D008AAF91 /* DMFeedBackViewController.m */; };
 		3EDDC4E71C0707D7008AAF91 /* DMUserCollectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4E61C0707D7008AAF91 /* DMUserCollectionListViewController.m */; };
 		3EDDC4EA1C070973008AAF91 /* DMFeedBackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4E91C070973008AAF91 /* DMFeedBackService.m */; };
@@ -245,6 +260,28 @@
 		3E7A56541C0B3A7B009AFA89 /* DMDiscoveryFilterTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMDiscoveryFilterTime.m; sourceTree = "<group>"; };
 		3E7A56591C0B3AC5009AFA89 /* DMPageDataInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPageDataInfo.h; sourceTree = "<group>"; };
 		3E7A565A1C0B3AC5009AFA89 /* DMPageDataInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPageDataInfo.m; sourceTree = "<group>"; };
+		3E832E711C0C4FED00FE4C58 /* DMNewcomerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMNewcomerCell.h; path = IndexPage/Newcomer/DMNewcomerCell.h; sourceTree = "<group>"; };
+		3E832E721C0C4FED00FE4C58 /* DMNewcomerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMNewcomerCell.m; path = IndexPage/Newcomer/DMNewcomerCell.m; sourceTree = "<group>"; };
+		3E832E751C0C506E00FE4C58 /* DMNewcomerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMNewcomerItem.h; path = IndexPage/Newcomer/DMNewcomerItem.h; sourceTree = "<group>"; };
+		3E832E761C0C506E00FE4C58 /* DMNewcomerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMNewcomerItem.m; path = IndexPage/Newcomer/DMNewcomerItem.m; sourceTree = "<group>"; };
+		3E832E801C0C521100FE4C58 /* DMMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMMessageParser.h; sourceTree = "<group>"; };
+		3E832E811C0C521100FE4C58 /* DMMessageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMMessageParser.m; sourceTree = "<group>"; };
+		3E832E831C0C522A00FE4C58 /* DMHotListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHotListParser.h; sourceTree = "<group>"; };
+		3E832E841C0C522A00FE4C58 /* DMHotListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHotListParser.m; sourceTree = "<group>"; };
+		3E832E861C0C524100FE4C58 /* DMP2PLibParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMP2PLibParser.h; sourceTree = "<group>"; };
+		3E832E871C0C524100FE4C58 /* DMP2PLibParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMP2PLibParser.m; sourceTree = "<group>"; };
+		3E832E8B1C0C528200FE4C58 /* DMYangmaoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMYangmaoParser.h; sourceTree = "<group>"; };
+		3E832E8C1C0C528200FE4C58 /* DMYangmaoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMYangmaoParser.m; sourceTree = "<group>"; };
+		3E832E8E1C0C529D00FE4C58 /* DMNewcomerParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNewcomerParser.h; sourceTree = "<group>"; };
+		3E832E8F1C0C529D00FE4C58 /* DMNewcomerParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNewcomerParser.m; sourceTree = "<group>"; };
+		3E832E911C0C52CA00FE4C58 /* DMYangmaoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMYangmaoItem.h; sourceTree = "<group>"; };
+		3E832E921C0C52CA00FE4C58 /* DMYangmaoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMYangmaoItem.m; sourceTree = "<group>"; };
+		3E832E941C0C52DF00FE4C58 /* DMHotListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHotListItem.h; sourceTree = "<group>"; };
+		3E832E951C0C52DF00FE4C58 /* DMHotListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHotListItem.m; sourceTree = "<group>"; };
+		3E832E971C0C52FB00FE4C58 /* DMP2PLibObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMP2PLibObject.h; sourceTree = "<group>"; };
+		3E832E981C0C52FB00FE4C58 /* DMP2PLibObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMP2PLibObject.m; sourceTree = "<group>"; };
+		3E832EB21C0C55B600FE4C58 /* DMIndexPageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMIndexPageService.h; sourceTree = "<group>"; };
+		3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMIndexPageService.m; sourceTree = "<group>"; };
 		3EBC022C1C0447BE006F1C35 /* DMFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC02301C0447BE006F1C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EBC02321C0447BE006F1C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -305,12 +342,6 @@
 		3EBC02941C0457AB006F1C35 /* DMUserCenterParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserCenterParser.m; sourceTree = "<group>"; };
 		3EBC02951C0457AB006F1C35 /* DMUserLoginParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserLoginParser.h; sourceTree = "<group>"; };
 		3EBC02961C0457AB006F1C35 /* DMUserLoginParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserLoginParser.m; sourceTree = "<group>"; };
-		3EBC02981C0457AB006F1C35 /* DMInformationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMInformationService.h; sourceTree = "<group>"; };
-		3EBC02991C0457AB006F1C35 /* DMInformationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMInformationService.m; sourceTree = "<group>"; };
-		3EBC029A1C0457AB006F1C35 /* DMRecordsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRecordsService.h; sourceTree = "<group>"; };
-		3EBC029B1C0457AB006F1C35 /* DMRecordsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRecordsService.m; sourceTree = "<group>"; };
-		3EBC029C1C0457AB006F1C35 /* DMSplistService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSplistService.h; sourceTree = "<group>"; };
-		3EBC029D1C0457AB006F1C35 /* DMSplistService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSplistService.m; sourceTree = "<group>"; };
 		3EBC029F1C0457AB006F1C35 /* DMLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoginService.h; sourceTree = "<group>"; };
 		3EBC02A01C0457AB006F1C35 /* DMLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoginService.m; sourceTree = "<group>"; };
 		3EBC02A11C0457AB006F1C35 /* DMUserCenterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserCenterService.h; sourceTree = "<group>"; };
@@ -603,6 +634,20 @@
 		3EBC04FF1C055B87006F1C35 /* DMManagementItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMManagementItemCell.m; path = Management/DMManagementItemCell.m; sourceTree = "<group>"; };
 		3EBC05021C056283006F1C35 /* DMManagementItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMManagementItem.h; path = Management/DMManagementItem.h; sourceTree = "<group>"; };
 		3EBC05031C056283006F1C35 /* DMManagementItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMManagementItem.m; path = Management/DMManagementItem.m; sourceTree = "<group>"; };
+		3EC62B9D1C0BF6D100D1F2B9 /* DMMessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMMessageListViewController.h; path = IndexPage/DMMessageListViewController.h; sourceTree = "<group>"; };
+		3EC62B9E1C0BF6D100D1F2B9 /* DMMessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMMessageListViewController.m; path = IndexPage/DMMessageListViewController.m; sourceTree = "<group>"; };
+		3EC62BA51C0C2D8F00D1F2B9 /* DMMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMMessageCell.h; path = IndexPage/Message/DMMessageCell.h; sourceTree = "<group>"; };
+		3EC62BA61C0C2D8F00D1F2B9 /* DMMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMMessageCell.m; path = IndexPage/Message/DMMessageCell.m; sourceTree = "<group>"; };
+		3EC62BAA1C0C2E1500D1F2B9 /* DMMessageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMMessageItem.h; path = IndexPage/Message/DMMessageItem.h; sourceTree = "<group>"; };
+		3EC62BAB1C0C2E1500D1F2B9 /* DMMessageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMMessageItem.m; path = IndexPage/Message/DMMessageItem.m; sourceTree = "<group>"; };
+		3EC62BB11C0C409900D1F2B9 /* DMNewcomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMNewcomerViewController.h; path = IndexPage/HotMenu/DMNewcomerViewController.h; sourceTree = "<group>"; };
+		3EC62BB21C0C409900D1F2B9 /* DMNewcomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMNewcomerViewController.m; path = IndexPage/HotMenu/DMNewcomerViewController.m; sourceTree = "<group>"; };
+		3EC62BB41C0C411700D1F2B9 /* DMYangmaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMYangmaoViewController.h; path = IndexPage/HotMenu/DMYangmaoViewController.h; sourceTree = "<group>"; };
+		3EC62BB51C0C411700D1F2B9 /* DMYangmaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMYangmaoViewController.m; path = IndexPage/HotMenu/DMYangmaoViewController.m; sourceTree = "<group>"; };
+		3EC62BB71C0C444600D1F2B9 /* DMP2PViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMP2PViewController.h; path = IndexPage/HotMenu/DMP2PViewController.h; sourceTree = "<group>"; };
+		3EC62BB81C0C444600D1F2B9 /* DMP2PViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMP2PViewController.m; path = IndexPage/HotMenu/DMP2PViewController.m; sourceTree = "<group>"; };
+		3EC62BBE1C0C498300D1F2B9 /* DMHotListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMHotListViewController.h; path = IndexPage/HotMenu/DMHotListViewController.h; sourceTree = "<group>"; };
+		3EC62BBF1C0C498300D1F2B9 /* DMHotListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMHotListViewController.m; path = IndexPage/HotMenu/DMHotListViewController.m; sourceTree = "<group>"; };
 		3EDDC4DD1C07069D008AAF91 /* DMFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedBackViewController.h; sourceTree = "<group>"; };
 		3EDDC4DE1C07069D008AAF91 /* DMFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFeedBackViewController.m; sourceTree = "<group>"; };
 		3EDDC4E51C0707D7008AAF91 /* DMUserCollectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserCollectionListViewController.h; sourceTree = "<group>"; };
@@ -644,6 +689,120 @@
 				3E7A56441C0B2C5F009AFA89 /* JFSwipeView.m */,
 			);
 			path = JFSwipeView;
+			sourceTree = "<group>";
+		};
+		3E832E701C0C4FBC00FE4C58 /* Newcomer */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E711C0C4FED00FE4C58 /* DMNewcomerCell.h */,
+				3E832E721C0C4FED00FE4C58 /* DMNewcomerCell.m */,
+			);
+			name = Newcomer;
+			sourceTree = "<group>";
+		};
+		3E832E741C0C504400FE4C58 /* Newcomer */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E751C0C506E00FE4C58 /* DMNewcomerItem.h */,
+				3E832E761C0C506E00FE4C58 /* DMNewcomerItem.m */,
+			);
+			name = Newcomer;
+			sourceTree = "<group>";
+		};
+		3E832E791C0C514200FE4C58 /* IndexPage */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E8A1C0C526700FE4C58 /* Yangmao */,
+				3E832E7A1C0C514200FE4C58 /* HotList */,
+				3E832E7B1C0C514200FE4C58 /* Message */,
+				3E832E7C1C0C514200FE4C58 /* Newcomer */,
+				3E832E7D1C0C514200FE4C58 /* P2PLib */,
+			);
+			path = IndexPage;
+			sourceTree = "<group>";
+		};
+		3E832E7A1C0C514200FE4C58 /* HotList */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E831C0C522A00FE4C58 /* DMHotListParser.h */,
+				3E832E841C0C522A00FE4C58 /* DMHotListParser.m */,
+			);
+			path = HotList;
+			sourceTree = "<group>";
+		};
+		3E832E7B1C0C514200FE4C58 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E801C0C521100FE4C58 /* DMMessageParser.h */,
+				3E832E811C0C521100FE4C58 /* DMMessageParser.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		3E832E7C1C0C514200FE4C58 /* Newcomer */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E8E1C0C529D00FE4C58 /* DMNewcomerParser.h */,
+				3E832E8F1C0C529D00FE4C58 /* DMNewcomerParser.m */,
+			);
+			path = Newcomer;
+			sourceTree = "<group>";
+		};
+		3E832E7D1C0C514200FE4C58 /* P2PLib */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E861C0C524100FE4C58 /* DMP2PLibParser.h */,
+				3E832E871C0C524100FE4C58 /* DMP2PLibParser.m */,
+			);
+			path = P2PLib;
+			sourceTree = "<group>";
+		};
+		3E832E7E1C0C515100FE4C58 /* HotList */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E941C0C52DF00FE4C58 /* DMHotListItem.h */,
+				3E832E951C0C52DF00FE4C58 /* DMHotListItem.m */,
+			);
+			name = HotList;
+			path = IndexPage/HotList;
+			sourceTree = "<group>";
+		};
+		3E832E7F1C0C515100FE4C58 /* P2PLib */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E971C0C52FB00FE4C58 /* DMP2PLibObject.h */,
+				3E832E981C0C52FB00FE4C58 /* DMP2PLibObject.m */,
+			);
+			name = P2PLib;
+			path = IndexPage/P2PLib;
+			sourceTree = "<group>";
+		};
+		3E832E891C0C525C00FE4C58 /* Yangmao */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E911C0C52CA00FE4C58 /* DMYangmaoItem.h */,
+				3E832E921C0C52CA00FE4C58 /* DMYangmaoItem.m */,
+			);
+			name = Yangmao;
+			path = IndexPage/Yangmao;
+			sourceTree = "<group>";
+		};
+		3E832E8A1C0C526700FE4C58 /* Yangmao */ = {
+			isa = PBXGroup;
+			children = (
+				3E832E8B1C0C528200FE4C58 /* DMYangmaoParser.h */,
+				3E832E8C1C0C528200FE4C58 /* DMYangmaoParser.m */,
+			);
+			path = Yangmao;
+			sourceTree = "<group>";
+		};
+		3E832E9A1C0C552300FE4C58 /* IndexPage */ = {
+			isa = PBXGroup;
+			children = (
+				3E832EB21C0C55B600FE4C58 /* DMIndexPageService.h */,
+				3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */,
+			);
+			path = IndexPage;
 			sourceTree = "<group>";
 		};
 		3EBC02231C0447BE006F1C35 = {
@@ -806,6 +965,7 @@
 		3EBC028A1C0457AB006F1C35 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				3E832E791C0C514200FE4C58 /* IndexPage */,
 				3EBC028B1C0457AB006F1C35 /* DMActivityParser.h */,
 				3EBC028C1C0457AB006F1C35 /* DMActivityParser.m */,
 				3EBC028D1C0457AB006F1C35 /* ExpertsOnline */,
@@ -839,12 +999,7 @@
 		3EBC02971C0457AB006F1C35 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3EBC02981C0457AB006F1C35 /* DMInformationService.h */,
-				3EBC02991C0457AB006F1C35 /* DMInformationService.m */,
-				3EBC029A1C0457AB006F1C35 /* DMRecordsService.h */,
-				3EBC029B1C0457AB006F1C35 /* DMRecordsService.m */,
-				3EBC029C1C0457AB006F1C35 /* DMSplistService.h */,
-				3EBC029D1C0457AB006F1C35 /* DMSplistService.m */,
+				3E832E9A1C0C552300FE4C58 /* IndexPage */,
 				3EBC029E1C0457AB006F1C35 /* UserCenter */,
 			);
 			path = Service;
@@ -1580,8 +1735,11 @@
 		3EBC04F81C046221006F1C35 /* IndexPage */ = {
 			isa = PBXGroup;
 			children = (
+				3EC62BB01C0C405700D1F2B9 /* HotMenu */,
 				3EBC04F91C04623C006F1C35 /* DMIndexPageViewController.h */,
 				3EBC04FA1C04623C006F1C35 /* DMIndexPageViewController.m */,
+				3EC62B9D1C0BF6D100D1F2B9 /* DMMessageListViewController.h */,
+				3EC62B9E1C0BF6D100D1F2B9 /* DMMessageListViewController.m */,
 			);
 			name = IndexPage;
 			sourceTree = "<group>";
@@ -1589,6 +1747,8 @@
 		3EBC04FC1C055AA7006F1C35 /* IndexPage */ = {
 			isa = PBXGroup;
 			children = (
+				3E832E701C0C4FBC00FE4C58 /* Newcomer */,
+				3EC62BA41C0C2D6700D1F2B9 /* Message */,
 				3E7A564A1C0B2F45009AFA89 /* DMFindPageView.h */,
 				3E7A564B1C0B2F45009AFA89 /* DMFindPageView.m */,
 				3EDDC4EB1C070CCE008AAF91 /* DMProjectListCell.h */,
@@ -1613,6 +1773,39 @@
 				3EBC05031C056283006F1C35 /* DMManagementItem.m */,
 			);
 			name = Management;
+			sourceTree = "<group>";
+		};
+		3EC62BA41C0C2D6700D1F2B9 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3EC62BA51C0C2D8F00D1F2B9 /* DMMessageCell.h */,
+				3EC62BA61C0C2D8F00D1F2B9 /* DMMessageCell.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		3EC62BA91C0C2DEE00D1F2B9 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				3EC62BAA1C0C2E1500D1F2B9 /* DMMessageItem.h */,
+				3EC62BAB1C0C2E1500D1F2B9 /* DMMessageItem.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		3EC62BB01C0C405700D1F2B9 /* HotMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3EC62BB11C0C409900D1F2B9 /* DMNewcomerViewController.h */,
+				3EC62BB21C0C409900D1F2B9 /* DMNewcomerViewController.m */,
+				3EC62BB41C0C411700D1F2B9 /* DMYangmaoViewController.h */,
+				3EC62BB51C0C411700D1F2B9 /* DMYangmaoViewController.m */,
+				3EC62BB71C0C444600D1F2B9 /* DMP2PViewController.h */,
+				3EC62BB81C0C444600D1F2B9 /* DMP2PViewController.m */,
+				3EC62BBE1C0C498300D1F2B9 /* DMHotListViewController.h */,
+				3EC62BBF1C0C498300D1F2B9 /* DMHotListViewController.m */,
+			);
+			name = HotMenu;
 			sourceTree = "<group>";
 		};
 		3EDDC4DB1C07063F008AAF91 /* Login */ = {
@@ -1651,6 +1844,11 @@
 		3EDDC4EE1C070D49008AAF91 /* IndexPage */ = {
 			isa = PBXGroup;
 			children = (
+				3E832E891C0C525C00FE4C58 /* Yangmao */,
+				3E832E7E1C0C515100FE4C58 /* HotList */,
+				3E832E7F1C0C515100FE4C58 /* P2PLib */,
+				3E832E741C0C504400FE4C58 /* Newcomer */,
+				3EC62BA91C0C2DEE00D1F2B9 /* Message */,
 				3E7A564D1C0B3A7B009AFA89 /* DMDiscoveryCategory.h */,
 				3E7A564E1C0B3A7B009AFA89 /* DMDiscoveryCategory.m */,
 				3E7A564F1C0B3A7B009AFA89 /* DMDiscoveryDateDetail.h */,
@@ -1782,7 +1980,6 @@
 				3EDDC4ED1C070CCE008AAF91 /* DMProjectListCell.m in Sources */,
 				3EBC04BE1C0457AC006F1C35 /* AMBlurView.m in Sources */,
 				3EBC04D91C0457AC006F1C35 /* DMChatMineCell.m in Sources */,
-				3EBC04351C0457AB006F1C35 /* DMRecordsService.m in Sources */,
 				3EBC04BF1C0457AC006F1C35 /* DMAlertView.m in Sources */,
 				3EBC04D41C0457AC006F1C35 /* UIView+Common.m in Sources */,
 				3EBC044B1C0457AB006F1C35 /* NSStringAdditions.m in Sources */,
@@ -1794,8 +1991,9 @@
 				3EBC046F1C0457AB006F1C35 /* SDWebImageDownloaderOperation.m in Sources */,
 				3EBC04411C0457AB006F1C35 /* NSData+LLDBQuickLook.m in Sources */,
 				3EBC041C1C0457AB006F1C35 /* DMObject.m in Sources */,
+				3EC62BAC1C0C2E1500D1F2B9 /* DMMessageItem.m in Sources */,
+				3EC62BB91C0C444600D1F2B9 /* DMP2PViewController.m in Sources */,
 				3EBC04B61C0457AC006F1C35 /* DMRegistCompleteViewController.m in Sources */,
-				3EBC04341C0457AB006F1C35 /* DMInformationService.m in Sources */,
 				3EDDC4EA1C070973008AAF91 /* DMFeedBackService.m in Sources */,
 				3EBC04C11C0457AC006F1C35 /* DMBottomGeneralButtonView.m in Sources */,
 				3EBC04CB1C0457AC006F1C35 /* DMRoundLabel.m in Sources */,
@@ -1822,6 +2020,7 @@
 				3EBC042B1C0457AB006F1C35 /* DMActivity.m in Sources */,
 				3EBC04561C0457AB006F1C35 /* UIView+Extension.m in Sources */,
 				3EBC04741C0457AB006F1C35 /* UIImage+MultiFormat.m in Sources */,
+				3E832E931C0C52CA00FE4C58 /* DMYangmaoItem.m in Sources */,
 				3EBC04551C0457AB006F1C35 /* UIView+DebugQuickLook.m in Sources */,
 				3EBC04F61C0461AD006F1C35 /* DMManagementViewController.m in Sources */,
 				3EBC046C1C0457AB006F1C35 /* SDWebImageCompat.m in Sources */,
@@ -1832,10 +2031,10 @@
 				3EBC042A1C0457AB006F1C35 /* NSObject+Mapping.m in Sources */,
 				3EBC04331C0457AB006F1C35 /* DMUserLoginParser.m in Sources */,
 				3E7A56571C0B3A7B009AFA89 /* DMDiscoveryFilterActivityOrder.m in Sources */,
-				3EBC04361C0457AB006F1C35 /* DMSplistService.m in Sources */,
 				3EBC046E1C0457AB006F1C35 /* SDWebImageDownloader.m in Sources */,
 				3EBC04D21C0457AC006F1C35 /* DMVenue_Annotation.m in Sources */,
 				3EBC04AA1C0457AC006F1C35 /* DMBaseViewController.m in Sources */,
+				3E832EB41C0C55B600FE4C58 /* DMIndexPageService.m in Sources */,
 				3EBC04DB1C0457AC006F1C35 /* DMPicker.m in Sources */,
 				3EBC04521C0457AB006F1C35 /* UIImageAdditions.m in Sources */,
 				3EBC05001C055B87006F1C35 /* DMManagementItemCell.m in Sources */,
@@ -1854,6 +2053,7 @@
 				3EBC04451C0457AB006F1C35 /* UIView+LLDBQuickLook.m in Sources */,
 				3EBC041F1C0457AB006F1C35 /* NSMutableArray+PageInfo.m in Sources */,
 				3EBC04381C0457AB006F1C35 /* DMUserCenterService.m in Sources */,
+				3E832E821C0C521100FE4C58 /* DMMessageParser.m in Sources */,
 				3EBC04591C0457AB006F1C35 /* AFHTTPRequestOperation.m in Sources */,
 				3EBC04DD1C0457AC006F1C35 /* DMChooseCategoryView.m in Sources */,
 				3EBC047B1C0457AB006F1C35 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
@@ -1874,13 +2074,16 @@
 				3EBC043C1C0457AB006F1C35 /* JFDictionaryToStringTransformer.m in Sources */,
 				3EBC041B1C0457AB006F1C35 /* DMObject+JsonParser.m in Sources */,
 				3EBC04D61C0457AC006F1C35 /* DMBirthdayPicker.m in Sources */,
+				3E832E961C0C52DF00FE4C58 /* DMHotListItem.m in Sources */,
 				3EBC04281C0457AB006F1C35 /* NSMutableArray+Mapping.m in Sources */,
 				3EBC045D1C0457AB006F1C35 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3EBC04371C0457AB006F1C35 /* DMLoginService.m in Sources */,
 				3EBC045C1C0457AB006F1C35 /* AFJSONRequestOperation.m in Sources */,
 				3E7A56581C0B3A7B009AFA89 /* DMDiscoveryFilterTime.m in Sources */,
 				3EBC04AB1C0457AC006F1C35 /* DMTabBarViewController.m in Sources */,
+				3EC62BC01C0C498300D1F2B9 /* DMHotListViewController.m in Sources */,
 				3EBC04C91C0457AC006F1C35 /* DMNewbieGuideView.m in Sources */,
+				3EC62BA71C0C2D8F00D1F2B9 /* DMMessageCell.m in Sources */,
 				3EBC04691C0457AB006F1C35 /* MKAnnotationView+WebCache.m in Sources */,
 				3EBC04C31C0457AC006F1C35 /* DMCellNumberView.m in Sources */,
 				3EBC04701C0457AB006F1C35 /* SDWebImageManager.m in Sources */,
@@ -1894,6 +2097,7 @@
 				3EBC041A1C0457AB006F1C35 /* DMDataService.m in Sources */,
 				3EBC046D1C0457AB006F1C35 /* SDWebImageDecoder.m in Sources */,
 				3EBC04DC1C0457AC006F1C35 /* DMCategoryItemView.m in Sources */,
+				3EC62BB31C0C409900D1F2B9 /* DMNewcomerViewController.m in Sources */,
 				3EBC04DF1C0457AC006F1C35 /* DMExpertsOnlineConsultCell.m in Sources */,
 				3EDDC4F11C070D75008AAF91 /* DMProjectListItem.m in Sources */,
 				3E7A564C1C0B2F45009AFA89 /* DMFindPageView.m in Sources */,
@@ -1901,13 +2105,16 @@
 				3EBC04731C0457AB006F1C35 /* UIImage+GIF.m in Sources */,
 				3EBC04781C0457AB006F1C35 /* UIView+WebCacheOperation.m in Sources */,
 				3E7A56561C0B3A7B009AFA89 /* DMDiscoveryDateDetail.m in Sources */,
+				3E832E851C0C522A00FE4C58 /* DMHotListParser.m in Sources */,
 				3EBC04471C0457AB006F1C35 /* NSDataHelper.m in Sources */,
 				3EBC046A1C0457AB006F1C35 /* NSData+ImageContentType.m in Sources */,
 				3EBC04D71C0457AC006F1C35 /* DMChatDateTransformer.m in Sources */,
 				3EBC04D81C0457AC006F1C35 /* DMChatEnterView.m in Sources */,
 				3EDDC4E71C0707D7008AAF91 /* DMUserCollectionListViewController.m in Sources */,
 				3EBC04CF1C0457AC006F1C35 /* DMTableViewCell.m in Sources */,
+				3E832E991C0C52FB00FE4C58 /* DMP2PLibObject.m in Sources */,
 				3E7A56461C0B2C5F009AFA89 /* JFSwipeItemView.m in Sources */,
+				3E832E771C0C506E00FE4C58 /* DMNewcomerItem.m in Sources */,
 				3EBC04BA1C0457AC006F1C35 /* DMUserCenterViewController.m in Sources */,
 				3EBC04E21C0457AC006F1C35 /* DMMyMoneyCell.m in Sources */,
 				3EBC04271C0457AB006F1C35 /* MappingRuntimeHelper.m in Sources */,
@@ -1915,9 +2122,14 @@
 				3EBC045F1C0457AB006F1C35 /* AFURLConnectionOperation.m in Sources */,
 				3E7A56551C0B3A7B009AFA89 /* DMDiscoveryCategory.m in Sources */,
 				3EBC044D1C0457AB006F1C35 /* UIButton+Additions.m in Sources */,
+				3E832E8D1C0C528200FE4C58 /* DMYangmaoParser.m in Sources */,
+				3E832E881C0C524100FE4C58 /* DMP2PLibParser.m in Sources */,
 				3EBC044F1C0457AB006F1C35 /* UIDeviceHelper.m in Sources */,
+				3E832E731C0C4FED00FE4C58 /* DMNewcomerCell.m in Sources */,
 				3EBC04431C0457AB006F1C35 /* NSString+LLDBQuickLook.m in Sources */,
+				3EC62B9F1C0BF6D100D1F2B9 /* DMMessageListViewController.m in Sources */,
 				3EBC04A91C0457AC006F1C35 /* DMBaseViewController+Addition.m in Sources */,
+				3EC62BB61C0C411700D1F2B9 /* DMYangmaoViewController.m in Sources */,
 				3EBC045B1C0457AB006F1C35 /* AFImageRequestOperation.m in Sources */,
 				3EBC045A1C0457AB006F1C35 /* AFHTTPRequestOperationLogger.m in Sources */,
 				3EBC04461C0457AB006F1C35 /* NSArray+Additions.m in Sources */,
@@ -1939,6 +2151,7 @@
 				3EBC04FB1C04623C006F1C35 /* DMIndexPageViewController.m in Sources */,
 				3EBC046B1C0457AB006F1C35 /* SDImageCache.m in Sources */,
 				3EBC04D51C0457AC006F1C35 /* DMActivityCell.m in Sources */,
+				3E832E901C0C529D00FE4C58 /* DMNewcomerParser.m in Sources */,
 				3EBC044A1C0457AB006F1C35 /* NSMutableDictionary+Addition.m in Sources */,
 				3E7A56481C0B2C5F009AFA89 /* JFSwipeUnderneathIndicateView.m in Sources */,
 				3EBC02311C0447BE006F1C35 /* main.m in Sources */,

@@ -14,6 +14,12 @@
 #import "DMDiscoveryFilterTime.h"
 #import "DMProjectListCell.h"
 
+#import "DMMessageListViewController.h"
+#import "DMNewcomerViewController.h"
+#import "DMYangmaoViewController.h"
+#import "DMP2PViewController.h"
+#import "DMHotListViewController.h"
+
 typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     DMIndexSwipeViewTypeHeader,
     DMIndexSwipeViewTypeBody
@@ -38,9 +44,20 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     [self.view addSubview:self.categoryContentView];
     [self.view addSubview:self.categoryHeaderView];
 
-    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(searchAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"消息" style:UIBarButtonItemStylePlain target:self action:@selector(messageAction)];
+
 }
 
+-(void)searchAction {
+
+}
+
+-(void)messageAction {
+    DMMessageListViewController *controller = [[DMMessageListViewController alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 -(void)refreshProjectsData:(BOOL)refresh {
     
@@ -80,13 +97,21 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
             [button buttonClickedcompletion:^(id returnData) {
                 DMButton *button = (DMButton *)returnData;
                 if ([button.titleLabel.text isEqualToString:@"新手入门"]) {
-                    
+                    DMNewcomerViewController *controller = [[DMNewcomerViewController alloc] init];
+                    controller.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:controller animated:YES];
                 } else if ([button.titleLabel.text isEqualToString:@"薅羊毛"]) {
-                
+                    DMYangmaoViewController *controller = [[DMYangmaoViewController alloc] init];
+                    controller.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:controller animated:YES];
                 } else if ([button.titleLabel.text isEqualToString:@"P2P产品库"]) {
-                    
+                    DMP2PViewController *controller = [[DMP2PViewController alloc] init];
+                    controller.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:controller animated:YES];
                 } else if ([button.titleLabel.text isEqualToString:@"排行榜"]) {
-                    
+                    DMHotListViewController *controller = [[DMHotListViewController alloc] init];
+                    controller.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:controller animated:YES];
                 }
             }];
             [_menuView addSubview:button];

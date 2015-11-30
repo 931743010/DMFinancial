@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DMFinancial/Source/Controller/IndexPage/DMIndexPageViewController.m"
-            timestampString = "470502858.145715"
+            timestampString = "470547870.870704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
             landmarkName = "-swipeView:itemViewAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DMFinancial/Source/Controller/IndexPage/DMIndexPageViewController.m"
-            timestampString = "470502858.145715"
+            timestampString = "470547870.870704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "-swipeViewDidChangeCurrentIndex:"
             landmarkType = "5">
          </BreakpointContent>

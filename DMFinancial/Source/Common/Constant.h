@@ -34,17 +34,12 @@
 #endif
 
 
-#define kRegister                       @"register.php"             //(用户注册)
-#define kLogin                          @"login.php"                //用户登录
-#define kInformation                    @"information.php"          //完善资料
-#define kUser                           @"user.php"                 //个人中心
-#define kUserscore                      @"userscore.php"            //个人中心-我的镖银
-#define kUserlike                       @"userlike.php"             //个人中心-我的关注
-#define kUserwork                       @"userwork.php"             //个人中心-我的工作经历
-#define kUseredu                        @"useredu.php"              //个人中心-我的教育经历
-#define kSplist                         @"splist.php"               //专家在线
-#define kRecords                        @"records.php"              //咨询操作
-#define kInformation1                   @"activity.php"             //咨询活动
+#define kMessage                      @"register.php"             //消息列表
+#define kIndexPageList                      @"register.php"             //首页列表
+#define kHotList                      @"register.php"             //排行榜
+#define kNewcomer                      @"register.php"             //新手入门
+#define kYangmao                     @"register.php"             //薅羊毛
+#define kP2PLib                      @"register.php"             //P2P产品库
 
 
 
