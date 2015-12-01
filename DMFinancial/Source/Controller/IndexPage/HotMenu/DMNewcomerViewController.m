@@ -27,13 +27,18 @@
     [self createSubViews];
 }
 
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    _collectionView.frame = self.view.bounds;
+}
+
 -(void)createSubViews {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     //    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.minimumInteritemSpacing = itemSpacing;
     layout.minimumLineSpacing = itemSpacing;
-    CGFloat itemWidth = (kScreenWidth - itemSpacing*3)/2;
-    layout.itemSize = CGSizeMake(itemWidth, itemWidth);
+    CGFloat itemWidth = kScreenWidth - itemSpacing*2;
+    layout.itemSize = CGSizeMake(itemWidth, 300);
     layout.sectionInset = UIEdgeInsetsMake(itemSpacing, itemSpacing, itemSpacing, itemSpacing);
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor clearColor];
@@ -56,7 +61,6 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DMNewcomerCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
     cell.item = [self.arrayList objectAt:indexPath.row];
     return cell;
 }
@@ -68,13 +72,10 @@
     if (!_arrayList) {
         _arrayList = [[NSMutableArray alloc] init];
         for (NSUInteger i = 0; i < 10; i++) {
-            DMManagementItem *item = [[DMManagementItem alloc] init];
-            item.name = [NSString stringWithFormat:@"资产%@",@(i)];
-            item.number = @"10000";
-            item.yield = @"4%";
-            item.dayGains = @"0.04";
+            DMNewcomerItem *item = [[DMNewcomerItem alloc] init];
+            item.itemId = [NSString stringWithFormat:@"%@",@(i)];
             item.url = @"http://img0.imgtn.bdimg.com/it/u=1070902365,2619384777&fm=21&gp=0.jpg";
-            item.hasNew = YES;
+            item.imageUrl = @"http://ww4.sinaimg.cn/bmiddle/537719cagw1eyk7c6r4lmj215o0ry4qp.jpg";
             [_arrayList addObject:item];
         }
     }

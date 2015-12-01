@@ -7,7 +7,9 @@
 //
 
 #import "DMTableViewCell.h"
+#import "DMNewcomerItem.h"
 
 @interface DMNewcomerCell : UICollectionViewCell
 
+@property (nonatomic, strong) DMNewcomerItem *item;
 @end

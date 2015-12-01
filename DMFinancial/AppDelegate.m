@@ -52,11 +52,14 @@
     self.tabBarController.delegate = self;
     self.tabBarController.tabBar.translucent = NO;
     NSDictionary *navbarTitleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                               [UIColor colorWithHexString:@"3e3030"],NSForegroundColorAttributeName,
+                                               [UIColor whiteColor],NSForegroundColorAttributeName,
                                                FONT(17), NSFontAttributeName, nil];
-    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithSize:CGSizeMake(kScreenWidth, 64)
+                                                                      color:kDMPinkColor]
+                                       forBarMetrics:UIBarMetricsDefault];
+
     [[UINavigationBar appearance] setTitleTextAttributes:navbarTitleTextAttributes];
-    [[UINavigationBar appearance] setTintColor:kDMDefaultBlackStringColor];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kDMDefaultGrayStringColor}
                                              forState:UIControlStateNormal];

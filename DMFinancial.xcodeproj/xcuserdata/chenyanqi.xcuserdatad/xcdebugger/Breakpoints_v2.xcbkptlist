@@ -10,11 +10,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DMFinancial/Source/Controller/IndexPage/DMIndexPageViewController.m"
-            timestampString = "470547870.870704"
+            timestampString = "470669757.543489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
+            landmarkName = "-swipeView:endDisplayView:atIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DMFinancial/Source/Controller/IndexPage/DMIndexPageViewController.m"
+            timestampString = "470669828.625354"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
             landmarkName = "-swipeView:itemViewAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,12 +42,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DMFinancial/Source/Controller/IndexPage/DMIndexPageViewController.m"
-            timestampString = "470547870.870704"
+            timestampString = "470669880.581653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "-swipeViewDidChangeCurrentIndex:"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
+            landmarkName = "-swipeView:itemViewAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DMFinancial/Source/Controller/IndexPage/DMIndexPageViewController.m"
+            timestampString = "470669962.121191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "-pageView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DMFinancial/Source/Controller/IndexPage/DMIndexPageViewController.m"
+            timestampString = "470670320.342174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "-swipeView:widthForItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

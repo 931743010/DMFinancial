@@ -17,7 +17,7 @@
                        fail:(void(^)(NSError *error))fail
 {
     DMRequest *request = [DMRequest new];
-    [request requestPostWithUrl:kLogin
+    [request requestPostWithUrl:kP2PLib
                           image:nil
                  parameters:params
                      parser:[DMUserLoginParser new]
@@ -34,7 +34,7 @@
                        fail:(void(^)(NSError *error))fail
 {
     DMRequest *request = [DMRequest new];
-    [request requestPostWithUrl:kRegister
+    [request requestPostWithUrl:kP2PLib
                           image:nil
                      parameters:params
                          parser:nil

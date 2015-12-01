@@ -8,14 +8,26 @@
 
 #import "DMNewcomerCell.h"
 
-@implementation DMNewcomerCell
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+@implementation DMNewcomerCell {
+    UIImageView *_imageView;//背景图片
 }
-*/
+
+-(instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self createSubViews];
+    }
+    return self;
+}
+
+-(void)createSubViews {
+    _imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    _imageView.backgroundColor = [UIColor grayColor];
+    [self addSubview:_imageView];
+}
+
+-(void)setItem:(DMNewcomerItem *)item {
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:item.imageUrl] placeholderImage:nil];
+}
 
 @end

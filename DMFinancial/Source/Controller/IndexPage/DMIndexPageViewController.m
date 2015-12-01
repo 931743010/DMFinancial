@@ -13,6 +13,8 @@
 #import "DMDiscoveryFilterActivityOrder.h"
 #import "DMDiscoveryFilterTime.h"
 #import "DMProjectListCell.h"
+#import "DMBannerCell.h"
+#import "DMIndexPageMenuCell.h"
 
 #import "DMMessageListViewController.h"
 #import "DMNewcomerViewController.h"
@@ -24,14 +26,13 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     DMIndexSwipeViewTypeHeader,
     DMIndexSwipeViewTypeBody
 };
-@interface DMIndexPageViewController ()<JFSwipeViewDataSource, JFSwipeViewSwipeDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface DMIndexPageViewController ()<JFSwipeViewDataSource, JFSwipeViewSwipeDelegate, UITableViewDataSource, UITableViewDelegate, DMBannerCellDelegate, DMIndexPageMenuCellDelegate>
 
 @property (strong, nonatomic) JFSwipeView *categoryHeaderView;
 
 @property (strong, nonatomic) JFSwipeView *categoryContentView;
 @property (nonatomic, strong) NSMutableArray *categories;
 @property (nonatomic, strong) NSMutableArray *listArray;
-@property (nonatomic, strong) UIView  *menuView;
 
 @end
 
@@ -40,6 +41,7 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"值得买";
+    _listArray = [[NSMutableArray alloc] init];
 
     [self.view addSubview:self.categoryContentView];
     [self.view addSubview:self.categoryHeaderView];
@@ -79,58 +81,22 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     return infos;
 }
 
-#pragma mark ------getter add setter---------
--(UIView *)menuView{
-    if (!_menuView) {
-        _menuView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
-        NSArray *title = [[NSArray alloc] initWithObjects:@"新手入门", @"薅羊毛", @"P2P产品库", @"排行榜", nil];
-        CGFloat left = 10;
-        CGFloat top = 10;
-        CGFloat width = (kScreenWidth - left*5)/4;
-
-        for (NSUInteger i = 0; i < title.count; i++) {
-            DMButton *button = [[DMButton alloc] initWithFrame:CGRectMake(left, top, width, width)];
-            [button setTitle:[title objectAt:i] forState:UIControlStateNormal];
-            button.layer.borderWidth = 0.5;
-            button.layer.borderColor = [UIColor grayColor].CGColor;
-            [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-            [button buttonClickedcompletion:^(id returnData) {
-                DMButton *button = (DMButton *)returnData;
-                if ([button.titleLabel.text isEqualToString:@"新手入门"]) {
-                    DMNewcomerViewController *controller = [[DMNewcomerViewController alloc] init];
-                    controller.hidesBottomBarWhenPushed = YES;
-                    [self.navigationController pushViewController:controller animated:YES];
-                } else if ([button.titleLabel.text isEqualToString:@"薅羊毛"]) {
-                    DMYangmaoViewController *controller = [[DMYangmaoViewController alloc] init];
-                    controller.hidesBottomBarWhenPushed = YES;
-                    [self.navigationController pushViewController:controller animated:YES];
-                } else if ([button.titleLabel.text isEqualToString:@"P2P产品库"]) {
-                    DMP2PViewController *controller = [[DMP2PViewController alloc] init];
-                    controller.hidesBottomBarWhenPushed = YES;
-                    [self.navigationController pushViewController:controller animated:YES];
-                } else if ([button.titleLabel.text isEqualToString:@"排行榜"]) {
-                    DMHotListViewController *controller = [[DMHotListViewController alloc] init];
-                    controller.hidesBottomBarWhenPushed = YES;
-                    [self.navigationController pushViewController:controller animated:YES];
-                }
-            }];
-            [_menuView addSubview:button];
-            left += width + 10;
-        }
-    }
+-(void)getListData {
+    [_listArray removeAllObjects];
+    NSArray *title = [[NSArray alloc] initWithObjects:@"热门", @"P2P", @"宝宝", @"基金", @"银行理财", @"保险", nil];
     
-    return _menuView;
+    for (NSString *string in title) {
+        DMProjectListItem *category = [[DMProjectListItem alloc] init];
+        category.name = string;
+        [_listArray addObject:category];
+    }
+
 }
+#pragma mark ------getter add setter---------
+
 -(NSMutableArray *)listArray {
     if (!_listArray) {
         _listArray = [[NSMutableArray alloc] init];
-        NSArray *title = [[NSArray alloc] initWithObjects:@"热门", @"P2P", @"宝宝", @"基金", @"银行理财", @"保险", nil];
-        
-        for (NSString *string in title) {
-            DMProjectListItem *category = [[DMProjectListItem alloc] init];
-            category.name = string;
-            [_listArray addObject:category];
-        }
         
     }
     return _listArray;
@@ -174,9 +140,11 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
         _categoryContentView.dataSource = self;
         _categoryContentView.pagingEnabled = YES;
         _categoryContentView.swipeDelegate = self;
+        _categoryContentView.dataSource = self;
         _categoryContentView.tapGestureRecognizer.enabled = NO;
         _categoryContentView.backgroundColor = kTableViewBgColor;
-        
+//        _categoryHeaderView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+
         [_categoryContentView registerClass:[DMFindPageView class] widthViewReuseIdentifier:@"pageView"];
         [_categoryContentView registerClass:[UICollectionView class] widthViewReuseIdentifier:@"collectionView"];
     }
@@ -185,14 +153,16 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 
 - (DMFindPageView *)pageView
 {
-    DMFindPageView *pageView = [[DMFindPageView alloc] initWithFrame:self.categoryContentView.bounds];
+    DMFindPageView *pageView = [[DMFindPageView alloc] initWithFrame:CGRectMake(0, 0, _categoryContentView.width, _categoryContentView.height)];
     pageView.backgroundColor = kTableViewBgColor;
     pageView.tableView.backgroundColor = kTableViewBgColor;
-    [pageView.tableView registerClass:[DMProjectListCell class]
-               forCellReuseIdentifier:@"DMProjectListCell"];
+    [pageView.tableView registerClass:[DMProjectListCell class] forCellReuseIdentifier:@"DMProjectListCell"];
+    [pageView.tableView registerClass:[DMBannerCell class] forCellReuseIdentifier:@"DMBannerCell"];
+    [pageView.tableView registerClass:[DMIndexPageMenuCell class] forCellReuseIdentifier:@"DMIndexPageMenuCell"];
+
     pageView.tableView.delegate = self;
     pageView.tableView.dataSource = self;
-//    pageView.tableView.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
+    pageView.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     //    pageView.tableView.scrollIndicatorInsets = UIEdgeInsetsMake([self topInset], 0, 0, 0);
 //    pageView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
@@ -210,16 +180,47 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     return pageView;
 }
 
-#pragma mark - ScrollView Delegate
+#pragma mark ------DMIndexPageMenuCellDelegate----------
 
-#pragma mark - SwipeView Delegate
+-(void)menuAction:(DMIndexPageMenuType)type {
+    if (type == DMIndexPageMenuTypeNewcomer) {
+        DMNewcomerViewController *controller = [[DMNewcomerViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if (type == DMIndexPageMenuTypeYangmao) {
+        DMYangmaoViewController *controller = [[DMYangmaoViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if (type == DMIndexPageMenuTypeP2P) {
+        DMP2PViewController *controller = [[DMP2PViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if (type == DMIndexPageMenuTypeHotList) {
+        DMHotListViewController *controller = [[DMHotListViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+}
+
+#pragma mark - DMBannerCellDelegate
+- (void)selectedType:(NSString *)type param:(NSDictionary *)param {
+
+}
+
+
+- (NSInteger)numberOfItemViewsInSwipeView:(JFSwipeView *)swipeView
+{
+    return [self.categories count];
+}
+
+#pragma mark - JFSwipeViewDelegate
 
 - (CGFloat)swipeView:(JFSwipeView *)swipeView widthForItemAtIndex:(NSInteger)index
 {
     if (swipeView.tag == DMIndexSwipeViewTypeHeader) {
         static UIFont *font;
         if (!font) {
-            font = BOLDFONT(16);
+            font = FONT(14);
         }
         DMDiscoveryCategory *category = [self.categories objectAt:index];
         NSString *content = category.categoryName;
@@ -228,65 +229,76 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
         return ceil(size.width) + AUTOSIZE(11.5*2);
         
     }else{
-        CGFloat width = CGRectGetWidth(self.view.frame);
-        return width;
+        return CGRectGetWidth(swipeView.bounds);
     }
+
 }
 
-- (void)swipeViewDidScroll:(JFSwipeView *)swipeView
+- (CGFloat)swipeView:(JFSwipeView *)swipeView widthForIndicatorAtIndex:(NSInteger)index
 {
-    //    if (swipeView.tag == DMFindCategoryViewTypeContent) {
-    //        // [self changeViewWithOffsetX:swipeView.contentOffset.x];
-    //    }
+    return 0;
 }
 
 - (void)swipeViewDidChangeCurrentIndex:(NSInteger)currentIndex
 {
-    //    [self setScrollToTopFalse:self.view];
     [self.categoryHeaderView scrollToItemAtIndex:currentIndex animated:YES];
-    
-    DMFindPageView *pageView = (DMFindPageView *)[self.categoryContentView currentItemView];
-    pageView.tableView.scrollsToTop = YES;
-    
-    //    [pageView.filterView reloadData];
-    //
-    //    [self refreshIfNeedWithCategory:self.currentCategory
-    //                         filterTime:self.currentFilterTime
-    //                        filterOrder:self.currentFilterOrder
-    //                           pageInfo:[DMPageDataInfo defaultPageDataInfo]];
+
+    //    DMFindPageView *pageView = (DMFindPageView *)[self.categoryContentView currentItemView];
+    //    pageView.tableView.scrollsToTop = YES;
+
+//    if (currentIndex == DMIndexPageTypeCommon) {
+//        [_jingxuanView startTimer];
+//        if (!self.jingxuanView.isLoaded) {
+//            [self.jingxuanView requestCommonData];
+//        }
+//    } else if (currentIndex == DMIndexPageTypeToday) {
+//        if (!self.todayView.isLoaded) {
+//            [self.todayView requestTodayListData];
+//        }
+//    } else if (currentIndex == DMIndexPageTypeStory) {
+//        if (!self.storyView.isLoaded) {
+//            self.storyView.isRefresh = YES;
+//            [self.storyView reloadData];
+//        }
+//    }
 }
+
+- (void)swipeViewDidScroll:(JFSwipeView *)swipeView
+{
+    [self.view endEditing:YES];
+}
+
+
+#pragma mark - SwipeView Delegate
+
 
 #pragma mark - Helper method
 
 - (void)changeViewWithOffsetX:(CGFloat)offsetX
 {
-    CGFloat width = CGRectGetWidth(self.categoryContentView.bounds);
-    CGFloat pageNumber = floorf(offsetX / width);
-    CGFloat already = offsetX - pageNumber * width - 1;
-    CGFloat percent = fabs(already / width);
-    
-    JFSwipeItemView *preItemView = (JFSwipeItemView *)[self.categoryHeaderView itemViewAtIndex:pageNumber];
-    JFSwipeItemView *nextItemView = (JFSwipeItemView *)[self.categoryHeaderView itemViewAtIndex:pageNumber+1];
-    
-    preItemView.progressForWillSelected = 1- percent;
-    nextItemView.progressForWillSelected = percent;
-    
+//    CGFloat width = CGRectGetWidth(self.categoryContentView.bounds);
+//    CGFloat pageNumber = floorf(offsetX / width);
+//    CGFloat already = offsetX - pageNumber * width - 1;
+//    CGFloat percent = fabs(already / width);
+//    
+//    JFSwipeItemView *preItemView = (JFSwipeItemView *)[self.categoryHeaderView itemViewAtIndex:pageNumber];
+//    JFSwipeItemView *nextItemView = (JFSwipeItemView *)[self.categoryHeaderView itemViewAtIndex:pageNumber+1];
+//    
+//    preItemView.progressForWillSelected = 1- percent;
+//    nextItemView.progressForWillSelected = percent;
+//    
     //    float preFontPercent = ((DMFindCategoryHeaderMaxFontSize - DMFindCategoryHeaderMinFontSize) * (1 - percent) + DMFindCategoryHeaderMinFontSize) / DMFindCategoryHeaderMaxFontSize;
     //    float nextFontPercent = ((DMFindCategoryHeaderMaxFontSize - DMFindCategoryHeaderMinFontSize) * percent + DMFindCategoryHeaderMinFontSize) / DMFindCategoryHeaderMaxFontSize;
     //    [preItemView makeScale:preFontPercent];
     //    [nextItemView makeScale:nextFontPercent];
     
-    [self.categoryHeaderView scrollIndicateViewFromIndex:pageNumber
-                                                progress:percent];
+//    [self.categoryHeaderView scrollIndicateViewFromIndex:pageNumber
+//                                                progress:percent];
     
 }
 
 #pragma mark - SwipeView Datasource
 
-- (NSInteger)numberOfItemViewsInSwipeView:(JFSwipeView *)swipeView
-{
-    return [self.categories count];
-}
 
 - (void)swipeView:(JFSwipeView *)swipeView willDisplayView:(UIView *)view atIndex:(NSInteger)index
 {
@@ -318,13 +330,13 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
         if (!item) {
             item = [[JFSwipeItemView alloc] initWithFrame:CGRectMake(0, 0, 60, 34)];
             item.backgroundColor = [UIColor clearColor];
-            //item.titleLabel.textColor = [UIColor redColor];
-            //            item.titleLabel.font = font;
-            item.alphaOfNormalColor = 0.6;
+//            item.titleLabel.textColor = [UIColor redColor];
+//            item.titleLabel.font = font;
+            item.alphaOfNormalColor = 1;
             item.normalColorElements = @[@174, @167, @170];
-            item.selectedColorElements = @[@81, @70, @71];
-            item.normalFont = FONT(16.0);
-            item.selectedFont = FONT(16.0);
+            item.selectedColorElements = @[@219, @73, @58];
+            item.normalFont = FONT(14.0);
+            item.selectedFont = FONT(14.0);
         }
         
         static UIColor *color;
@@ -345,11 +357,6 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
             
             // 生成新的pageview
             pageView = [self pageView];
-        }
-        if (index == 0) {
-            pageView.tableView.tableHeaderView = self.menuView;
-        } else {
-            pageView.tableView.tableHeaderView = nil;
         }
         pageView.index = index;
         
@@ -391,6 +398,12 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
         //        
         
         //        [pageView showFilterView];
+        
+        [self getListData];
+        if (index == 0) {
+            [self.listArray insertObject:@"menu" atIndex:0];
+            [self.listArray insertObject:@"banner" atIndex:0];
+        }
         [pageView.tableView reloadData];
         return pageView;
     }
@@ -404,9 +417,29 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id obj = [self.listArray objectAt:indexPath.row];
+    if ([obj isKindOfClass:[NSString class]]) {
+        NSString *string = (NSString *)obj;
+        if ([string isEqualToString:@"banner"]) {
+            DMBannerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMBannerCell"];
+            cell.delegate = self;
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            for (NSUInteger i = 0; i < 10; i++) {
+                DMBannerModel *model = [[DMBannerModel alloc] init];
+                model.picUrl = @"http://ww1.sinaimg.cn/bmiddle/74f67c55jw1eykcwjnpusj20sg0k0jwe.jpg";
+                [array addObject:model];
+            }
+            [cell reloadBannerWithSubjects:array];
+            return cell;
+        } else if ([string isEqualToString:@"menu"]) {
+            DMIndexPageMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMIndexPageMenuCell"];
+            cell.delegate = self;
+            return cell;
+        }
+    }
     DMProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMProjectListCell"];
     cell.item = [self.listArray objectAt:indexPath.row];
-    cell.backgroundColor = [UIColor redColor];
+    cell.backgroundColor = kDMPinkColor;
     return cell;
 }
 
@@ -415,6 +448,15 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    id obj = [self.listArray objectAt:indexPath.row];
+    if ([obj isKindOfClass:[NSString class]]) {
+        NSString *string = (NSString *)obj;
+        if ([string isEqualToString:@"banner"]) {
+            return 200;
+        } else if ([string isEqualToString:@"menu"]) {
+            return 100;
+        }
+    }
     return 100;
 }
 @end

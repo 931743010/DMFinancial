@@ -63,7 +63,7 @@ typedef NS_ENUM(NSInteger, DMScollType) {
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DMManagementItemCell *cell = [_collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    cell.backgroundColor = kDMPinkColor;
     cell.item = [self.arrayList objectAt:indexPath.row];
     return cell;
 }

@@ -33,4 +33,18 @@ typedef NS_ENUM(NSInteger, DMAssetsType) {
     DMAssetsType10,
 
 };
+
+//精选跳转类型
+typedef enum : NSUInteger{
+    DMSubjectCommon = 0,    //
+    DMSubjectHuodong = 1,   //活动详情
+    DMSubjectZhuban = 2,    //主办
+    DMSubjectMingxing = 3,  //明星
+    DMSubjectChangguan = 4, //场馆
+    DMSubjectZhuantiHtml = 5,   //专题web页面
+    DMSubjectURL = 6,       //需要登陆url
+    DMSubDijia = 7,         //跳转到低价
+    DMSubjectZhuantiList = 9,   //专题 根据专题id获取专题列表
+} DMSubjectType;
+
 #endif

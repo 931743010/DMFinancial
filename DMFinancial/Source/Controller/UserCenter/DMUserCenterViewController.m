@@ -141,13 +141,13 @@
     [params setSafetyObject:@"kxemhhbmduaW5nMTM5OANy9wZzVoL0tBNU4xUUZpZGwzTmtBMlViMEQ3UDBaUGRtU2lUNHhPMnlYVFd5NUJ0NktyRzFZdm1NRzBaejRnNUdkMVo3M00rcG9UQkt1VlhaMmxWblE" forKey:@"token"];
 
     [self showLoadingViewWithText:kLoadingText];
-    [DMUserCenterService getUserInforWithParams:params success:^(id returnData) {
-        [self hideLoadingView];
-        [self userInfoRequestSuccess:returnData];
-    } fail:^(NSError *error) {
-        [self hideLoadingView];
-        [self showErrorViewWithText:[error localizedDescription]];
-    }];
+//    [DMUserCenterService getUserInforWithParams:params success:^(id returnData) {
+//        [self hideLoadingView];
+//        [self userInfoRequestSuccess:returnData];
+//    } fail:^(NSError *error) {
+//        [self hideLoadingView];
+//        [self showErrorViewWithText:[error localizedDescription]];
+//    }];
 
 }
 

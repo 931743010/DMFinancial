@@ -58,14 +58,15 @@
     if (_selected) {
         self.titleLabel.textColor = [self colorWithPercent:1];
 //        [self makeScale:1.0];
-        if (self.selectedFont) {
-            self.titleLabel.font = self.selectedFont;
-        }
+//        if (self.selectedFont) {
+//            self.titleLabel.font = self.selectedFont;
+//        }
     } else {
         self.titleLabel.textColor = [self colorWithPercent:0];
 //        [self makeScale:15.0/17.0];
-        self.titleLabel.font = self.normalFont;
+//        self.titleLabel.font = self.normalFont;
     }
+//    self.titleLabel.font = self.normalFont;
 
 }
 
