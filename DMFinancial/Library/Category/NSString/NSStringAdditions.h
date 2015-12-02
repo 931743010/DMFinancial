@@ -79,7 +79,6 @@
 
 - (NSString *)flattenHTML;
 
-- (CGFloat)widthWithFont:(UIFont *)font;
 
 ////支付密码加密
 //+ (NSString *)encryptPassworToString:(NSString *)password;

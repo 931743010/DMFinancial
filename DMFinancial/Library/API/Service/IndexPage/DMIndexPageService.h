@@ -49,5 +49,12 @@
 + (void)getP2PLibListWithParams:(NSDictionary *)params
                         success:(void(^)(id returnData))success
                            fail:(void(^)(NSError *error))fail;
+/**
+ *  首页列表
+ */
+
++ (void)getProjectLibListWithParams:(NSDictionary *)params
+                        success:(void(^)(id returnData))success
+                           fail:(void(^)(NSError *error))fail;
 
 @end

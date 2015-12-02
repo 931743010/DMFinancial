@@ -22,6 +22,7 @@
 #import "DMP2PViewController.h"
 #import "DMHotListViewController.h"
 
+#import "DMIndexPageService.h"
 typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     DMIndexSwipeViewTypeHeader,
     DMIndexSwipeViewTypeBody
@@ -46,10 +47,11 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     [self.view addSubview:self.categoryContentView];
     [self.view addSubview:self.categoryHeaderView];
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(searchAction)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"index_search_white.png"] style:UIBarButtonItemStylePlain target:self action:@selector(searchAction)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"消息" style:UIBarButtonItemStylePlain target:self action:@selector(messageAction)];
 
 }
+
 
 -(void)searchAction {
 
@@ -62,7 +64,29 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 }
 
 -(void)refreshProjectsData:(BOOL)refresh {
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setSafetyObject:@"" forKey:@"1"];
+    [self showLoadingViewWithText:kLoadingText];
     
+    __block DMIndexPageViewController * weakSelf = self;
+
+    [DMIndexPageService getProjectLibListWithParams:params success:^(id returnData) {
+        [self hideLoadingView];
+        [self dataRequestSuccess:returnData];
+    } fail:^(NSError *error) {
+        [self hideLoadingView];
+        [self showErrorViewWithText:[error localizedDescription]];
+        DMFindPageView *pageView = (DMFindPageView *)[weakSelf.categoryContentView currentItemView];
+        [pageView cancelRequest];
+
+    }];
+
+}
+
+-(void)dataRequestSuccess:(id)returnData {
+    DMFindPageView *pageView = (DMFindPageView *)[self.categoryContentView currentItemView];
+    [pageView cancelRequest];
+
 }
 - (NSDictionary *)createParametersWithCategory:(DMDiscoveryCategory *)category
                                     filterTime:(DMDiscoveryFilterTime *)filterTime
@@ -88,6 +112,8 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     for (NSString *string in title) {
         DMProjectListItem *category = [[DMProjectListItem alloc] init];
         category.name = string;
+        category.yield = @"4%";
+        category.url = @"http://img0.imgtn.bdimg.com/it/u=1070902365,2619384777&fm=21&gp=0.jpg";
         [_listArray addObject:category];
     }
 
@@ -144,6 +170,7 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
         _categoryContentView.tapGestureRecognizer.enabled = NO;
         _categoryContentView.backgroundColor = kTableViewBgColor;
 //        _categoryHeaderView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        _categoryContentView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 
         [_categoryContentView registerClass:[DMFindPageView class] widthViewReuseIdentifier:@"pageView"];
         [_categoryContentView registerClass:[UICollectionView class] widthViewReuseIdentifier:@"collectionView"];
@@ -159,7 +186,7 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     [pageView.tableView registerClass:[DMProjectListCell class] forCellReuseIdentifier:@"DMProjectListCell"];
     [pageView.tableView registerClass:[DMBannerCell class] forCellReuseIdentifier:@"DMBannerCell"];
     [pageView.tableView registerClass:[DMIndexPageMenuCell class] forCellReuseIdentifier:@"DMIndexPageMenuCell"];
-
+    pageView.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     pageView.tableView.delegate = self;
     pageView.tableView.dataSource = self;
     pageView.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
@@ -270,33 +297,6 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 
 
 #pragma mark - SwipeView Delegate
-
-
-#pragma mark - Helper method
-
-- (void)changeViewWithOffsetX:(CGFloat)offsetX
-{
-//    CGFloat width = CGRectGetWidth(self.categoryContentView.bounds);
-//    CGFloat pageNumber = floorf(offsetX / width);
-//    CGFloat already = offsetX - pageNumber * width - 1;
-//    CGFloat percent = fabs(already / width);
-//    
-//    JFSwipeItemView *preItemView = (JFSwipeItemView *)[self.categoryHeaderView itemViewAtIndex:pageNumber];
-//    JFSwipeItemView *nextItemView = (JFSwipeItemView *)[self.categoryHeaderView itemViewAtIndex:pageNumber+1];
-//    
-//    preItemView.progressForWillSelected = 1- percent;
-//    nextItemView.progressForWillSelected = percent;
-//    
-    //    float preFontPercent = ((DMFindCategoryHeaderMaxFontSize - DMFindCategoryHeaderMinFontSize) * (1 - percent) + DMFindCategoryHeaderMinFontSize) / DMFindCategoryHeaderMaxFontSize;
-    //    float nextFontPercent = ((DMFindCategoryHeaderMaxFontSize - DMFindCategoryHeaderMinFontSize) * percent + DMFindCategoryHeaderMinFontSize) / DMFindCategoryHeaderMaxFontSize;
-    //    [preItemView makeScale:preFontPercent];
-    //    [nextItemView makeScale:nextFontPercent];
-    
-//    [self.categoryHeaderView scrollIndicateViewFromIndex:pageNumber
-//                                                progress:percent];
-    
-}
-
 #pragma mark - SwipeView Datasource
 
 
@@ -439,7 +439,6 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     }
     DMProjectListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMProjectListCell"];
     cell.item = [self.listArray objectAt:indexPath.row];
-    cell.backgroundColor = kDMPinkColor;
     return cell;
 }
 

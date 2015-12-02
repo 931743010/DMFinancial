@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>5F4204F7-28AF-48A0-9C21-43810188F6E8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>DMFinancial</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>EB7F34DC64A407847B1553031BB7C4B8907E05F4</key>
 		<string>https://github.com/chenyanqi987/DMFinancial.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DMFinancial.xcodeproj</string>
+	<string>DMFinancial.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>EB7F34DC64A407847B1553031BB7C4B8907E05F4</key>

@@ -63,7 +63,7 @@
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kDMDefaultGrayStringColor}
                                              forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kDMDefaultBlackStringColor}
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : kDMPinkColor}
                                              forState:UIControlStateSelected];
     
     DMIndexPageViewController *indexPageController = [[DMIndexPageViewController alloc] init];

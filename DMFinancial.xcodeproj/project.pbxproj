@@ -16,6 +16,11 @@
 		3E13BDAB1C0DCCF20075E439 /* nearby@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDA31C0DCCF20075E439 /* nearby@3x.png */; };
 		3E13BDAC1C0DCCF20075E439 /* num@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDA41C0DCCF20075E439 /* num@2x.png */; };
 		3E13BDAD1C0DCCF20075E439 /* num@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDA51C0DCCF20075E439 /* num@3x.png */; };
+		3E13BDB01C0DDE3D0075E439 /* icon_pagecontrol_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDAE1C0DDE3D0075E439 /* icon_pagecontrol_normal@2x.png */; };
+		3E13BDB11C0DDE3D0075E439 /* icon_pagecontrol_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDAF1C0DDE3D0075E439 /* icon_pagecontrol_selected@2x.png */; };
+		3E13BDB81C0DDED50075E439 /* index_search_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDB41C0DDED50075E439 /* index_search_white@2x.png */; };
+		3E13BDB91C0DDED50075E439 /* index_search_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDB51C0DDED50075E439 /* index_search_white@3x.png */; };
+		3E13BDBB1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDBA1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png */; };
 		3E5D5E191C0D9BE900BA508D /* DMBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D5E181C0D9BE900BA508D /* DMBannerCell.m */; };
 		3E5D5E1C1C0D9C4C00BA508D /* DMSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D5E1B1C0D9C4C00BA508D /* DMSubject.m */; };
 		3E5D5E201C0D9C7400BA508D /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D5E1F1C0D9C7400BA508D /* SwipeView.m */; };
@@ -42,6 +47,9 @@
 		3E832E961C0C52DF00FE4C58 /* DMHotListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E951C0C52DF00FE4C58 /* DMHotListItem.m */; };
 		3E832E991C0C52FB00FE4C58 /* DMP2PLibObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832E981C0C52FB00FE4C58 /* DMP2PLibObject.m */; };
 		3E832EB41C0C55B600FE4C58 /* DMIndexPageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */; };
+		3E8CE4A41C0EE90D00471B37 /* DMBookkeepingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */; };
+		3E8CE4A81C0EEA1900471B37 /* DMBookkeepingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */; };
+		3E8CE4AB1C0EF22A00471B37 /* DMEditNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4AA1C0EF22A00471B37 /* DMEditNumberViewController.m */; };
 		3EBC02311C0447BE006F1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02301C0447BE006F1C35 /* main.m */; };
 		3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02331C0447BE006F1C35 /* AppDelegate.m */; };
 		3EBC023D1C0447BE006F1C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC023B1C0447BE006F1C35 /* Main.storyboard */; };
@@ -225,6 +233,11 @@
 		3E13BDA31C0DCCF20075E439 /* nearby@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nearby@3x.png"; sourceTree = "<group>"; };
 		3E13BDA41C0DCCF20075E439 /* num@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "num@2x.png"; sourceTree = "<group>"; };
 		3E13BDA51C0DCCF20075E439 /* num@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "num@3x.png"; sourceTree = "<group>"; };
+		3E13BDAE1C0DDE3D0075E439 /* icon_pagecontrol_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_pagecontrol_normal@2x.png"; sourceTree = "<group>"; };
+		3E13BDAF1C0DDE3D0075E439 /* icon_pagecontrol_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_pagecontrol_selected@2x.png"; sourceTree = "<group>"; };
+		3E13BDB41C0DDED50075E439 /* index_search_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_search_white@2x.png"; sourceTree = "<group>"; };
+		3E13BDB51C0DDED50075E439 /* index_search_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_search_white@3x.png"; sourceTree = "<group>"; };
+		3E13BDBA1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_refresh_arrow_down@2x.png"; sourceTree = "<group>"; };
 		3E5D5E171C0D9BE900BA508D /* DMBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBannerCell.h; sourceTree = "<group>"; };
 		3E5D5E181C0D9BE900BA508D /* DMBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBannerCell.m; sourceTree = "<group>"; };
 		3E5D5E1A1C0D9C4C00BA508D /* DMSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSubject.h; sourceTree = "<group>"; };
@@ -277,6 +290,12 @@
 		3E832E981C0C52FB00FE4C58 /* DMP2PLibObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMP2PLibObject.m; sourceTree = "<group>"; };
 		3E832EB21C0C55B600FE4C58 /* DMIndexPageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMIndexPageService.h; sourceTree = "<group>"; };
 		3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMIndexPageService.m; sourceTree = "<group>"; };
+		3E8CE4A21C0EE90D00471B37 /* DMBookkeepingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMBookkeepingViewController.h; path = Management/Bookkeeping/DMBookkeepingViewController.h; sourceTree = "<group>"; };
+		3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBookkeepingViewController.m; path = Management/Bookkeeping/DMBookkeepingViewController.m; sourceTree = "<group>"; };
+		3E8CE4A61C0EEA1900471B37 /* DMBookkeepingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMBookkeepingCollectionView.h; path = Management/Bookkeeping/DMBookkeepingCollectionView.h; sourceTree = "<group>"; };
+		3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBookkeepingCollectionView.m; path = Management/Bookkeeping/DMBookkeepingCollectionView.m; sourceTree = "<group>"; };
+		3E8CE4A91C0EF22A00471B37 /* DMEditNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMEditNumberViewController.h; path = Management/Bookkeeping/DMEditNumberViewController.h; sourceTree = "<group>"; };
+		3E8CE4AA1C0EF22A00471B37 /* DMEditNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMEditNumberViewController.m; path = Management/Bookkeeping/DMEditNumberViewController.m; sourceTree = "<group>"; };
 		3EBC022C1C0447BE006F1C35 /* DMFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC02301C0447BE006F1C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EBC02321C0447BE006F1C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -636,6 +655,9 @@
 		3E13BD9A1C0DCCDD0075E439 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3E13BDBA1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png */,
+				3E13BDAE1C0DDE3D0075E439 /* icon_pagecontrol_normal@2x.png */,
+				3E13BDAF1C0DDE3D0075E439 /* icon_pagecontrol_selected@2x.png */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -643,6 +665,8 @@
 		3E13BD9B1C0DCCDD0075E439 /* IndexPage */ = {
 			isa = PBXGroup;
 			children = (
+				3E13BDB41C0DDED50075E439 /* index_search_white@2x.png */,
+				3E13BDB51C0DDED50075E439 /* index_search_white@3x.png */,
 				3E13BD9E1C0DCCF20075E439 /* cal@2x.png */,
 				3E13BD9F1C0DCCF20075E439 /* cal@3x.png */,
 				3E13BDA01C0DCCF20075E439 /* mark@2x.png */,
@@ -816,6 +840,26 @@
 				3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */,
 			);
 			path = IndexPage;
+			sourceTree = "<group>";
+		};
+		3E8CE4A11C0EE8E600471B37 /* Bookkeeping */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CE4A21C0EE90D00471B37 /* DMBookkeepingViewController.h */,
+				3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */,
+				3E8CE4A91C0EF22A00471B37 /* DMEditNumberViewController.h */,
+				3E8CE4AA1C0EF22A00471B37 /* DMEditNumberViewController.m */,
+			);
+			name = Bookkeeping;
+			sourceTree = "<group>";
+		};
+		3E8CE4A51C0EE9BF00471B37 /* Bookkeeping */ = {
+			isa = PBXGroup;
+			children = (
+				3E8CE4A61C0EEA1900471B37 /* DMBookkeepingCollectionView.h */,
+				3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */,
+			);
+			name = Bookkeeping;
 			sourceTree = "<group>";
 		};
 		3EBC02231C0447BE006F1C35 = {
@@ -1705,6 +1749,7 @@
 		3EBC04F71C0461B5006F1C35 /* Management */ = {
 			isa = PBXGroup;
 			children = (
+				3E8CE4A11C0EE8E600471B37 /* Bookkeeping */,
 				3EBC04F41C0461AD006F1C35 /* DMManagementViewController.h */,
 				3EBC04F51C0461AD006F1C35 /* DMManagementViewController.m */,
 			);
@@ -1741,6 +1786,7 @@
 		3EBC04FD1C055ABA006F1C35 /* Management */ = {
 			isa = PBXGroup;
 			children = (
+				3E8CE4A51C0EE9BF00471B37 /* Bookkeeping */,
 				3EBC04FE1C055B87006F1C35 /* DMManagementItemCell.h */,
 				3EBC04FF1C055B87006F1C35 /* DMManagementItemCell.m */,
 			);
@@ -1903,16 +1949,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E13BDA91C0DCCF20075E439 /* mark@3x.png in Resources */,
+				3E13BDB81C0DDED50075E439 /* index_search_white@2x.png in Resources */,
+				3E13BDB01C0DDE3D0075E439 /* icon_pagecontrol_normal@2x.png in Resources */,
 				3EBC02421C0447BE006F1C35 /* LaunchScreen.storyboard in Resources */,
 				3EBC023F1C0447BE006F1C35 /* Assets.xcassets in Resources */,
 				3E13BDAA1C0DCCF20075E439 /* nearby@2x.png in Resources */,
 				3EBC04A71C0457AC006F1C35 /* icons_back_dark@3x.png in Resources */,
 				3E13BDA81C0DCCF20075E439 /* mark@2x.png in Resources */,
+				3E13BDBB1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png in Resources */,
 				3EBC023D1C0447BE006F1C35 /* Main.storyboard in Resources */,
 				3E13BDA71C0DCCF20075E439 /* cal@3x.png in Resources */,
+				3E13BDB91C0DDED50075E439 /* index_search_white@3x.png in Resources */,
 				3E13BDAD1C0DCCF20075E439 /* num@3x.png in Resources */,
 				3E13BDAC1C0DCCF20075E439 /* num@2x.png in Resources */,
 				3E13BDAB1C0DCCF20075E439 /* nearby@3x.png in Resources */,
+				3E13BDB11C0DDE3D0075E439 /* icon_pagecontrol_selected@2x.png in Resources */,
 				3E13BDA61C0DCCF20075E439 /* cal@2x.png in Resources */,
 				3EBC047E1C0457AC006F1C35 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				3EBC04811C0457AC006F1C35 /* read_me.txt in Resources */,
@@ -1974,6 +2025,7 @@
 				3EBC042B1C0457AB006F1C35 /* DMActivity.m in Sources */,
 				3EBC04561C0457AB006F1C35 /* UIView+Extension.m in Sources */,
 				3EBC04741C0457AB006F1C35 /* UIImage+MultiFormat.m in Sources */,
+				3E8CE4A81C0EEA1900471B37 /* DMBookkeepingCollectionView.m in Sources */,
 				3E832E931C0C52CA00FE4C58 /* DMYangmaoItem.m in Sources */,
 				3EBC04551C0457AB006F1C35 /* UIView+DebugQuickLook.m in Sources */,
 				3EBC04F61C0461AD006F1C35 /* DMManagementViewController.m in Sources */,
@@ -2019,6 +2071,7 @@
 				3EBC04261C0457AB006F1C35 /* DMUserLoginInfo.m in Sources */,
 				3EBC04E31C0457AC006F1C35 /* DMUserInfoView.m in Sources */,
 				3EBC04C61C0457AC006F1C35 /* DMDetailProjSeatImgView.m in Sources */,
+				3E8CE4AB1C0EF22A00471B37 /* DMEditNumberViewController.m in Sources */,
 				3EBC04211C0457AB006F1C35 /* DMApiClient.m in Sources */,
 				3EBC04481C0457AB006F1C35 /* NSDate+convenience.m in Sources */,
 				3EBC04581C0457AB006F1C35 /* AFHTTPClient.m in Sources */,
@@ -2096,6 +2149,7 @@
 				3EBC04311C0457AB006F1C35 /* DMSplistParser.m in Sources */,
 				3EBC04541C0457AB006F1C35 /* UILabel+Additions.m in Sources */,
 				3EBC042E1C0457AB006F1C35 /* DMUserInfo.m in Sources */,
+				3E8CE4A41C0EE90D00471B37 /* DMBookkeepingViewController.m in Sources */,
 				3EBC04D11C0457AC006F1C35 /* DMTextField.m in Sources */,
 				3EBC043B1C0457AB006F1C35 /* JFDataCache.m in Sources */,
 				3EBC043E1C0457AB006F1C35 /* CommonHelper.m in Sources */,

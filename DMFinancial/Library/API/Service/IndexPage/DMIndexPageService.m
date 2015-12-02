@@ -17,6 +17,7 @@
 
 @implementation DMIndexPageService
 
+
 /**
  *  消息
  */
@@ -107,6 +108,26 @@
                        fail:^(NSError *error){
                            fail(error);
                        }];
+}
+
+/**
+ *  首页列表
+ */
+
++ (void)getProjectLibListWithParams:(NSDictionary *)params
+                            success:(void(^)(id returnData))success
+                               fail:(void(^)(NSError *error))fail {
+    DMRequest *request = [DMRequest new];
+    [request requestWithUrl:kP2PLib
+                 parameters:params
+                     parser:[DMP2PLibParser new]
+                    success:^(id returnData){
+                        success(returnData);
+                    }
+                       fail:^(NSError *error){
+                           fail(error);
+                       }];
+
 }
 
 @end

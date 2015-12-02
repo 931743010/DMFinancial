@@ -66,6 +66,4 @@ typedef NS_ENUM(NSUInteger, SVPullToRefreshState) {
 // deprecated; use [self.scrollView triggerPullToRefresh] instead
 - (void)triggerRefresh DEPRECATED_ATTRIBUTE;
 
-- (void)updateOriginalTopInset:(CGFloat)top;
-
 @end

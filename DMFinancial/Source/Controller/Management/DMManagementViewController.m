@@ -12,6 +12,8 @@ typedef NS_ENUM(NSInteger, DMScollType) {
 };
 #import "DMManagementViewController.h"
 #import "DMManagementItemCell.h"
+#import "DMBookkeepingViewController.h"
+
 #define itemSpacing 10
 @interface DMManagementViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -25,6 +27,7 @@ typedef NS_ENUM(NSInteger, DMScollType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"管理";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"记一笔" style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonAction)];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
 //    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -50,6 +53,14 @@ typedef NS_ENUM(NSInteger, DMScollType) {
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     _collectionView.frame = self.view.bounds;
+}
+
+#pragma mark -------private--------
+
+-(void)rightButtonAction {
+    DMBookkeepingViewController *controller = [[DMBookkeepingViewController alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark UICollectionViewDelegate

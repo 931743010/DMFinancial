@@ -11,8 +11,8 @@
 #import "UIScrollView+SVInfiniteScrolling.h"
 
 
-//static CGFloat const SVInfiniteScrollingViewHeight = 60;
-static CGFloat const SVInfiniteScrollingViewHeight = 150;
+static CGFloat const SVInfiniteScrollingViewHeight = 60;
+
 @interface SVInfiniteScrollingDotView : UIView
 
 @property (nonatomic, strong) UIColor *arrowColor;
