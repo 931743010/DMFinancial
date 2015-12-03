@@ -28,6 +28,7 @@
     [_textField setValue:kDMDefaultGrayStringColor forKeyPath:@"_placeholderLabel.textColor"];
     _textField.returnKeyType = UIReturnKeyDone;
     _textField.delegate = self;
+    _textField.keyboardType = UIKeyboardTypeNumberPad;
     _textField.font = FONT(12);
     _textField.textColor = kDMDefaultGrayStringColor;
     _textField.textAlignment = NSTextAlignmentRight;

@@ -116,6 +116,8 @@ static float kSeperatorWidth = 0.5;
 static int const kPageSize = 20;
 
 #pragma mark-----------通知---------------------
+
+static NSString * const kAddAssetsNotification = @"AddAssetsNotification";
 /**
  *  常用目录
  */

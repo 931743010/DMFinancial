@@ -21,6 +21,31 @@
 		3E13BDB81C0DDED50075E439 /* index_search_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDB41C0DDED50075E439 /* index_search_white@2x.png */; };
 		3E13BDB91C0DDED50075E439 /* index_search_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDB51C0DDED50075E439 /* index_search_white@3x.png */; };
 		3E13BDBB1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDBA1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png */; };
+		3E527CC61C101C6400C7269C /* DMManageBaobaoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CC51C101C6400C7269C /* DMManageBaobaoListViewController.m */; };
+		3E527CC91C101C8300C7269C /* DMManageBaobaoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CC81C101C8300C7269C /* DMManageBaobaoDetailViewController.m */; };
+		3E527CCC1C101CA400C7269C /* DMManageBaobaoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CCB1C101CA400C7269C /* DMManageBaobaoEditViewController.m */; };
+		3E527CCF1C101D0400C7269C /* DMManageBaoxianListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CCE1C101D0400C7269C /* DMManageBaoxianListViewController.m */; };
+		3E527CD21C101D1B00C7269C /* DMManageBaoxianDeatilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CD11C101D1B00C7269C /* DMManageBaoxianDeatilViewController.m */; };
+		3E527CD51C101DC800C7269C /* DMManageBaoxianEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CD41C101DC800C7269C /* DMManageBaoxianEditViewController.m */; };
+		3E527CD81C101DF800C7269C /* DMManageGuozhaiEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CD71C101DF800C7269C /* DMManageGuozhaiEditViewController.m */; };
+		3E527CDB1C101E1000C7269C /* DMManageGuozhaiListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CDA1C101E1000C7269C /* DMManageGuozhaiListViewController.m */; };
+		3E527CDE1C101E2200C7269C /* DMManageGuozhaiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CDD1C101E2200C7269C /* DMManageGuozhaiDetailViewController.m */; };
+		3E527CE11C101E5200C7269C /* DMManageJijinListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CE01C101E5200C7269C /* DMManageJijinListViewController.m */; };
+		3E527CE41C101E6200C7269C /* DMManageJijinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CE31C101E6200C7269C /* DMManageJijinDetailViewController.m */; };
+		3E527CE71C101E7300C7269C /* DMManageJijinEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CE61C101E7300C7269C /* DMManageJijinEditViewController.m */; };
+		3E527CEA1C101EA100C7269C /* DMManageOtherListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CE91C101EA100C7269C /* DMManageOtherListViewController.m */; };
+		3E527CED1C101EB100C7269C /* DMManageOtherDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CEC1C101EB100C7269C /* DMManageOtherDetailViewController.m */; };
+		3E527CF01C101EC000C7269C /* DMManageOtheEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CEF1C101EC000C7269C /* DMManageOtheEditViewController.m */; };
+		3E527CF31C101ED500C7269C /* DMManageP2PListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CF21C101ED500C7269C /* DMManageP2PListViewController.m */; };
+		3E527CF61C101EE500C7269C /* DMManageP2PDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CF51C101EE500C7269C /* DMManageP2PDetailViewController.m */; };
+		3E527CF91C101EF300C7269C /* DMManageP2PEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CF81C101EF300C7269C /* DMManageP2PEditViewController.m */; };
+		3E527CFC1C101F1200C7269C /* DMManageYinhangkaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CFB1C101F1200C7269C /* DMManageYinhangkaListViewController.m */; };
+		3E527CFF1C101F2000C7269C /* DMManageYinhangkaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CFE1C101F2000C7269C /* DMManageYinhangkaDetailViewController.m */; };
+		3E527D021C101F3100C7269C /* DMManageYinhangkaEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527D011C101F3100C7269C /* DMManageYinhangkaEditViewController.m */; };
+		3E527D051C101F4300C7269C /* DMManageYinhanglicaiListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527D041C101F4300C7269C /* DMManageYinhanglicaiListViewController.m */; };
+		3E527D081C101F5500C7269C /* DMManageYinhanglicaiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527D071C101F5500C7269C /* DMManageYinhanglicaiDetailViewController.m */; };
+		3E527D0B1C101F6400C7269C /* DMManageYinhanglicaiEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527D0A1C101F6400C7269C /* DMManageYinhanglicaiEditViewController.m */; };
+		3E527D121C102D7200C7269C /* DMManagementService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527D111C102D7200C7269C /* DMManagementService.m */; };
 		3E5D5E191C0D9BE900BA508D /* DMBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D5E181C0D9BE900BA508D /* DMBannerCell.m */; };
 		3E5D5E1C1C0D9C4C00BA508D /* DMSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D5E1B1C0D9C4C00BA508D /* DMSubject.m */; };
 		3E5D5E201C0D9C7400BA508D /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D5E1F1C0D9C7400BA508D /* SwipeView.m */; };
@@ -49,7 +74,6 @@
 		3E832EB41C0C55B600FE4C58 /* DMIndexPageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */; };
 		3E8CE4A41C0EE90D00471B37 /* DMBookkeepingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */; };
 		3E8CE4A81C0EEA1900471B37 /* DMBookkeepingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */; };
-		3E8CE4AB1C0EF22A00471B37 /* DMEditNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4AA1C0EF22A00471B37 /* DMEditNumberViewController.m */; };
 		3EBC02311C0447BE006F1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02301C0447BE006F1C35 /* main.m */; };
 		3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02331C0447BE006F1C35 /* AppDelegate.m */; };
 		3EBC023D1C0447BE006F1C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC023B1C0447BE006F1C35 /* Main.storyboard */; };
@@ -238,6 +262,56 @@
 		3E13BDB41C0DDED50075E439 /* index_search_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_search_white@2x.png"; sourceTree = "<group>"; };
 		3E13BDB51C0DDED50075E439 /* index_search_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_search_white@3x.png"; sourceTree = "<group>"; };
 		3E13BDBA1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_refresh_arrow_down@2x.png"; sourceTree = "<group>"; };
+		3E527CC41C101C6400C7269C /* DMManageBaobaoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageBaobaoListViewController.h; sourceTree = "<group>"; };
+		3E527CC51C101C6400C7269C /* DMManageBaobaoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageBaobaoListViewController.m; sourceTree = "<group>"; };
+		3E527CC71C101C8300C7269C /* DMManageBaobaoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageBaobaoDetailViewController.h; sourceTree = "<group>"; };
+		3E527CC81C101C8300C7269C /* DMManageBaobaoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageBaobaoDetailViewController.m; sourceTree = "<group>"; };
+		3E527CCA1C101CA400C7269C /* DMManageBaobaoEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageBaobaoEditViewController.h; sourceTree = "<group>"; };
+		3E527CCB1C101CA400C7269C /* DMManageBaobaoEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageBaobaoEditViewController.m; sourceTree = "<group>"; };
+		3E527CCD1C101D0400C7269C /* DMManageBaoxianListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageBaoxianListViewController.h; sourceTree = "<group>"; };
+		3E527CCE1C101D0400C7269C /* DMManageBaoxianListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageBaoxianListViewController.m; sourceTree = "<group>"; };
+		3E527CD01C101D1B00C7269C /* DMManageBaoxianDeatilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageBaoxianDeatilViewController.h; sourceTree = "<group>"; };
+		3E527CD11C101D1B00C7269C /* DMManageBaoxianDeatilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageBaoxianDeatilViewController.m; sourceTree = "<group>"; };
+		3E527CD31C101DC800C7269C /* DMManageBaoxianEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageBaoxianEditViewController.h; sourceTree = "<group>"; };
+		3E527CD41C101DC800C7269C /* DMManageBaoxianEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageBaoxianEditViewController.m; sourceTree = "<group>"; };
+		3E527CD61C101DF800C7269C /* DMManageGuozhaiEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageGuozhaiEditViewController.h; sourceTree = "<group>"; };
+		3E527CD71C101DF800C7269C /* DMManageGuozhaiEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageGuozhaiEditViewController.m; sourceTree = "<group>"; };
+		3E527CD91C101E1000C7269C /* DMManageGuozhaiListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageGuozhaiListViewController.h; sourceTree = "<group>"; };
+		3E527CDA1C101E1000C7269C /* DMManageGuozhaiListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageGuozhaiListViewController.m; sourceTree = "<group>"; };
+		3E527CDC1C101E2200C7269C /* DMManageGuozhaiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageGuozhaiDetailViewController.h; sourceTree = "<group>"; };
+		3E527CDD1C101E2200C7269C /* DMManageGuozhaiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageGuozhaiDetailViewController.m; sourceTree = "<group>"; };
+		3E527CDF1C101E5200C7269C /* DMManageJijinListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageJijinListViewController.h; sourceTree = "<group>"; };
+		3E527CE01C101E5200C7269C /* DMManageJijinListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageJijinListViewController.m; sourceTree = "<group>"; };
+		3E527CE21C101E6200C7269C /* DMManageJijinDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageJijinDetailViewController.h; sourceTree = "<group>"; };
+		3E527CE31C101E6200C7269C /* DMManageJijinDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageJijinDetailViewController.m; sourceTree = "<group>"; };
+		3E527CE51C101E7300C7269C /* DMManageJijinEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageJijinEditViewController.h; sourceTree = "<group>"; };
+		3E527CE61C101E7300C7269C /* DMManageJijinEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageJijinEditViewController.m; sourceTree = "<group>"; };
+		3E527CE81C101EA100C7269C /* DMManageOtherListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageOtherListViewController.h; sourceTree = "<group>"; };
+		3E527CE91C101EA100C7269C /* DMManageOtherListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageOtherListViewController.m; sourceTree = "<group>"; };
+		3E527CEB1C101EB100C7269C /* DMManageOtherDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageOtherDetailViewController.h; sourceTree = "<group>"; };
+		3E527CEC1C101EB100C7269C /* DMManageOtherDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageOtherDetailViewController.m; sourceTree = "<group>"; };
+		3E527CEE1C101EC000C7269C /* DMManageOtheEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageOtheEditViewController.h; sourceTree = "<group>"; };
+		3E527CEF1C101EC000C7269C /* DMManageOtheEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageOtheEditViewController.m; sourceTree = "<group>"; };
+		3E527CF11C101ED500C7269C /* DMManageP2PListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageP2PListViewController.h; sourceTree = "<group>"; };
+		3E527CF21C101ED500C7269C /* DMManageP2PListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageP2PListViewController.m; sourceTree = "<group>"; };
+		3E527CF41C101EE500C7269C /* DMManageP2PDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageP2PDetailViewController.h; sourceTree = "<group>"; };
+		3E527CF51C101EE500C7269C /* DMManageP2PDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageP2PDetailViewController.m; sourceTree = "<group>"; };
+		3E527CF71C101EF300C7269C /* DMManageP2PEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageP2PEditViewController.h; sourceTree = "<group>"; };
+		3E527CF81C101EF300C7269C /* DMManageP2PEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageP2PEditViewController.m; sourceTree = "<group>"; };
+		3E527CFA1C101F1200C7269C /* DMManageYinhangkaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageYinhangkaListViewController.h; sourceTree = "<group>"; };
+		3E527CFB1C101F1200C7269C /* DMManageYinhangkaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageYinhangkaListViewController.m; sourceTree = "<group>"; };
+		3E527CFD1C101F2000C7269C /* DMManageYinhangkaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageYinhangkaDetailViewController.h; sourceTree = "<group>"; };
+		3E527CFE1C101F2000C7269C /* DMManageYinhangkaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageYinhangkaDetailViewController.m; sourceTree = "<group>"; };
+		3E527D001C101F3100C7269C /* DMManageYinhangkaEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageYinhangkaEditViewController.h; sourceTree = "<group>"; };
+		3E527D011C101F3100C7269C /* DMManageYinhangkaEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageYinhangkaEditViewController.m; sourceTree = "<group>"; };
+		3E527D031C101F4300C7269C /* DMManageYinhanglicaiListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageYinhanglicaiListViewController.h; sourceTree = "<group>"; };
+		3E527D041C101F4300C7269C /* DMManageYinhanglicaiListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageYinhanglicaiListViewController.m; sourceTree = "<group>"; };
+		3E527D061C101F5500C7269C /* DMManageYinhanglicaiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageYinhanglicaiDetailViewController.h; sourceTree = "<group>"; };
+		3E527D071C101F5500C7269C /* DMManageYinhanglicaiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageYinhanglicaiDetailViewController.m; sourceTree = "<group>"; };
+		3E527D091C101F6400C7269C /* DMManageYinhanglicaiEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageYinhanglicaiEditViewController.h; sourceTree = "<group>"; };
+		3E527D0A1C101F6400C7269C /* DMManageYinhanglicaiEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageYinhanglicaiEditViewController.m; sourceTree = "<group>"; };
+		3E527D101C102D7200C7269C /* DMManagementService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMManagementService.h; path = Management/DMManagementService.h; sourceTree = "<group>"; };
+		3E527D111C102D7200C7269C /* DMManagementService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMManagementService.m; path = Management/DMManagementService.m; sourceTree = "<group>"; };
 		3E5D5E171C0D9BE900BA508D /* DMBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBannerCell.h; sourceTree = "<group>"; };
 		3E5D5E181C0D9BE900BA508D /* DMBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBannerCell.m; sourceTree = "<group>"; };
 		3E5D5E1A1C0D9C4C00BA508D /* DMSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSubject.h; sourceTree = "<group>"; };
@@ -294,8 +368,6 @@
 		3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBookkeepingViewController.m; path = Management/Bookkeeping/DMBookkeepingViewController.m; sourceTree = "<group>"; };
 		3E8CE4A61C0EEA1900471B37 /* DMBookkeepingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMBookkeepingCollectionView.h; path = Management/Bookkeeping/DMBookkeepingCollectionView.h; sourceTree = "<group>"; };
 		3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBookkeepingCollectionView.m; path = Management/Bookkeeping/DMBookkeepingCollectionView.m; sourceTree = "<group>"; };
-		3E8CE4A91C0EF22A00471B37 /* DMEditNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMEditNumberViewController.h; path = Management/Bookkeeping/DMEditNumberViewController.h; sourceTree = "<group>"; };
-		3E8CE4AA1C0EF22A00471B37 /* DMEditNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMEditNumberViewController.m; path = Management/Bookkeeping/DMEditNumberViewController.m; sourceTree = "<group>"; };
 		3EBC022C1C0447BE006F1C35 /* DMFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC02301C0447BE006F1C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EBC02321C0447BE006F1C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -693,6 +765,127 @@
 			path = UserCenter;
 			sourceTree = "<group>";
 		};
+		3E527CBC1C10192700C7269C /* Baobao */ = {
+			isa = PBXGroup;
+			children = (
+				3E527CC41C101C6400C7269C /* DMManageBaobaoListViewController.h */,
+				3E527CC51C101C6400C7269C /* DMManageBaobaoListViewController.m */,
+				3E527CC71C101C8300C7269C /* DMManageBaobaoDetailViewController.h */,
+				3E527CC81C101C8300C7269C /* DMManageBaobaoDetailViewController.m */,
+				3E527CCA1C101CA400C7269C /* DMManageBaobaoEditViewController.h */,
+				3E527CCB1C101CA400C7269C /* DMManageBaobaoEditViewController.m */,
+			);
+			name = Baobao;
+			path = Management/Baobao;
+			sourceTree = "<group>";
+		};
+		3E527CBD1C10192700C7269C /* Baoxian */ = {
+			isa = PBXGroup;
+			children = (
+				3E527CCD1C101D0400C7269C /* DMManageBaoxianListViewController.h */,
+				3E527CCE1C101D0400C7269C /* DMManageBaoxianListViewController.m */,
+				3E527CD01C101D1B00C7269C /* DMManageBaoxianDeatilViewController.h */,
+				3E527CD11C101D1B00C7269C /* DMManageBaoxianDeatilViewController.m */,
+				3E527CD31C101DC800C7269C /* DMManageBaoxianEditViewController.h */,
+				3E527CD41C101DC800C7269C /* DMManageBaoxianEditViewController.m */,
+			);
+			name = Baoxian;
+			path = Management/Baoxian;
+			sourceTree = "<group>";
+		};
+		3E527CBE1C10192700C7269C /* Guozhai */ = {
+			isa = PBXGroup;
+			children = (
+				3E527CD61C101DF800C7269C /* DMManageGuozhaiEditViewController.h */,
+				3E527CD71C101DF800C7269C /* DMManageGuozhaiEditViewController.m */,
+				3E527CD91C101E1000C7269C /* DMManageGuozhaiListViewController.h */,
+				3E527CDA1C101E1000C7269C /* DMManageGuozhaiListViewController.m */,
+				3E527CDC1C101E2200C7269C /* DMManageGuozhaiDetailViewController.h */,
+				3E527CDD1C101E2200C7269C /* DMManageGuozhaiDetailViewController.m */,
+			);
+			name = Guozhai;
+			path = Management/Guozhai;
+			sourceTree = "<group>";
+		};
+		3E527CBF1C10192700C7269C /* Jijin */ = {
+			isa = PBXGroup;
+			children = (
+				3E527CDF1C101E5200C7269C /* DMManageJijinListViewController.h */,
+				3E527CE01C101E5200C7269C /* DMManageJijinListViewController.m */,
+				3E527CE21C101E6200C7269C /* DMManageJijinDetailViewController.h */,
+				3E527CE31C101E6200C7269C /* DMManageJijinDetailViewController.m */,
+				3E527CE51C101E7300C7269C /* DMManageJijinEditViewController.h */,
+				3E527CE61C101E7300C7269C /* DMManageJijinEditViewController.m */,
+			);
+			name = Jijin;
+			path = Management/Jijin;
+			sourceTree = "<group>";
+		};
+		3E527CC01C10192700C7269C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3E527CE81C101EA100C7269C /* DMManageOtherListViewController.h */,
+				3E527CE91C101EA100C7269C /* DMManageOtherListViewController.m */,
+				3E527CEB1C101EB100C7269C /* DMManageOtherDetailViewController.h */,
+				3E527CEC1C101EB100C7269C /* DMManageOtherDetailViewController.m */,
+				3E527CEE1C101EC000C7269C /* DMManageOtheEditViewController.h */,
+				3E527CEF1C101EC000C7269C /* DMManageOtheEditViewController.m */,
+			);
+			name = Other;
+			path = Management/Other;
+			sourceTree = "<group>";
+		};
+		3E527CC11C10192700C7269C /* P2P */ = {
+			isa = PBXGroup;
+			children = (
+				3E527CF11C101ED500C7269C /* DMManageP2PListViewController.h */,
+				3E527CF21C101ED500C7269C /* DMManageP2PListViewController.m */,
+				3E527CF41C101EE500C7269C /* DMManageP2PDetailViewController.h */,
+				3E527CF51C101EE500C7269C /* DMManageP2PDetailViewController.m */,
+				3E527CF71C101EF300C7269C /* DMManageP2PEditViewController.h */,
+				3E527CF81C101EF300C7269C /* DMManageP2PEditViewController.m */,
+			);
+			name = P2P;
+			path = Management/P2P;
+			sourceTree = "<group>";
+		};
+		3E527CC21C10192700C7269C /* Yinhangka */ = {
+			isa = PBXGroup;
+			children = (
+				3E527CFA1C101F1200C7269C /* DMManageYinhangkaListViewController.h */,
+				3E527CFB1C101F1200C7269C /* DMManageYinhangkaListViewController.m */,
+				3E527CFD1C101F2000C7269C /* DMManageYinhangkaDetailViewController.h */,
+				3E527CFE1C101F2000C7269C /* DMManageYinhangkaDetailViewController.m */,
+				3E527D001C101F3100C7269C /* DMManageYinhangkaEditViewController.h */,
+				3E527D011C101F3100C7269C /* DMManageYinhangkaEditViewController.m */,
+			);
+			name = Yinhangka;
+			path = Management/Yinhangka;
+			sourceTree = "<group>";
+		};
+		3E527CC31C10192700C7269C /* Yinhanglicai */ = {
+			isa = PBXGroup;
+			children = (
+				3E527D031C101F4300C7269C /* DMManageYinhanglicaiListViewController.h */,
+				3E527D041C101F4300C7269C /* DMManageYinhanglicaiListViewController.m */,
+				3E527D061C101F5500C7269C /* DMManageYinhanglicaiDetailViewController.h */,
+				3E527D071C101F5500C7269C /* DMManageYinhanglicaiDetailViewController.m */,
+				3E527D091C101F6400C7269C /* DMManageYinhanglicaiEditViewController.h */,
+				3E527D0A1C101F6400C7269C /* DMManageYinhanglicaiEditViewController.m */,
+			);
+			name = Yinhanglicai;
+			path = Management/Yinhanglicai;
+			sourceTree = "<group>";
+		};
+		3E527D0F1C102D3400C7269C /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				3E527D101C102D7200C7269C /* DMManagementService.h */,
+				3E527D111C102D7200C7269C /* DMManagementService.m */,
+			);
+			name = Management;
+			sourceTree = "<group>";
+		};
 		3E5D5E1D1C0D9C7400BA508D /* SwipView */ = {
 			isa = PBXGroup;
 			children = (
@@ -847,8 +1040,6 @@
 			children = (
 				3E8CE4A21C0EE90D00471B37 /* DMBookkeepingViewController.h */,
 				3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */,
-				3E8CE4A91C0EF22A00471B37 /* DMEditNumberViewController.h */,
-				3E8CE4AA1C0EF22A00471B37 /* DMEditNumberViewController.m */,
 			);
 			name = Bookkeeping;
 			sourceTree = "<group>";
@@ -1058,6 +1249,7 @@
 		3EBC02971C0457AB006F1C35 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				3E527D0F1C102D3400C7269C /* Management */,
 				3E832E9A1C0C552300FE4C58 /* IndexPage */,
 				3EBC029E1C0457AB006F1C35 /* UserCenter */,
 			);
@@ -1749,6 +1941,14 @@
 		3EBC04F71C0461B5006F1C35 /* Management */ = {
 			isa = PBXGroup;
 			children = (
+				3E527CBC1C10192700C7269C /* Baobao */,
+				3E527CBD1C10192700C7269C /* Baoxian */,
+				3E527CBE1C10192700C7269C /* Guozhai */,
+				3E527CBF1C10192700C7269C /* Jijin */,
+				3E527CC01C10192700C7269C /* Other */,
+				3E527CC11C10192700C7269C /* P2P */,
+				3E527CC21C10192700C7269C /* Yinhangka */,
+				3E527CC31C10192700C7269C /* Yinhanglicai */,
 				3E8CE4A11C0EE8E600471B37 /* Bookkeeping */,
 				3EBC04F41C0461AD006F1C35 /* DMManagementViewController.h */,
 				3EBC04F51C0461AD006F1C35 /* DMManagementViewController.m */,
@@ -1980,6 +2180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EBC04231C0457AB006F1C35 /* NSDictionary+Addition.m in Sources */,
+				3E527CED1C101EB100C7269C /* DMManageOtherDetailViewController.m in Sources */,
 				3EBC04B91C0457AC006F1C35 /* DMSettingViewController.m in Sources */,
 				3EDDC4ED1C070CCE008AAF91 /* DMProjectListCell.m in Sources */,
 				3EBC04BE1C0457AC006F1C35 /* AMBlurView.m in Sources */,
@@ -1999,10 +2200,13 @@
 				3EC62BAC1C0C2E1500D1F2B9 /* DMMessageItem.m in Sources */,
 				3EC62BB91C0C444600D1F2B9 /* DMP2PViewController.m in Sources */,
 				3EBC04B61C0457AC006F1C35 /* DMRegistCompleteViewController.m in Sources */,
+				3E527CD81C101DF800C7269C /* DMManageGuozhaiEditViewController.m in Sources */,
 				3EDDC4EA1C070973008AAF91 /* DMFeedBackService.m in Sources */,
+				3E527CF31C101ED500C7269C /* DMManageP2PListViewController.m in Sources */,
 				3EBC04C11C0457AC006F1C35 /* DMBottomGeneralButtonView.m in Sources */,
 				3EBC04CB1C0457AC006F1C35 /* DMRoundLabel.m in Sources */,
 				3EBC04201C0457AB006F1C35 /* NSObject+Mapping.m in Sources */,
+				3E527CE71C101E7300C7269C /* DMManageJijinEditViewController.m in Sources */,
 				3EBC04391C0457AB006F1C35 /* CLCachePolicy.m in Sources */,
 				3EBC047C1C0457AB006F1C35 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				3EDDC4DF1C07069D008AAF91 /* DMFeedBackViewController.m in Sources */,
@@ -2026,16 +2230,19 @@
 				3EBC04561C0457AB006F1C35 /* UIView+Extension.m in Sources */,
 				3EBC04741C0457AB006F1C35 /* UIImage+MultiFormat.m in Sources */,
 				3E8CE4A81C0EEA1900471B37 /* DMBookkeepingCollectionView.m in Sources */,
+				3E527D121C102D7200C7269C /* DMManagementService.m in Sources */,
 				3E832E931C0C52CA00FE4C58 /* DMYangmaoItem.m in Sources */,
 				3EBC04551C0457AB006F1C35 /* UIView+DebugQuickLook.m in Sources */,
 				3EBC04F61C0461AD006F1C35 /* DMManagementViewController.m in Sources */,
 				3EBC046C1C0457AB006F1C35 /* SDWebImageCompat.m in Sources */,
 				3EBC04531C0457AB006F1C35 /* UIImageHelper.m in Sources */,
 				3EBC04F31C045C7E006F1C35 /* MBProgressHUD.m in Sources */,
+				3E527CE41C101E6200C7269C /* DMManageJijinDetailViewController.m in Sources */,
 				3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */,
 				3EBC042C1C0457AB006F1C35 /* DMRecords.m in Sources */,
 				3EBC042A1C0457AB006F1C35 /* NSObject+Mapping.m in Sources */,
 				3EBC04331C0457AB006F1C35 /* DMUserLoginParser.m in Sources */,
+				3E527CF61C101EE500C7269C /* DMManageP2PDetailViewController.m in Sources */,
 				3E7A56571C0B3A7B009AFA89 /* DMDiscoveryFilterActivityOrder.m in Sources */,
 				3EBC046E1C0457AB006F1C35 /* SDWebImageDownloader.m in Sources */,
 				3EBC04D21C0457AC006F1C35 /* DMVenue_Annotation.m in Sources */,
@@ -2048,6 +2255,7 @@
 				3EBC04671C0457AB006F1C35 /* UIView+JFAddSeperator.m in Sources */,
 				3EBC04C01C0457AC006F1C35 /* DMBarItem.m in Sources */,
 				3EBC04CD1C0457AC006F1C35 /* DMSelectorButton.m in Sources */,
+				3E527CE11C101E5200C7269C /* DMManageJijinListViewController.m in Sources */,
 				3EBC04221C0457AB006F1C35 /* DMRequest.m in Sources */,
 				3EBC04DA1C0457AC006F1C35 /* DMChatOtherCell.m in Sources */,
 				3EBC04301C0457AB006F1C35 /* DMRecordsParser.m in Sources */,
@@ -2061,17 +2269,20 @@
 				3EBC041F1C0457AB006F1C35 /* NSMutableArray+PageInfo.m in Sources */,
 				3EBC04381C0457AB006F1C35 /* DMUserCenterService.m in Sources */,
 				3E832E821C0C521100FE4C58 /* DMMessageParser.m in Sources */,
+				3E527D081C101F5500C7269C /* DMManageYinhanglicaiDetailViewController.m in Sources */,
 				3EBC04591C0457AB006F1C35 /* AFHTTPRequestOperation.m in Sources */,
 				3EBC04DD1C0457AC006F1C35 /* DMChooseCategoryView.m in Sources */,
 				3EBC047B1C0457AB006F1C35 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				3EBC04721C0457AB006F1C35 /* UIButton+WebCache.m in Sources */,
 				3EBC044E1C0457AB006F1C35 /* UIColor+expanded.m in Sources */,
+				3E527CF01C101EC000C7269C /* DMManageOtheEditViewController.m in Sources */,
+				3E527CFC1C101F1200C7269C /* DMManageYinhangkaListViewController.m in Sources */,
 				3EBC04771C0457AB006F1C35 /* UIImageView+WebCache.m in Sources */,
 				3EBC04C81C0457AC006F1C35 /* DMImageView.m in Sources */,
 				3EBC04261C0457AB006F1C35 /* DMUserLoginInfo.m in Sources */,
 				3EBC04E31C0457AC006F1C35 /* DMUserInfoView.m in Sources */,
+				3E527CFF1C101F2000C7269C /* DMManageYinhangkaDetailViewController.m in Sources */,
 				3EBC04C61C0457AC006F1C35 /* DMDetailProjSeatImgView.m in Sources */,
-				3E8CE4AB1C0EF22A00471B37 /* DMEditNumberViewController.m in Sources */,
 				3EBC04211C0457AB006F1C35 /* DMApiClient.m in Sources */,
 				3EBC04481C0457AB006F1C35 /* NSDate+convenience.m in Sources */,
 				3EBC04581C0457AB006F1C35 /* AFHTTPClient.m in Sources */,
@@ -2089,6 +2300,8 @@
 				3EBC045D1C0457AB006F1C35 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				3EBC04371C0457AB006F1C35 /* DMLoginService.m in Sources */,
 				3EBC045C1C0457AB006F1C35 /* AFJSONRequestOperation.m in Sources */,
+				3E527D0B1C101F6400C7269C /* DMManageYinhanglicaiEditViewController.m in Sources */,
+				3E527D051C101F4300C7269C /* DMManageYinhanglicaiListViewController.m in Sources */,
 				3E7A56581C0B3A7B009AFA89 /* DMDiscoveryFilterTime.m in Sources */,
 				3EBC04AB1C0457AC006F1C35 /* DMTabBarViewController.m in Sources */,
 				3EC62BC01C0C498300D1F2B9 /* DMHotListViewController.m in Sources */,
@@ -2105,6 +2318,7 @@
 				3EBC04AC1C0457AC006F1C35 /* DMWebViewController.m in Sources */,
 				3EBC04CE1C0457AC006F1C35 /* DMSubjoinLabelBtn.m in Sources */,
 				3E7A56471C0B2C5F009AFA89 /* JFSwipeLineIndicateView.m in Sources */,
+				3E527CD51C101DC800C7269C /* DMManageBaoxianEditViewController.m in Sources */,
 				3EBC041A1C0457AB006F1C35 /* DMDataService.m in Sources */,
 				3EBC046D1C0457AB006F1C35 /* SDWebImageDecoder.m in Sources */,
 				3EBC04DC1C0457AC006F1C35 /* DMCategoryItemView.m in Sources */,
@@ -2119,6 +2333,8 @@
 				3E832E851C0C522A00FE4C58 /* DMHotListParser.m in Sources */,
 				3EBC04471C0457AB006F1C35 /* NSDataHelper.m in Sources */,
 				3EBC046A1C0457AB006F1C35 /* NSData+ImageContentType.m in Sources */,
+				3E527CC61C101C6400C7269C /* DMManageBaobaoListViewController.m in Sources */,
+				3E527CDE1C101E2200C7269C /* DMManageGuozhaiDetailViewController.m in Sources */,
 				3EBC04D71C0457AC006F1C35 /* DMChatDateTransformer.m in Sources */,
 				3EBC04D81C0457AC006F1C35 /* DMChatEnterView.m in Sources */,
 				3EDDC4E71C0707D7008AAF91 /* DMUserCollectionListViewController.m in Sources */,
@@ -2138,25 +2354,33 @@
 				3EBC044F1C0457AB006F1C35 /* UIDeviceHelper.m in Sources */,
 				3E832E731C0C4FED00FE4C58 /* DMNewcomerCell.m in Sources */,
 				3EBC04431C0457AB006F1C35 /* NSString+LLDBQuickLook.m in Sources */,
+				3E527CCC1C101CA400C7269C /* DMManageBaobaoEditViewController.m in Sources */,
 				3EC62B9F1C0BF6D100D1F2B9 /* DMMessageListViewController.m in Sources */,
 				3EBC04A91C0457AC006F1C35 /* DMBaseViewController+Addition.m in Sources */,
 				3EC62BB61C0C411700D1F2B9 /* DMYangmaoViewController.m in Sources */,
 				3EBC045B1C0457AB006F1C35 /* AFImageRequestOperation.m in Sources */,
 				3EBC045A1C0457AB006F1C35 /* AFHTTPRequestOperationLogger.m in Sources */,
+				3E527CDB1C101E1000C7269C /* DMManageGuozhaiListViewController.m in Sources */,
 				3EBC04461C0457AB006F1C35 /* NSArray+Additions.m in Sources */,
 				3EBC042D1C0457AB006F1C35 /* DMSplist.m in Sources */,
 				3EBC04651C0457AB006F1C35 /* JFReminderSwitchController.m in Sources */,
 				3EBC04311C0457AB006F1C35 /* DMSplistParser.m in Sources */,
 				3EBC04541C0457AB006F1C35 /* UILabel+Additions.m in Sources */,
 				3EBC042E1C0457AB006F1C35 /* DMUserInfo.m in Sources */,
+				3E527CEA1C101EA100C7269C /* DMManageOtherListViewController.m in Sources */,
+				3E527CD21C101D1B00C7269C /* DMManageBaoxianDeatilViewController.m in Sources */,
 				3E8CE4A41C0EE90D00471B37 /* DMBookkeepingViewController.m in Sources */,
 				3EBC04D11C0457AC006F1C35 /* DMTextField.m in Sources */,
 				3EBC043B1C0457AB006F1C35 /* JFDataCache.m in Sources */,
+				3E527CC91C101C8300C7269C /* DMManageBaobaoDetailViewController.m in Sources */,
 				3EBC043E1C0457AB006F1C35 /* CommonHelper.m in Sources */,
+				3E527CCF1C101D0400C7269C /* DMManageBaoxianListViewController.m in Sources */,
 				3EBC04D01C0457AC006F1C35 /* DMTextCell.m in Sources */,
 				3EBC043F1C0457AB006F1C35 /* DMHelper.m in Sources */,
 				3EBC043A1C0457AB006F1C35 /* CLCacheService.m in Sources */,
 				3EBC04611C0457AB006F1C35 /* AnimatedGIFImageSerialization.m in Sources */,
+				3E527D021C101F3100C7269C /* DMManageYinhangkaEditViewController.m in Sources */,
+				3E527CF91C101EF300C7269C /* DMManageP2PEditViewController.m in Sources */,
 				3EBC04631C0457AB006F1C35 /* CLParallaxViewController.m in Sources */,
 				3EBC04761C0457AB006F1C35 /* UIImageView+HighlightedWebCache.m in Sources */,
 				3EBC04E11C0457AC006F1C35 /* DMMyAttentionCell.m in Sources */,

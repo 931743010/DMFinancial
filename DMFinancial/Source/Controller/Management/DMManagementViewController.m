@@ -48,6 +48,11 @@ typedef NS_ENUM(NSInteger, DMScollType) {
     
     [_collectionView registerClass:[DMManagementItemCell class] forCellWithReuseIdentifier:@"cell"];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(addAssets)
+                                                 name:kAddAssetsNotification
+                                               object:nil];
+
 }
 
 -(void)viewDidLayoutSubviews {
@@ -56,6 +61,10 @@ typedef NS_ENUM(NSInteger, DMScollType) {
 }
 
 #pragma mark -------private--------
+
+-(void)addAssets {
+
+}
 
 -(void)rightButtonAction {
     DMBookkeepingViewController *controller = [[DMBookkeepingViewController alloc] init];

@@ -8,7 +8,7 @@
 
 #import "DMBookkeepingViewController.h"
 #import "DMBookkeepingCollectionView.h"
-#import "DMEditNumberViewController.h"
+#import "DMManageBaobaoEditViewController.h"
 
 @interface DMBookkeepingViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -67,9 +67,9 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     DMBookkeepingItem *item = [self.arrayList objectAt:indexPath.row];
-    DMEditNumberViewController *controller = [[DMEditNumberViewController alloc] init];
+    DMManageBaobaoEditViewController *controller = [[DMManageBaobaoEditViewController alloc] init];
     controller.hidesBottomBarWhenPushed = YES;
-    controller.AssetsType = item.itemId;
+//    controller.AssetsType = item.itemId;
     controller.titleString = item.itemName;
     [self.navigationController pushViewController:controller animated:YES];
 
