@@ -106,7 +106,7 @@ static NSString * const kProjPlaceHolder        = @"project_default_pic.png";
 static NSString * const kMemberHeadPlaceholderImage        = @"bg_headPlaceHolder.png";
 
 #define kTableViewBgColor [UIColor colorWithRed:246.0/255.0 green:246.0/255.0 blue:246.0/255.0 alpha:1] //灰色背景颜色 f6f6f6
-#define kDMPinkColor [UIColor colorWithRed:219.0/255.0 green:73.0/255.0 blue:58.0/255.0 alpha:1] //橙色 db493a (程序主色)
+#define kDMPinkColor [UIColor colorWithRed:254.0/255.0 green:96.0/255.0 blue:70.0/255.0 alpha:1] //橙色 fe6046 (程序主色)
 #define kDMDefaultBlackStringColor [UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1]//主标题颜色(黑色) 666666
 #define kDMDefaultGrayStringColor [UIColor colorWithRed:133.0/255.0 green:133.0/255.0 blue:133.0/255.0 alpha:1]//副标题颜色(858585)
 #define kDMDefaultLightGrayStringColor [UIColor colorWithRed:180.0/255.0 green:180.0/255.0 blue:180.0/255.0 alpha:1]//浅灰色(b4b4b4)

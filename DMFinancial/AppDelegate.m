@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "DMIndexPageViewController.h"
-#import "DMManagementViewController.h"
+//#import "DMManagementViewController.h"
 #import "DMUserCenterViewController.h"
+#import "DMCustomizeViewController.h"
 
 @interface AppDelegate () <UITabBarControllerDelegate>
 
@@ -81,21 +82,36 @@
 //        }
 //    }
     
-    DMManagementViewController *managementViewController = [[DMManagementViewController alloc] init];
-    managementViewController.hideBackButton = YES;
-    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:managementViewController];
-//    //    [nav2.navigationBar drawSolidLineWithFrame:CGRectMake(0, nav1.navigationBar.bottom - 0.5, nav1.navigationBar.width, 0.5)];
-//    for (UIView *view in nav2.navigationBar.subviews) {
-//        for (UIView *view2 in view.subviews) {
-//            if ([view2 isKindOfClass:[UIImageView class]]) {
-//                [view2 removeFromSuperview];
+//    DMManagementViewController *managementViewController = [[DMManagementViewController alloc] init];
+//    managementViewController.hideBackButton = YES;
+//    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:managementViewController];
+////    //    [nav2.navigationBar drawSolidLineWithFrame:CGRectMake(0, nav1.navigationBar.bottom - 0.5, nav1.navigationBar.width, 0.5)];
+////    for (UIView *view in nav2.navigationBar.subviews) {
+////        for (UIView *view2 in view.subviews) {
+////            if ([view2 isKindOfClass:[UIImageView class]]) {
+////                [view2 removeFromSuperview];
+////                UIImageView *lineView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64 - 0.5, view.width, 0.5)];
+////                lineView.backgroundColor = [UIColor colorWithHexString:@"dddddd"];
+////                [view addSubview:lineView];
+////            }
+////        }
+////    }
+    
+    DMCustomizeViewController *customizeViewController = [[DMCustomizeViewController alloc] init];
+    customizeViewController.hideBackButton = YES;
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:customizeViewController];
+    //    [nav2.navigationBar drawSolidLineWithFrame:CGRectMake(0, nav1.navigationBar.bottom - 0.5, nav1.navigationBar.width, 0.5)];
+    for (UIView *view in nav2.navigationBar.subviews) {
+        for (UIView *view2 in view.subviews) {
+            if ([view2 isKindOfClass:[UIImageView class]]) {
+                [view2 removeFromSuperview];
 //                UIImageView *lineView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64 - 0.5, view.width, 0.5)];
 //                lineView.backgroundColor = [UIColor colorWithHexString:@"dddddd"];
 //                [view addSubview:lineView];
-//            }
-//        }
-//    }
-    
+            }
+        }
+    }
+
     DMUserCenterViewController *userCenterViewController = [[DMUserCenterViewController alloc] init];
     userCenterViewController.hideBackButton = YES;
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:userCenterViewController];
@@ -104,7 +120,7 @@
     [self.tabBarController setViewControllers:controllers];
     
     
-    NSArray *titles = @[@"值得买", @"管理", @"我"];
+    NSArray *titles = @[@"值得买", @"量身定制", @"我"];
     
     int i = 0;
     for (UITabBarItem *item in self.tabBarController.tabBar.items) {

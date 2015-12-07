@@ -85,7 +85,7 @@
     
     NSMutableAttributedString *attributedString1 = [item.yield replaceWithColor:kDMPinkColor font:BOLDFONT(13) string:@"%"];
     _yieldLabel.attributedText = attributedString1;
-
+    self.height = 100;
 }
 
 @end
