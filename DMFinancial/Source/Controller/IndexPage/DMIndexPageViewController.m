@@ -21,19 +21,26 @@
 #import "DMYangmaoViewController.h"
 #import "DMP2PViewController.h"
 #import "DMHotListViewController.h"
+#import "DMP2PDetailViewController.h"
+#import "DMSearchViewController.h"
 
 #import "DMIndexPageService.h"
+#import "DMPageState.h"
 typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
     DMIndexSwipeViewTypeHeader,
     DMIndexSwipeViewTypeBody
 };
-@interface DMIndexPageViewController ()<JFSwipeViewDataSource, JFSwipeViewSwipeDelegate, UITableViewDataSource, UITableViewDelegate, DMBannerCellDelegate, DMIndexPageMenuCellDelegate>
+@interface DMIndexPageViewController ()<JFSwipeViewDataSource, JFSwipeViewSwipeDelegate, UITableViewDataSource, UITableViewDelegate, DMBannerCellDelegate, DMIndexPageMenuCellDelegate> {
+    NSTimeInterval _expiredTime;
+
+}
 
 @property (strong, nonatomic) JFSwipeView *categoryHeaderView;
 
 @property (strong, nonatomic) JFSwipeView *categoryContentView;
 @property (nonatomic, strong) NSMutableArray *categories;
 @property (nonatomic, strong) NSMutableArray *listArray;
+@property (nonatomic, strong) NSArray *states;
 
 @end
 
@@ -42,6 +49,8 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"值得买";
+    _expiredTime = 60 * 30;
+
     _listArray = [[NSMutableArray alloc] init];
 
     [self.view addSubview:self.categoryContentView];
@@ -54,6 +63,9 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 
 
 -(void)searchAction {
+    DMSearchViewController *controller = [[DMSearchViewController alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:controller animated:YES];
 
 }
 
@@ -89,18 +101,13 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 
 }
 - (NSDictionary *)createParametersWithCategory:(DMDiscoveryCategory *)category
-                                    filterTime:(DMDiscoveryFilterTime *)filterTime
-                                   filterOrder:(DMDiscoveryFilterActivityOrder *)filterOrder
                                       pageInfo:(DMPageDataInfo *)pageInfo
 {
     NSMutableDictionary *infos = [NSMutableDictionary new];
     
     [infos setSafetyObject:category.categoryId forKey:@"cateid"];
-    [infos setSafetyObject:filterTime.startTime forKey:@"stime"];
-    [infos setSafetyObject:filterTime.endTime forKey:@"etime"];
     [infos setSafetyObject:@(pageInfo.pageNo) forKey:@"pindex"];
     [infos setSafetyObject:@(pageInfo.size) forKey:@"psize"];
-    [infos setSafetyObject:filterOrder.name forKey:@"order"];
     
     return infos;
 }
@@ -113,6 +120,7 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
         DMProjectListItem *category = [[DMProjectListItem alloc] init];
         category.name = string;
         category.yield = @"4%";
+        category.dec = @"贷款金额11111";
         category.url = @"http://img0.imgtn.bdimg.com/it/u=1070902365,2619384777&fm=21&gp=0.jpg";
         [_listArray addObject:category];
     }
@@ -355,47 +363,47 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
         DMFindPageView *pageView = (DMFindPageView *)[swipeView dequeueViewWithIdentifier:@"pageView"];
         if (!pageView) {
             
-            // 生成新的pageview
+            // 生成新的pagevie
             pageView = [self pageView];
         }
         pageView.index = index;
         
-        //        // 距离当前近的才进行一系列操作
-        //        if (labs(index - swipeView.currentIndex) <= 1) {
-        //
-        //            DMDiscoveryCategory *category = [self.categories objectAt:index];
-        //            DMPageDataInfo *pageInfo = [DMPageDataInfo defaultPageDataInfo];
-        //            NSMutableArray *cacheItems = [NSMutableArray array];
-        //            for (int i=0; i<= state.pageInfo.pageNo; i++) {
-        //                pageInfo.pageNo = i;
-        //                NSDictionary *parameters = [self createParametersWithCategory:category
-        //                                                                   filterTime:[DMDiscoveryFilterTime defaultFilterTime]
-        //                                                                  filterOrder:self.categoryList.orders[0]
-        //                                                                     pageInfo:pageInfo];
-        //                NSArray *items = [DMDiscoveryService fetchCacheWithParameters:parameters];
-        //                if ([items count]) {
-        //                    [cacheItems addObjectsFromArray:items];
-        //                }
-        //            }
-        //            if (cacheItems.count > 0) {//有缓存
-        //                pageView.dataSource.items = cacheItems;
-        //                [pageView.tableView reloadData];
-        //                if (state.offsetY == 0) {
-        //                    [pageView.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 0) animated:NO];
-        //
-        //                } else {
-        //                    CGFloat offset = pageView.tableView.contentSize.height - pageView.tableView.frame.size.height;
-        //                    [pageView.tableView setContentOffset:CGPointMake(0, 0) animated:NO];
-        //                }
-        //            }
-        //            else {//没有缓存
-        //                _expiredTime = 1;
-        //                pageView.dataSource.items = nil;
-        //                [pageView.tableView reloadData];
-        //                [pageView.tableView setContentOffset:CGPointMake(0, 0)];
-        //            }
-        //        }
-        //        
+        // 距离当前近的才进行一系列操作
+        if (labs(index - swipeView.currentIndex) <= 1) {
+
+            DMPageState *state = self.states[index];
+
+            DMDiscoveryCategory *category = [self.categories objectAt:index];
+            DMPageDataInfo *pageInfo = [DMPageDataInfo defaultPageDataInfo];
+            NSMutableArray *cacheItems = [NSMutableArray array];
+            for (int i=0; i<= state.pageInfo.pageNo; i++) {
+                pageInfo.pageNo = i;
+                NSDictionary *parameters = [self createParametersWithCategory:category
+                                                                     pageInfo:pageInfo];
+                NSArray *items = [DMIndexPageService fetchCacheWithParameters:parameters];
+                if ([_listArray count]) {
+                    [cacheItems addObjectsFromArray:_listArray];
+                }
+            }
+            if (cacheItems.count > 0) {//有缓存
+                self.listArray = cacheItems;
+                [pageView.tableView reloadData];
+                if (state.offsetY == 0) {
+                    [pageView.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 0) animated:NO];
+
+                } else {
+                    CGFloat offset = pageView.tableView.contentSize.height - pageView.tableView.frame.size.height;
+                    [pageView.tableView setContentOffset:CGPointMake(0, MIN(offset, state.offsetY)) animated:NO];
+                }
+            }
+            else {//没有缓存
+                _expiredTime = 1;
+                [self.listArray removeAllObjects];
+                [pageView.tableView reloadData];
+                [pageView.tableView setContentOffset:CGPointMake(0, 0)];
+            }
+        }
+        
         
         //        [pageView showFilterView];
         
@@ -444,6 +452,15 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 
 
 #pragma mark -  UITableViewDelegate --------
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DMP2PDetailViewController *controller = [[DMP2PDetailViewController alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    controller.item = [_listArray objectAt:indexPath.row];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

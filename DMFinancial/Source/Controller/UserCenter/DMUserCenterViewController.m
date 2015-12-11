@@ -12,6 +12,8 @@
 #import "DMUserInfo.h"
 #import "DMFeedBackViewController.h"
 #import "DMUserCollectionListViewController.h"
+#import "DMUserLoginViewController.h"
+#import "DMUserRegisterViewController.h"
 
 #define KShoucangCell @"我的收藏"
 #define KBaoliaoCell @"我的爆料"
@@ -45,15 +47,17 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
 
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"我";
     _tableViewScetion = @[@[KShoucangCell, KBaoliaoCell], @[KXiugaimimaCell], @[KHaopingCell, KYijianfankuiCell, KTuijianCell]];
-    [self createUserInfoViews];
     [self createSubViews];
-    [self requestUserInfo];
+    [self createUserInfoViews];
+//    [self requestUserInfo];
 }
 
 #pragma mark ========== Private Method ==========
@@ -61,12 +65,15 @@
 #pragma mark -------------createSubViews----------
 
 -(void)createUserInfoViews {
-    _userInfoView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, AUTOSIZE(140))];
+    if (_userInfoView) {
+        [_userInfoView removeFromSuperview];
+        _userInfoView = nil;
+    }
+    _userInfoView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 95)];
     _userInfoView.backgroundColor = kDMPinkColor;
 
-    _userHeadImageView = [[UIImageView alloc] initWithFrame:CGRectMake(AUTOSIZE(50), 0, AUTOSIZE(64), AUTOSIZE(64))];
+    _userHeadImageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.width - 48)/2, 9, 48, 48)];
     _userHeadImageView.backgroundColor = kDMDefaultBlackStringColor;
-    _userHeadImageView.layer.cornerRadius = AUTOSIZE(64)/2;
     _userHeadImageView.clipsToBounds = YES;
     _userHeadImageView.userInteractionEnabled = YES;
     [_userInfoView addSubview:_userHeadImageView];
@@ -75,10 +82,45 @@
                                                                           action:@selector(gotoUserDetailInfo)];
     [_userHeadImageView addGestureRecognizer:tap];
     
-    _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(_userHeadImageView.right + AUTOSIZE(24), _userHeadImageView.top + 15, kScreenWidth - _userHeadImageView.right - AUTOSIZE(24 - AUTOSIZE(10)), AUTOSIZE(14))];
-    _userNameLabel.font = FONT(12);
-    [_userInfoView addSubview:_userNameLabel];
+    if ([DMHelper isLogin]) {
+        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _userHeadImageView.bottom, kScreenWidth, 38)];
+        _userNameLabel.font = FONT(12);
+        _userNameLabel.textAlignment = NSTextAlignmentCenter;
+        _userNameLabel.text = @"13651052254";
+        _userNameLabel.textColor = [UIColor whiteColor];
+        [_userInfoView addSubview:_userNameLabel];
+    } else {
+        DMButton *loginButton = [[DMButton alloc] initWithFrame:CGRectMake(20, _userHeadImageView.bottom + 5, 60, 20)];
+        [loginButton setTitle:@"登录" forState:UIControlStateNormal];
+        [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [loginButton.titleLabel setFont:FONT(13)];
+        [loginButton buttonClickedcompletion:^(id returnData) {
+            DMUserLoginViewController *controller = [[DMUserLoginViewController alloc] init];
+            controller.hidesBottomBarWhenPushed = YES;
+            controller.success = ^(id returnData) {
+            
+            };
+            UINavigationController *naviCtrl = [[UINavigationController alloc]initWithRootViewController:controller];
+            [self presentViewController:naviCtrl animated:YES completion:nil];
+        }];
 
+        [_userInfoView addSubview:loginButton];
+        
+        DMButton *registButton = [[DMButton alloc] initWithFrame:CGRectMake(150, _userHeadImageView.bottom + 5, 60, 20)];
+        [registButton setTitle:@"注册" forState:UIControlStateNormal];
+        [registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [registButton.titleLabel setFont:FONT(13)];
+        [registButton buttonClickedcompletion:^(id returnData) {
+            DMUserRegisterViewController *controller = [[DMUserRegisterViewController alloc] init];
+            controller.hidesBottomBarWhenPushed = YES;
+            UINavigationController *naviCtrl = [[UINavigationController alloc]initWithRootViewController:controller];
+            [self presentViewController:naviCtrl animated:YES completion:nil];
+        }];
+        [_userInfoView addSubview:registButton];
+
+    }
+
+    [self.view addSubview:_userInfoView];
 }
 
 - (void)createSubViews {
@@ -94,19 +136,15 @@
     _tableView.userInteractionEnabled = YES;
     _tableView.sectionFooterHeight = 0.1;
 //    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.contentInset = UIEdgeInsetsMake(80, 0, 0, 0);
-    [_tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    _tableView.contentInset = UIEdgeInsetsMake(95, 0, 0, 0);
     [self.view addSubview:_tableView];
     
-    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-        [_tableView setSeparatorInset:UIEdgeInsetsZero];
-    }
-    
-    if ([_tableView respondsToSelector:@selector(setLayoutMargins:)]) {
-        [_tableView setLayoutMargins:UIEdgeInsetsZero];
-    }
-    
-    _tableView.tableFooterView = [[UIView alloc] init];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 30)];
+    label.text = [NSString stringWithFormat:@"当前版本:%@",[@"V" stringByAppendingString:[[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]]];
+    label.textColor = kDMDefaultBlackStringColor;
+    label.font = FONT(12);
+    label.textAlignment = NSTextAlignmentCenter;
+    _tableView.tableFooterView = label;
 }
 
 #pragma mark-----------------私有方法-------------------
@@ -181,47 +219,42 @@
     cell.textLabel.text = [section objectAt:indexPath.row];
     cell.textLabel.textColor = kDMDefaultBlackStringColor;
     cell.textLabel.font = FONT(14);
+    cell.imageView.image = [UIImage imageWithSize:CGSizeMake(15, 15) color:[UIColor redColor]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 40;
+    return 32;
 }
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth, 30)];
     switch (section) {
         case 0:
-            return @"   我的";
+            label.text = @"     我的";
             break;
         case 1:
-            return @"   账户安全";
+            label.text = @"     账户安全";
             break;
         case 2:
-            return @"   其他";
+            label.text = @"     其他";
             break;
-
         default:
-            return @"";
+            label.text = @"";
             break;
     }
+    label.backgroundColor = kTableViewBgColor;
+    label.textColor = kDMDefaultBlackStringColor;
+    label.font = FONT(12);
+    return label;
 }
+
 #pragma mark----------------UITableViewDelegate---------------------
-
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsZero];
-    }
-    
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return AUTOSIZE(50);
+    return 50;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

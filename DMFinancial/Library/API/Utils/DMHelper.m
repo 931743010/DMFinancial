@@ -99,32 +99,7 @@
     return [predicate evaluateWithObject:string];
 }
 
-+ (BOOL)isNoLoginCode:(NSInteger)code {
-    NSArray *noLoginCodeArray = @[@"1201",
-                                  @"1301",
-                                  @"1401",
-                                  @"1501",
-                                  @"1701",
-                                  @"1711",
-                                  @"1721",
-                                  @"1731",
-                                  @"1801",
-                                  @"1811",
-                                  @"1821",
-                                  @"1831",
-                                  @"2001",
-                                  @"2011",
-                                  @"2021",
-                                  @"2031",
-                                  @"2041",
-                                  @"2051",
-                                  @"3001",
-                                  @"3011",
-                                  @"3021"];
-    
-    if ([[NSString stringWithFormat:@"%@",@(code)] isBelongToArray:noLoginCodeArray]) {
-        return YES;
-    }
++ (BOOL)isLogin{
     return NO;
 
 }

@@ -21,6 +21,15 @@
 		3E13BDB81C0DDED50075E439 /* index_search_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDB41C0DDED50075E439 /* index_search_white@2x.png */; };
 		3E13BDB91C0DDED50075E439 /* index_search_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDB51C0DDED50075E439 /* index_search_white@3x.png */; };
 		3E13BDBB1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E13BDBA1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png */; };
+		3E1C82601C17CA3F00C72E6F /* DMP2PDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C825F1C17CA3F00C72E6F /* DMP2PDetailViewController.m */; };
+		3E1C82631C17CA5300C72E6F /* DMBaobaoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C82621C17CA5300C72E6F /* DMBaobaoDetailViewController.m */; };
+		3E1C82661C17CA6100C72E6F /* DMBaoxianDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C82651C17CA6100C72E6F /* DMBaoxianDetailViewController.m */; };
+		3E1C82691C17CA7600C72E6F /* DMJijinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C82681C17CA7600C72E6F /* DMJijinDetailViewController.m */; };
+		3E1C826C1C17CA8800C72E6F /* DMYinhanglicaiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C826B1C17CA8800C72E6F /* DMYinhanglicaiDetailViewController.m */; };
+		3E1C82701C17CBB000C72E6F /* DMDetailTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C826F1C17CBB000C72E6F /* DMDetailTopView.m */; };
+		3E1C82761C17FFA000C72E6F /* DMDetailPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C82751C17FFA000C72E6F /* DMDetailPageCell.m */; };
+		3E1C827D1C180C3E00C72E6F /* DMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C827C1C180C3E00C72E6F /* DMWebView.m */; };
+		3E1C82801C18109700C72E6F /* DMPageBottomButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C827F1C18109700C72E6F /* DMPageBottomButtonView.m */; };
 		3E527CC61C101C6400C7269C /* DMManageBaobaoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CC51C101C6400C7269C /* DMManageBaobaoListViewController.m */; };
 		3E527CC91C101C8300C7269C /* DMManageBaobaoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CC81C101C8300C7269C /* DMManageBaobaoDetailViewController.m */; };
 		3E527CCC1C101CA400C7269C /* DMManageBaobaoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E527CCB1C101CA400C7269C /* DMManageBaobaoEditViewController.m */; };
@@ -76,6 +85,7 @@
 		3E832EB41C0C55B600FE4C58 /* DMIndexPageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */; };
 		3E8CE4A41C0EE90D00471B37 /* DMBookkeepingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */; };
 		3E8CE4A81C0EEA1900471B37 /* DMBookkeepingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */; };
+		3E98EE0D1C167F3A008D6DFF /* DMPageState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E98EE0C1C167F3A008D6DFF /* DMPageState.m */; };
 		3EBC02311C0447BE006F1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02301C0447BE006F1C35 /* main.m */; };
 		3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02331C0447BE006F1C35 /* AppDelegate.m */; };
 		3EBC023D1C0447BE006F1C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC023B1C0447BE006F1C35 /* Main.storyboard */; };
@@ -99,12 +109,8 @@
 		3EBC04291C0457AB006F1C35 /* NSMutableArray+PageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC027D1C0457AB006F1C35 /* NSMutableArray+PageInfo.m */; };
 		3EBC042A1C0457AB006F1C35 /* NSObject+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC027F1C0457AB006F1C35 /* NSObject+Mapping.m */; };
 		3EBC042B1C0457AB006F1C35 /* DMActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02811C0457AB006F1C35 /* DMActivity.m */; };
-		3EBC042C1C0457AB006F1C35 /* DMRecords.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02841C0457AB006F1C35 /* DMRecords.m */; };
-		3EBC042D1C0457AB006F1C35 /* DMSplist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02861C0457AB006F1C35 /* DMSplist.m */; };
 		3EBC042E1C0457AB006F1C35 /* DMUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02891C0457AB006F1C35 /* DMUserInfo.m */; };
 		3EBC042F1C0457AB006F1C35 /* DMActivityParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC028C1C0457AB006F1C35 /* DMActivityParser.m */; };
-		3EBC04301C0457AB006F1C35 /* DMRecordsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC028F1C0457AB006F1C35 /* DMRecordsParser.m */; };
-		3EBC04311C0457AB006F1C35 /* DMSplistParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02911C0457AB006F1C35 /* DMSplistParser.m */; };
 		3EBC04321C0457AB006F1C35 /* DMUserCenterParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02941C0457AB006F1C35 /* DMUserCenterParser.m */; };
 		3EBC04331C0457AB006F1C35 /* DMUserLoginParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02961C0457AB006F1C35 /* DMUserLoginParser.m */; };
 		3EBC04371C0457AB006F1C35 /* DMLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02A01C0457AB006F1C35 /* DMLoginService.m */; };
@@ -185,10 +191,6 @@
 		3EBC04AA1C0457AC006F1C35 /* DMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC039B1C0457AB006F1C35 /* DMBaseViewController.m */; };
 		3EBC04AB1C0457AC006F1C35 /* DMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC039D1C0457AB006F1C35 /* DMTabBarViewController.m */; };
 		3EBC04AC1C0457AC006F1C35 /* DMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC039F1C0457AB006F1C35 /* DMWebViewController.m */; };
-		3EBC04B31C0457AC006F1C35 /* DMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03B01C0457AB006F1C35 /* DMLoginViewController.m */; };
-		3EBC04B61C0457AC006F1C35 /* DMRegistCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03B61C0457AB006F1C35 /* DMRegistCompleteViewController.m */; };
-		3EBC04B71C0457AC006F1C35 /* DMRegistPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03B81C0457AB006F1C35 /* DMRegistPwdViewController.m */; };
-		3EBC04B81C0457AC006F1C35 /* DMRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03BA1C0457AB006F1C35 /* DMRegistViewController.m */; };
 		3EBC04B91C0457AC006F1C35 /* DMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03BC1C0457AB006F1C35 /* DMSettingViewController.m */; };
 		3EBC04BA1C0457AC006F1C35 /* DMUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03BE1C0457AB006F1C35 /* DMUserCenterViewController.m */; };
 		3EBC04BE1C0457AC006F1C35 /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC03CD1C0457AB006F1C35 /* AMBlurView.m */; };
@@ -235,6 +237,12 @@
 		3EC62BC01C0C498300D1F2B9 /* DMHotListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC62BBF1C0C498300D1F2B9 /* DMHotListViewController.m */; };
 		3ECBF7C91C15C6B6004E9983 /* DMRiskPreferenceTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECBF7C81C15C6B6004E9983 /* DMRiskPreferenceTestViewController.m */; };
 		3ECBF7CC1C15C777004E9983 /* DMRiskPreferenceTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECBF7CB1C15C777004E9983 /* DMRiskPreferenceTestView.m */; };
+		3ED4AABC1C19408C00714335 /* DMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4AABB1C19408C00714335 /* DMSearchViewController.m */; };
+		3ED4AAC41C1952E800714335 /* DMUserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4AAC11C1952E800714335 /* DMUserLoginViewController.m */; };
+		3ED4AAC51C1952E800714335 /* DMUserRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4AAC31C1952E800714335 /* DMUserRegisterViewController.m */; };
+		3ED4AAC81C1953A100714335 /* DMUserLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4AAC71C1953A100714335 /* DMUserLoginService.m */; };
+		3ED4AAD81C19558500714335 /* DMUserLoginWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4AAD71C19558500714335 /* DMUserLoginWebViewController.m */; };
+		3ED4AADB1C1955B300714335 /* DMForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED4AADA1C1955B300714335 /* DMForgetPwdViewController.m */; };
 		3EDDC4DF1C07069D008AAF91 /* DMFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4DE1C07069D008AAF91 /* DMFeedBackViewController.m */; };
 		3EDDC4E71C0707D7008AAF91 /* DMUserCollectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4E61C0707D7008AAF91 /* DMUserCollectionListViewController.m */; };
 		3EDDC4EA1C070973008AAF91 /* DMFeedBackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4E91C070973008AAF91 /* DMFeedBackService.m */; };
@@ -258,6 +266,24 @@
 		3E13BDB41C0DDED50075E439 /* index_search_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_search_white@2x.png"; sourceTree = "<group>"; };
 		3E13BDB51C0DDED50075E439 /* index_search_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_search_white@3x.png"; sourceTree = "<group>"; };
 		3E13BDBA1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_refresh_arrow_down@2x.png"; sourceTree = "<group>"; };
+		3E1C825E1C17CA3F00C72E6F /* DMP2PDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMP2PDetailViewController.h; sourceTree = "<group>"; };
+		3E1C825F1C17CA3F00C72E6F /* DMP2PDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMP2PDetailViewController.m; sourceTree = "<group>"; };
+		3E1C82611C17CA5300C72E6F /* DMBaobaoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaobaoDetailViewController.h; sourceTree = "<group>"; };
+		3E1C82621C17CA5300C72E6F /* DMBaobaoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBaobaoDetailViewController.m; sourceTree = "<group>"; };
+		3E1C82641C17CA6100C72E6F /* DMBaoxianDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaoxianDetailViewController.h; sourceTree = "<group>"; };
+		3E1C82651C17CA6100C72E6F /* DMBaoxianDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMBaoxianDetailViewController.m; sourceTree = "<group>"; };
+		3E1C82671C17CA7600C72E6F /* DMJijinDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMJijinDetailViewController.h; sourceTree = "<group>"; };
+		3E1C82681C17CA7600C72E6F /* DMJijinDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMJijinDetailViewController.m; sourceTree = "<group>"; };
+		3E1C826A1C17CA8800C72E6F /* DMYinhanglicaiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMYinhanglicaiDetailViewController.h; sourceTree = "<group>"; };
+		3E1C826B1C17CA8800C72E6F /* DMYinhanglicaiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMYinhanglicaiDetailViewController.m; sourceTree = "<group>"; };
+		3E1C826E1C17CBB000C72E6F /* DMDetailTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDetailTopView.h; sourceTree = "<group>"; };
+		3E1C826F1C17CBB000C72E6F /* DMDetailTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMDetailTopView.m; sourceTree = "<group>"; };
+		3E1C82741C17FFA000C72E6F /* DMDetailPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDetailPageCell.h; sourceTree = "<group>"; };
+		3E1C82751C17FFA000C72E6F /* DMDetailPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMDetailPageCell.m; sourceTree = "<group>"; };
+		3E1C827B1C180C3E00C72E6F /* DMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebView.h; sourceTree = "<group>"; };
+		3E1C827C1C180C3E00C72E6F /* DMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebView.m; sourceTree = "<group>"; };
+		3E1C827E1C18109700C72E6F /* DMPageBottomButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPageBottomButtonView.h; sourceTree = "<group>"; };
+		3E1C827F1C18109700C72E6F /* DMPageBottomButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPageBottomButtonView.m; sourceTree = "<group>"; };
 		3E527CC41C101C6400C7269C /* DMManageBaobaoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageBaobaoListViewController.h; sourceTree = "<group>"; };
 		3E527CC51C101C6400C7269C /* DMManageBaobaoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMManageBaobaoListViewController.m; sourceTree = "<group>"; };
 		3E527CC71C101C8300C7269C /* DMManageBaobaoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMManageBaobaoDetailViewController.h; sourceTree = "<group>"; };
@@ -368,6 +394,8 @@
 		3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBookkeepingViewController.m; path = Management/Bookkeeping/DMBookkeepingViewController.m; sourceTree = "<group>"; };
 		3E8CE4A61C0EEA1900471B37 /* DMBookkeepingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMBookkeepingCollectionView.h; path = Management/Bookkeeping/DMBookkeepingCollectionView.h; sourceTree = "<group>"; };
 		3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBookkeepingCollectionView.m; path = Management/Bookkeeping/DMBookkeepingCollectionView.m; sourceTree = "<group>"; };
+		3E98EE0B1C167F3A008D6DFF /* DMPageState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPageState.h; sourceTree = "<group>"; };
+		3E98EE0C1C167F3A008D6DFF /* DMPageState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPageState.m; sourceTree = "<group>"; };
 		3EBC022C1C0447BE006F1C35 /* DMFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC02301C0447BE006F1C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EBC02321C0447BE006F1C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -412,18 +440,10 @@
 		3EBC027F1C0457AB006F1C35 /* NSObject+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Mapping.m"; sourceTree = "<group>"; };
 		3EBC02801C0457AB006F1C35 /* DMActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMActivity.h; sourceTree = "<group>"; };
 		3EBC02811C0457AB006F1C35 /* DMActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMActivity.m; sourceTree = "<group>"; };
-		3EBC02831C0457AB006F1C35 /* DMRecords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRecords.h; sourceTree = "<group>"; };
-		3EBC02841C0457AB006F1C35 /* DMRecords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRecords.m; sourceTree = "<group>"; };
-		3EBC02851C0457AB006F1C35 /* DMSplist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSplist.h; sourceTree = "<group>"; };
-		3EBC02861C0457AB006F1C35 /* DMSplist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSplist.m; sourceTree = "<group>"; };
 		3EBC02881C0457AB006F1C35 /* DMUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserInfo.h; sourceTree = "<group>"; };
 		3EBC02891C0457AB006F1C35 /* DMUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserInfo.m; sourceTree = "<group>"; };
 		3EBC028B1C0457AB006F1C35 /* DMActivityParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMActivityParser.h; sourceTree = "<group>"; };
 		3EBC028C1C0457AB006F1C35 /* DMActivityParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMActivityParser.m; sourceTree = "<group>"; };
-		3EBC028E1C0457AB006F1C35 /* DMRecordsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRecordsParser.h; sourceTree = "<group>"; };
-		3EBC028F1C0457AB006F1C35 /* DMRecordsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRecordsParser.m; sourceTree = "<group>"; };
-		3EBC02901C0457AB006F1C35 /* DMSplistParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSplistParser.h; sourceTree = "<group>"; };
-		3EBC02911C0457AB006F1C35 /* DMSplistParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSplistParser.m; sourceTree = "<group>"; };
 		3EBC02931C0457AB006F1C35 /* DMUserCenterParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserCenterParser.h; sourceTree = "<group>"; };
 		3EBC02941C0457AB006F1C35 /* DMUserCenterParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserCenterParser.m; sourceTree = "<group>"; };
 		3EBC02951C0457AB006F1C35 /* DMUserLoginParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserLoginParser.h; sourceTree = "<group>"; };
@@ -585,14 +605,6 @@
 		3EBC039D1C0457AB006F1C35 /* DMTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTabBarViewController.m; sourceTree = "<group>"; };
 		3EBC039E1C0457AB006F1C35 /* DMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMWebViewController.h; sourceTree = "<group>"; };
 		3EBC039F1C0457AB006F1C35 /* DMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMWebViewController.m; sourceTree = "<group>"; };
-		3EBC03AF1C0457AB006F1C35 /* DMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoginViewController.h; sourceTree = "<group>"; };
-		3EBC03B01C0457AB006F1C35 /* DMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoginViewController.m; sourceTree = "<group>"; };
-		3EBC03B51C0457AB006F1C35 /* DMRegistCompleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRegistCompleteViewController.h; sourceTree = "<group>"; };
-		3EBC03B61C0457AB006F1C35 /* DMRegistCompleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRegistCompleteViewController.m; sourceTree = "<group>"; };
-		3EBC03B71C0457AB006F1C35 /* DMRegistPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRegistPwdViewController.h; sourceTree = "<group>"; };
-		3EBC03B81C0457AB006F1C35 /* DMRegistPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRegistPwdViewController.m; sourceTree = "<group>"; };
-		3EBC03B91C0457AB006F1C35 /* DMRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRegistViewController.h; sourceTree = "<group>"; };
-		3EBC03BA1C0457AB006F1C35 /* DMRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRegistViewController.m; sourceTree = "<group>"; };
 		3EBC03BB1C0457AB006F1C35 /* DMSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSettingViewController.h; sourceTree = "<group>"; };
 		3EBC03BC1C0457AB006F1C35 /* DMSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSettingViewController.m; sourceTree = "<group>"; };
 		3EBC03BD1C0457AB006F1C35 /* DMUserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserCenterViewController.h; sourceTree = "<group>"; };
@@ -686,6 +698,18 @@
 		3ECBF7C81C15C6B6004E9983 /* DMRiskPreferenceTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRiskPreferenceTestViewController.m; sourceTree = "<group>"; };
 		3ECBF7CA1C15C777004E9983 /* DMRiskPreferenceTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRiskPreferenceTestView.h; sourceTree = "<group>"; };
 		3ECBF7CB1C15C777004E9983 /* DMRiskPreferenceTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRiskPreferenceTestView.m; sourceTree = "<group>"; };
+		3ED4AABA1C19408C00714335 /* DMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSearchViewController.h; sourceTree = "<group>"; };
+		3ED4AABB1C19408C00714335 /* DMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSearchViewController.m; sourceTree = "<group>"; };
+		3ED4AAC01C1952E800714335 /* DMUserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserLoginViewController.h; sourceTree = "<group>"; };
+		3ED4AAC11C1952E800714335 /* DMUserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserLoginViewController.m; sourceTree = "<group>"; };
+		3ED4AAC21C1952E800714335 /* DMUserRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserRegisterViewController.h; sourceTree = "<group>"; };
+		3ED4AAC31C1952E800714335 /* DMUserRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserRegisterViewController.m; sourceTree = "<group>"; };
+		3ED4AAC61C1953A100714335 /* DMUserLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserLoginService.h; sourceTree = "<group>"; };
+		3ED4AAC71C1953A100714335 /* DMUserLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserLoginService.m; sourceTree = "<group>"; };
+		3ED4AAD61C19558500714335 /* DMUserLoginWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserLoginWebViewController.h; sourceTree = "<group>"; };
+		3ED4AAD71C19558500714335 /* DMUserLoginWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserLoginWebViewController.m; sourceTree = "<group>"; };
+		3ED4AAD91C1955B300714335 /* DMForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMForgetPwdViewController.h; sourceTree = "<group>"; };
+		3ED4AADA1C1955B300714335 /* DMForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMForgetPwdViewController.m; sourceTree = "<group>"; };
 		3EDDC4DD1C07069D008AAF91 /* DMFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFeedBackViewController.h; sourceTree = "<group>"; };
 		3EDDC4DE1C07069D008AAF91 /* DMFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFeedBackViewController.m; sourceTree = "<group>"; };
 		3EDDC4E51C0707D7008AAF91 /* DMUserCollectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserCollectionListViewController.h; sourceTree = "<group>"; };
@@ -751,6 +775,45 @@
 			children = (
 			);
 			path = UserCenter;
+			sourceTree = "<group>";
+		};
+		3E1C825D1C17CA0100C72E6F /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				3E1C825E1C17CA3F00C72E6F /* DMP2PDetailViewController.h */,
+				3E1C825F1C17CA3F00C72E6F /* DMP2PDetailViewController.m */,
+				3E1C82611C17CA5300C72E6F /* DMBaobaoDetailViewController.h */,
+				3E1C82621C17CA5300C72E6F /* DMBaobaoDetailViewController.m */,
+				3E1C82641C17CA6100C72E6F /* DMBaoxianDetailViewController.h */,
+				3E1C82651C17CA6100C72E6F /* DMBaoxianDetailViewController.m */,
+				3E1C82671C17CA7600C72E6F /* DMJijinDetailViewController.h */,
+				3E1C82681C17CA7600C72E6F /* DMJijinDetailViewController.m */,
+				3E1C826A1C17CA8800C72E6F /* DMYinhanglicaiDetailViewController.h */,
+				3E1C826B1C17CA8800C72E6F /* DMYinhanglicaiDetailViewController.m */,
+			);
+			name = DetailPage;
+			path = IndexPage/DetailPage;
+			sourceTree = "<group>";
+		};
+		3E1C826D1C17CB9500C72E6F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3E1C826E1C17CBB000C72E6F /* DMDetailTopView.h */,
+				3E1C826F1C17CBB000C72E6F /* DMDetailTopView.m */,
+				3E1C82741C17FFA000C72E6F /* DMDetailPageCell.h */,
+				3E1C82751C17FFA000C72E6F /* DMDetailPageCell.m */,
+			);
+			name = Detail;
+			path = IndexPage/Detail;
+			sourceTree = "<group>";
+		};
+		3E1C827A1C180C3E00C72E6F /* DMWebView */ = {
+			isa = PBXGroup;
+			children = (
+				3E1C827B1C180C3E00C72E6F /* DMWebView.h */,
+				3E1C827C1C180C3E00C72E6F /* DMWebView.m */,
+			);
+			path = DMWebView;
 			sourceTree = "<group>";
 		};
 		3E527CBC1C10192700C7269C /* Baobao */ = {
@@ -1131,6 +1194,8 @@
 		3EBC025A1C0457AB006F1C35 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3E98EE0B1C167F3A008D6DFF /* DMPageState.h */,
+				3E98EE0C1C167F3A008D6DFF /* DMPageState.m */,
 				3EBC025B1C0457AB006F1C35 /* DMDataService.h */,
 				3EBC025C1C0457AB006F1C35 /* DMDataService.m */,
 				3EBC025D1C0457AB006F1C35 /* DMObject+JsonParser.h */,
@@ -1171,7 +1236,6 @@
 				3EBC02711C0457AB006F1C35 /* Common */,
 				3EBC02801C0457AB006F1C35 /* DMActivity.h */,
 				3EBC02811C0457AB006F1C35 /* DMActivity.m */,
-				3EBC02821C0457AB006F1C35 /* ExpertsOnline */,
 				3EBC02871C0457AB006F1C35 /* UserCenter */,
 			);
 			path = Model;
@@ -1202,17 +1266,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		3EBC02821C0457AB006F1C35 /* ExpertsOnline */ = {
-			isa = PBXGroup;
-			children = (
-				3EBC02831C0457AB006F1C35 /* DMRecords.h */,
-				3EBC02841C0457AB006F1C35 /* DMRecords.m */,
-				3EBC02851C0457AB006F1C35 /* DMSplist.h */,
-				3EBC02861C0457AB006F1C35 /* DMSplist.m */,
-			);
-			path = ExpertsOnline;
-			sourceTree = "<group>";
-		};
 		3EBC02871C0457AB006F1C35 /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1228,21 +1281,9 @@
 				3E832E791C0C514200FE4C58 /* IndexPage */,
 				3EBC028B1C0457AB006F1C35 /* DMActivityParser.h */,
 				3EBC028C1C0457AB006F1C35 /* DMActivityParser.m */,
-				3EBC028D1C0457AB006F1C35 /* ExpertsOnline */,
 				3EBC02921C0457AB006F1C35 /* UserCenter */,
 			);
 			path = Parser;
-			sourceTree = "<group>";
-		};
-		3EBC028D1C0457AB006F1C35 /* ExpertsOnline */ = {
-			isa = PBXGroup;
-			children = (
-				3EBC028E1C0457AB006F1C35 /* DMRecordsParser.h */,
-				3EBC028F1C0457AB006F1C35 /* DMRecordsParser.m */,
-				3EBC02901C0457AB006F1C35 /* DMSplistParser.h */,
-				3EBC02911C0457AB006F1C35 /* DMSplistParser.m */,
-			);
-			path = ExpertsOnline;
 			sourceTree = "<group>";
 		};
 		3EBC02921C0457AB006F1C35 /* UserCenter */ = {
@@ -1269,6 +1310,8 @@
 		3EBC029E1C0457AB006F1C35 /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				3ED4AAC61C1953A100714335 /* DMUserLoginService.h */,
+				3ED4AAC71C1953A100714335 /* DMUserLoginService.m */,
 				3EDDC4E81C070973008AAF91 /* DMFeedBackService.h */,
 				3EDDC4E91C070973008AAF91 /* DMFeedBackService.m */,
 				3EBC029F1C0457AB006F1C35 /* DMLoginService.h */,
@@ -1850,6 +1893,9 @@
 		3EBC03CB1C0457AB006F1C35 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3E1C827E1C18109700C72E6F /* DMPageBottomButtonView.h */,
+				3E1C827F1C18109700C72E6F /* DMPageBottomButtonView.m */,
+				3E1C827A1C180C3E00C72E6F /* DMWebView */,
 				3E5D5E171C0D9BE900BA508D /* DMBannerCell.h */,
 				3E5D5E181C0D9BE900BA508D /* DMBannerCell.m */,
 				3EBC03CC1C0457AB006F1C35 /* AMBlurView.h */,
@@ -1947,6 +1993,8 @@
 		3EBC04F81C046221006F1C35 /* IndexPage */ = {
 			isa = PBXGroup;
 			children = (
+				3ED4AAB91C19407600714335 /* SearchPage */,
+				3E1C825D1C17CA0100C72E6F /* DetailPage */,
 				3EC62BB01C0C405700D1F2B9 /* HotMenu */,
 				3EBC04F91C04623C006F1C35 /* DMIndexPageViewController.h */,
 				3EBC04FA1C04623C006F1C35 /* DMIndexPageViewController.m */,
@@ -1959,6 +2007,7 @@
 		3EBC04FC1C055AA7006F1C35 /* IndexPage */ = {
 			isa = PBXGroup;
 			children = (
+				3E1C826D1C17CB9500C72E6F /* Detail */,
 				3E13BD961C0DCA480075E439 /* DMIndexPageMenuCell.h */,
 				3E13BD971C0DCA480075E439 /* DMIndexPageMenuCell.m */,
 				3E832E701C0C4FBC00FE4C58 /* Newcomer */,
@@ -2023,17 +2072,27 @@
 			name = HotMenu;
 			sourceTree = "<group>";
 		};
+		3ED4AAB91C19407600714335 /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+				3ED4AABA1C19408C00714335 /* DMSearchViewController.h */,
+				3ED4AABB1C19408C00714335 /* DMSearchViewController.m */,
+			);
+			name = SearchPage;
+			path = IndexPage/SearchPage;
+			sourceTree = "<group>";
+		};
 		3EDDC4DB1C07063F008AAF91 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3EBC03AF1C0457AB006F1C35 /* DMLoginViewController.h */,
-				3EBC03B01C0457AB006F1C35 /* DMLoginViewController.m */,
-				3EBC03B51C0457AB006F1C35 /* DMRegistCompleteViewController.h */,
-				3EBC03B61C0457AB006F1C35 /* DMRegistCompleteViewController.m */,
-				3EBC03B71C0457AB006F1C35 /* DMRegistPwdViewController.h */,
-				3EBC03B81C0457AB006F1C35 /* DMRegistPwdViewController.m */,
-				3EBC03B91C0457AB006F1C35 /* DMRegistViewController.h */,
-				3EBC03BA1C0457AB006F1C35 /* DMRegistViewController.m */,
+				3ED4AAD91C1955B300714335 /* DMForgetPwdViewController.h */,
+				3ED4AADA1C1955B300714335 /* DMForgetPwdViewController.m */,
+				3ED4AAD61C19558500714335 /* DMUserLoginWebViewController.h */,
+				3ED4AAD71C19558500714335 /* DMUserLoginWebViewController.m */,
+				3ED4AAC01C1952E800714335 /* DMUserLoginViewController.h */,
+				3ED4AAC11C1952E800714335 /* DMUserLoginViewController.m */,
+				3ED4AAC21C1952E800714335 /* DMUserRegisterViewController.h */,
+				3ED4AAC31C1952E800714335 /* DMUserRegisterViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -2174,19 +2233,18 @@
 				3EBC04BE1C0457AC006F1C35 /* AMBlurView.m in Sources */,
 				3E5D5E1C1C0D9C4C00BA508D /* DMSubject.m in Sources */,
 				3EBC04BF1C0457AC006F1C35 /* DMAlertView.m in Sources */,
+				3E1C82691C17CA7600C72E6F /* DMJijinDetailViewController.m in Sources */,
 				3EBC04D41C0457AC006F1C35 /* UIView+Common.m in Sources */,
 				3EBC044B1C0457AB006F1C35 /* NSStringAdditions.m in Sources */,
 				3EBC04621C0457AB006F1C35 /* CLParallaxView.m in Sources */,
 				3EBC047F1C0457AC006F1C35 /* WCAlertView.m in Sources */,
 				3EBC05041C056283006F1C35 /* DMManagementItem.m in Sources */,
-				3EBC04B81C0457AC006F1C35 /* DMRegistViewController.m in Sources */,
 				3EBC04661C0457AB006F1C35 /* JFReminderSwitchView.m in Sources */,
 				3EBC046F1C0457AB006F1C35 /* SDWebImageDownloaderOperation.m in Sources */,
 				3EBC04411C0457AB006F1C35 /* NSData+LLDBQuickLook.m in Sources */,
 				3EBC041C1C0457AB006F1C35 /* DMObject.m in Sources */,
 				3EC62BAC1C0C2E1500D1F2B9 /* DMMessageItem.m in Sources */,
 				3EC62BB91C0C444600D1F2B9 /* DMP2PViewController.m in Sources */,
-				3EBC04B61C0457AC006F1C35 /* DMRegistCompleteViewController.m in Sources */,
 				3E527CD81C101DF800C7269C /* DMManageGuozhaiEditViewController.m in Sources */,
 				3EDDC4EA1C070973008AAF91 /* DMFeedBackService.m in Sources */,
 				3E527CF31C101ED500C7269C /* DMManageP2PListViewController.m in Sources */,
@@ -2194,6 +2252,7 @@
 				3EBC04C11C0457AC006F1C35 /* DMBottomGeneralButtonView.m in Sources */,
 				3EBC04CB1C0457AC006F1C35 /* DMRoundLabel.m in Sources */,
 				3EBC04201C0457AB006F1C35 /* NSObject+Mapping.m in Sources */,
+				3E1C826C1C17CA8800C72E6F /* DMYinhanglicaiDetailViewController.m in Sources */,
 				3E527CE71C101E7300C7269C /* DMManageJijinEditViewController.m in Sources */,
 				3EBC04391C0457AB006F1C35 /* CLCachePolicy.m in Sources */,
 				3EBC047C1C0457AB006F1C35 /* UIScrollView+SVPullToRefresh.m in Sources */,
@@ -2202,6 +2261,7 @@
 				3E7A56491C0B2C5F009AFA89 /* JFSwipeView.m in Sources */,
 				3EBC04441C0457AB006F1C35 /* UIImage+LLDBQuickLook.m in Sources */,
 				3EBC04E01C0457AC006F1C35 /* DMInfoCell.m in Sources */,
+				3E1C82801C18109700C72E6F /* DMPageBottomButtonView.m in Sources */,
 				3EBC04251C0457AB006F1C35 /* DMGlobalVar.m in Sources */,
 				3EBC045E1C0457AB006F1C35 /* AFPropertyListRequestOperation.m in Sources */,
 				3EBC04CC1C0457AC006F1C35 /* DMSearchBar.m in Sources */,
@@ -2216,9 +2276,11 @@
 				3ECBF7CC1C15C777004E9983 /* DMRiskPreferenceTestView.m in Sources */,
 				3EBC042B1C0457AB006F1C35 /* DMActivity.m in Sources */,
 				3EBC04561C0457AB006F1C35 /* UIView+Extension.m in Sources */,
+				3E1C82661C17CA6100C72E6F /* DMBaoxianDetailViewController.m in Sources */,
 				3EBC04741C0457AB006F1C35 /* UIImage+MultiFormat.m in Sources */,
 				3E8CE4A81C0EEA1900471B37 /* DMBookkeepingCollectionView.m in Sources */,
 				3E527D121C102D7200C7269C /* DMManagementService.m in Sources */,
+				3ED4AADB1C1955B300714335 /* DMForgetPwdViewController.m in Sources */,
 				3E832E931C0C52CA00FE4C58 /* DMYangmaoItem.m in Sources */,
 				3EBC04551C0457AB006F1C35 /* UIView+DebugQuickLook.m in Sources */,
 				3EBC04F61C0461AD006F1C35 /* DMManagementViewController.m in Sources */,
@@ -2227,14 +2289,16 @@
 				3EBC04F31C045C7E006F1C35 /* MBProgressHUD.m in Sources */,
 				3E527CE41C101E6200C7269C /* DMManageJijinDetailViewController.m in Sources */,
 				3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */,
-				3EBC042C1C0457AB006F1C35 /* DMRecords.m in Sources */,
 				3EBC042A1C0457AB006F1C35 /* NSObject+Mapping.m in Sources */,
 				3EBC04331C0457AB006F1C35 /* DMUserLoginParser.m in Sources */,
 				3E527CF61C101EE500C7269C /* DMManageP2PDetailViewController.m in Sources */,
 				3E7A56571C0B3A7B009AFA89 /* DMDiscoveryFilterActivityOrder.m in Sources */,
+				3E1C82631C17CA5300C72E6F /* DMBaobaoDetailViewController.m in Sources */,
 				3EBC046E1C0457AB006F1C35 /* SDWebImageDownloader.m in Sources */,
+				3E1C82761C17FFA000C72E6F /* DMDetailPageCell.m in Sources */,
 				3EBC04D21C0457AC006F1C35 /* DMVenue_Annotation.m in Sources */,
 				3E5D5E191C0D9BE900BA508D /* DMBannerCell.m in Sources */,
+				3ED4AABC1C19408C00714335 /* DMSearchViewController.m in Sources */,
 				3EBC04AA1C0457AC006F1C35 /* DMBaseViewController.m in Sources */,
 				3E832EB41C0C55B600FE4C58 /* DMIndexPageService.m in Sources */,
 				3EBC04DB1C0457AC006F1C35 /* DMPicker.m in Sources */,
@@ -2245,17 +2309,15 @@
 				3EBC04CD1C0457AC006F1C35 /* DMSelectorButton.m in Sources */,
 				3E527CE11C101E5200C7269C /* DMManageJijinListViewController.m in Sources */,
 				3EBC04221C0457AB006F1C35 /* DMRequest.m in Sources */,
-				3EBC04301C0457AB006F1C35 /* DMRecordsParser.m in Sources */,
 				3EBC04CA1C0457AC006F1C35 /* DMRoundedImageView.m in Sources */,
-				3EBC04B71C0457AC006F1C35 /* DMRegistPwdViewController.m in Sources */,
 				3EBC04711C0457AB006F1C35 /* SDWebImagePrefetcher.m in Sources */,
 				3EBC04C51C0457AC006F1C35 /* DMDatePicker.m in Sources */,
 				3EBC04321C0457AB006F1C35 /* DMUserCenterParser.m in Sources */,
-				3EBC04B31C0457AC006F1C35 /* DMLoginViewController.m in Sources */,
 				3EBC04451C0457AB006F1C35 /* UIView+LLDBQuickLook.m in Sources */,
 				3EBC041F1C0457AB006F1C35 /* NSMutableArray+PageInfo.m in Sources */,
 				3EBC04381C0457AB006F1C35 /* DMUserCenterService.m in Sources */,
 				3E832E821C0C521100FE4C58 /* DMMessageParser.m in Sources */,
+				3E1C82601C17CA3F00C72E6F /* DMP2PDetailViewController.m in Sources */,
 				3E527D081C101F5500C7269C /* DMManageYinhanglicaiDetailViewController.m in Sources */,
 				3EBC04591C0457AB006F1C35 /* AFHTTPRequestOperation.m in Sources */,
 				3EBC047B1C0457AB006F1C35 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
@@ -2265,11 +2327,13 @@
 				3E527CFC1C101F1200C7269C /* DMManageYinhangkaListViewController.m in Sources */,
 				3EBC04771C0457AB006F1C35 /* UIImageView+WebCache.m in Sources */,
 				3EBC04C81C0457AC006F1C35 /* DMImageView.m in Sources */,
+				3ED4AAC81C1953A100714335 /* DMUserLoginService.m in Sources */,
 				3EBC04261C0457AB006F1C35 /* DMUserLoginInfo.m in Sources */,
 				3EBC04E31C0457AC006F1C35 /* DMUserInfoView.m in Sources */,
 				3E527CFF1C101F2000C7269C /* DMManageYinhangkaDetailViewController.m in Sources */,
 				3EBC04C61C0457AC006F1C35 /* DMDetailProjSeatImgView.m in Sources */,
 				3EBC04211C0457AB006F1C35 /* DMApiClient.m in Sources */,
+				3ED4AAC41C1952E800714335 /* DMUserLoginViewController.m in Sources */,
 				3EBC04481C0457AB006F1C35 /* NSDate+convenience.m in Sources */,
 				3EBC04581C0457AB006F1C35 /* AFHTTPClient.m in Sources */,
 				3E5D5E241C0DA16800BA508D /* StyledPageControl.m in Sources */,
@@ -2324,6 +2388,7 @@
 				3EDDC4E71C0707D7008AAF91 /* DMUserCollectionListViewController.m in Sources */,
 				3EBC04CF1C0457AC006F1C35 /* DMTableViewCell.m in Sources */,
 				3E832E991C0C52FB00FE4C58 /* DMP2PLibObject.m in Sources */,
+				3ED4AAD81C19558500714335 /* DMUserLoginWebViewController.m in Sources */,
 				3E7A56461C0B2C5F009AFA89 /* JFSwipeItemView.m in Sources */,
 				3E832E771C0C506E00FE4C58 /* DMNewcomerItem.m in Sources */,
 				3EBC04BA1C0457AC006F1C35 /* DMUserCenterViewController.m in Sources */,
@@ -2335,6 +2400,7 @@
 				3EBC044D1C0457AB006F1C35 /* UIButton+Additions.m in Sources */,
 				3E832E8D1C0C528200FE4C58 /* DMYangmaoParser.m in Sources */,
 				3E832E881C0C524100FE4C58 /* DMP2PLibParser.m in Sources */,
+				3ED4AAC51C1952E800714335 /* DMUserRegisterViewController.m in Sources */,
 				3EBC044F1C0457AB006F1C35 /* UIDeviceHelper.m in Sources */,
 				3E832E731C0C4FED00FE4C58 /* DMNewcomerCell.m in Sources */,
 				3EBC04431C0457AB006F1C35 /* NSString+LLDBQuickLook.m in Sources */,
@@ -2346,9 +2412,7 @@
 				3EBC045A1C0457AB006F1C35 /* AFHTTPRequestOperationLogger.m in Sources */,
 				3E527CDB1C101E1000C7269C /* DMManageGuozhaiListViewController.m in Sources */,
 				3EBC04461C0457AB006F1C35 /* NSArray+Additions.m in Sources */,
-				3EBC042D1C0457AB006F1C35 /* DMSplist.m in Sources */,
 				3EBC04651C0457AB006F1C35 /* JFReminderSwitchController.m in Sources */,
-				3EBC04311C0457AB006F1C35 /* DMSplistParser.m in Sources */,
 				3EBC04541C0457AB006F1C35 /* UILabel+Additions.m in Sources */,
 				3EBC042E1C0457AB006F1C35 /* DMUserInfo.m in Sources */,
 				3E527CEA1C101EA100C7269C /* DMManageOtherListViewController.m in Sources */,
@@ -2360,11 +2424,14 @@
 				3EBC043E1C0457AB006F1C35 /* CommonHelper.m in Sources */,
 				3E527CCF1C101D0400C7269C /* DMManageBaoxianListViewController.m in Sources */,
 				3EBC04D01C0457AC006F1C35 /* DMTextCell.m in Sources */,
+				3E98EE0D1C167F3A008D6DFF /* DMPageState.m in Sources */,
 				3EBC043F1C0457AB006F1C35 /* DMHelper.m in Sources */,
 				3EBC043A1C0457AB006F1C35 /* CLCacheService.m in Sources */,
 				3EBC04611C0457AB006F1C35 /* AnimatedGIFImageSerialization.m in Sources */,
+				3E1C82701C17CBB000C72E6F /* DMDetailTopView.m in Sources */,
 				3E527D021C101F3100C7269C /* DMManageYinhangkaEditViewController.m in Sources */,
 				3E527CF91C101EF300C7269C /* DMManageP2PEditViewController.m in Sources */,
+				3E1C827D1C180C3E00C72E6F /* DMWebView.m in Sources */,
 				3EBC04631C0457AB006F1C35 /* CLParallaxViewController.m in Sources */,
 				3EBC04761C0457AB006F1C35 /* UIImageView+HighlightedWebCache.m in Sources */,
 				3EBC04E11C0457AC006F1C35 /* DMMyAttentionCell.m in Sources */,

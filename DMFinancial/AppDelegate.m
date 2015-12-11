@@ -115,6 +115,16 @@
     DMUserCenterViewController *userCenterViewController = [[DMUserCenterViewController alloc] init];
     userCenterViewController.hideBackButton = YES;
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:userCenterViewController];
+    for (UIView *view in nav3.navigationBar.subviews) {
+        for (UIView *view2 in view.subviews) {
+            if ([view2 isKindOfClass:[UIImageView class]]) {
+                [view2 removeFromSuperview];
+                //                UIImageView *lineView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64 - 0.5, view.width, 0.5)];
+                //                lineView.backgroundColor = [UIColor colorWithHexString:@"dddddd"];
+                //                [view addSubview:lineView];
+            }
+        }
+    }
 
     NSArray *controllers = @[nav1, nav2, nav3];
     [self.tabBarController setViewControllers:controllers];

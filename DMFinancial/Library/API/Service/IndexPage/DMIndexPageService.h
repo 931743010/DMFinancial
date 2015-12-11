@@ -10,6 +10,8 @@
 
 @interface DMIndexPageService : DMDataService
 
++ (id)fetchCacheWithParameters:(NSDictionary *)parameters;
+
 /**
  *  消息
  */

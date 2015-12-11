@@ -7,7 +7,7 @@
 //
 
 #import "DMBaseViewController+Addition.h"
-#import "DMLoginViewController.h"
+#import "DMUserLoginViewController.h"
 
 
 
@@ -18,7 +18,7 @@
                       success:(void (^)(id returnData))success
                          fail:(void (^)(NSError *error))fail
 {
-    DMLoginViewController *loginCtrl = [[DMLoginViewController alloc]init];
+    DMUserLoginViewController *loginCtrl = [[DMUserLoginViewController alloc]init];
     loginCtrl.success  =success;
     loginCtrl.fail = fail;
     UINavigationController *naviCtrl = [[UINavigationController alloc] initWithRootViewController:loginCtrl];

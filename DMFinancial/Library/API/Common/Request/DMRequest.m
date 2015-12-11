@@ -213,33 +213,33 @@
         return;
     }
     
-    //判断状态码
-    id obj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    if (obj != nil) {
-        NSInteger errorCode = [[obj objectForKey:@"ret"] integerValue];
-        NSString *errorMsg = [obj objectForKey:@"msg"];
-
-        
-        if (errorCode != 0) {//接口错误
-            if ([DMHelper isNoLoginCode:errorCode]) {//登录异常
-                if (IsNilOrNull(errorMsg)) {
-                    errorMsg = kNotLogin;
-                }
-
-                NSError *error = [NSError errorWithCode:DMStatusNotLogin message:errorMsg];
-                fail(error);
-                return;
-            } else {//其他异常
-                if (IsNilOrNull(errorMsg)) {
-                    errorMsg = kResourceNotFound;
-                }
-                NSError *error = [NSError errorWithCode:DMCommonErrorCode message:errorMsg];
-                fail(error);
-                return;
-
-            }
-        }
-    }
+//    //判断状态码
+//    id obj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//    if (obj != nil) {
+//        NSInteger errorCode = [[obj objectForKey:@"ret"] integerValue];
+//        NSString *errorMsg = [obj objectForKey:@"msg"];
+//
+//        
+//        if (errorCode != 0) {//接口错误
+//            if ([DMHelper isNoLoginCode:errorCode]) {//登录异常
+//                if (IsNilOrNull(errorMsg)) {
+//                    errorMsg = kNotLogin;
+//                }
+//
+//                NSError *error = [NSError errorWithCode:DMStatusNotLogin message:errorMsg];
+//                fail(error);
+//                return;
+//            } else {//其他异常
+//                if (IsNilOrNull(errorMsg)) {
+//                    errorMsg = kResourceNotFound;
+//                }
+//                NSError *error = [NSError errorWithCode:DMCommonErrorCode message:errorMsg];
+//                fail(error);
+//                return;
+//
+//            }
+//        }
+//    }
     
     //如果使用解析器
     if (nil != parser) {

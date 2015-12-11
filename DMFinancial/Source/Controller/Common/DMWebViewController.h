@@ -12,9 +12,13 @@
 
 @property (nonatomic, strong) NSString *htmlStr;
 @property (nonatomic, strong) NSString *httpUrl;
-@property (nonatomic, assign) BOOL externalNet;
-@property (nonatomic, assign) BOOL hiddenToolBar;
+@property (nonatomic, assign) BOOL needLogin;
+@property (nonatomic, assign) BOOL showShare;
+
+//web页面的标题,如果为空就显示网页本身的标题
 @property (nonatomic, strong) NSString *titleString;
-@property (nonatomic, strong) NSDictionary *objectDic;
+
+//分享相关
+@property (nonatomic, strong) NSDictionary *shareDic;
 
 @end

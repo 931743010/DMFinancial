@@ -38,11 +38,11 @@
 + (BOOL)isNumericDecimal:(NSString *)string;
 
 /**
- *  判断接口状态码是否为登录异常
+ *  判断是否登录
  *
  *  @param code <#code description#>
  *
  *  @return <#return value description#>
  */
-+ (BOOL)isNoLoginCode:(NSInteger)code ;
++ (BOOL)isLogin;
 @end

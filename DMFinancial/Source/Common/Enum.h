@@ -21,11 +21,14 @@ typedef NS_ENUM(NSUInteger, DMTabControllerSelectedIndex) {
 
 //资产类型
 typedef NS_ENUM(NSInteger, DMAssetsType) {
+    /*
+        货币基金(宝宝类)
+     */
     DMAssetsType1 = 0,//货币基金(宝宝类)
     DMAssetsType2 = 1,//基金
-    DMAssetsType3 = 2,//股票
-    DMAssetsType4 = 3,//P2P
-    DMAssetsType5 = 4,//银行理财
+    DMAssetsType3 = 2,//P2P
+    DMAssetsType4 = 3,//银行理财
+    DMAssetsType5 = 4,//保险
     DMAssetsType6 = 5,//保险
     DMAssetsType7 = 6,
     DMAssetsType8 = 7,

@@ -40,7 +40,10 @@
 #define kNewcomer                      @"register.php"             //新手入门
 #define kYangmao                     @"register.php"             //薅羊毛
 #define kP2PLib                      @"register.php"             //P2P产品库
-
+#define kUserLogin                      @"register.php"             //P2P产品库
+#define kUserRegbycode                      @"register.php"             //P2P产品库
+#define kRegister                      @"register.php"             //P2P产品库
+#define kLoginthird                      @"register.php"             //P2P产品库
 
 
 /**
@@ -115,6 +118,9 @@ static NSString * const kMemberHeadPlaceholderImage        = @"bg_headPlaceHolde
 static float kSeperatorWidth = 0.5;
 static int const kPageSize = 20;
 
+
+static NSString * const kWeiXinUrlScheme = @"weixin://";              //微信
+
 #pragma mark-----------通知---------------------
 
 static NSString * const kAddAssetsNotification = @"AddAssetsNotification";
@@ -124,5 +130,7 @@ static NSString * const kAddAssetsNotification = @"AddAssetsNotification";
 static NSString * const kUserGuideFile = @"/Account/userguide.dat";
 //static NSString * const kDMLauchImageDir = @"/LaunchImage";
 #define kDMLauchImageDir PATH_AT_CACHEDIR(@"/LaunchImage")
+
+static int const DMPageBottomButtonViewHeight = 56;
 
 #endif

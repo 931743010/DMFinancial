@@ -12,11 +12,27 @@
 #import "DMMessageParser.h"
 #import "DMNewcomerParser.h"
 #import "DMP2PLibParser.h"
+#import "JFDataCache.h"
 
 #import "DMRequest.h"
 
 @implementation DMIndexPageService
 
+
++ (id)fetchCacheWithParameters:(NSDictionary *)parameters
+{
+    NSString *key = [[JFDataCache sharedDataCache] transformDictionary:parameters];//[JFDataCache generateKeyWithURLAsString:kDiscoveryProject
+    //                           parameters:parameters];
+    id data = [[JFDataCache sharedDataCache] readDataForKey:key];
+    
+    if (data) {
+//        DMProjectParser *parser = [[DMProjectParser alloc] init];
+//        DMProjectList *list = [parser parseData:data];
+//        return list.data;
+        return [NSArray array];
+    }
+    return nil;
+}
 
 /**
  *  消息

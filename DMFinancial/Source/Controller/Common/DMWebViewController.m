@@ -7,46 +7,49 @@
 //
 
 #import "DMWebViewController.h"
-//#import "DMProjectDetailViewController.h"
 #import "DMGlobalVar.h"
 #import "NSStringAdditions.h"
-////#import "CHTumblrMenuView.h"
-//#import "DMProjectShareViewController.h"
-//#import "DMShare.h"
-//#import "DMTencentShare.h"
-//#import "DMUserCenterViewController.h"
-//#import "DMUserOrderListViewController.h"
 #import "WCAlertView.h"
-@interface DMWebViewController () <UIWebViewDelegate> {
-    UIWebView                   *_webView;
-    UIButton                    *_backBtn;
-    UIButton                    *_shareBtn;
+#import "DMWebView.h"
+@interface DMWebViewController () <DMWebViewDelegate> {
+    DMWebView                   *_webView;
+    id _navPanTarget;
+    SEL _navPanAction;
+    UIBarButtonItem *_closeButtonItem;
 }
-
 @property (nonatomic, strong) NSString *shareTitle;
-@property (nonatomic, strong) UIToolbar *toolbar;
-@property (nonatomic, strong) UIBarButtonItem *backBarButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *forwardBarButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *refreshBarButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *stopBarButtonItem;
-@property (nonatomic, strong) UIBarButtonItem *actionBarButtonItem;
 
 @end
 
 @implementation DMWebViewController
 
+-(void)dealloc {
+    _webView.delegate = nil;
+    [_webView stopLoading];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.titleString;
     
-    if (self.objectDic) {
-        self.title = [self.objectDic objectForKey:@"maintitle"];
-    }
+    // 获取系统默认手势Handler并保存
+        NSMutableArray *gestureTargets = [self.navigationController.interactivePopGestureRecognizer valueForKey:@"_targets"];
+        id gestureTarget = [gestureTargets firstObject];
+        _navPanTarget = [gestureTarget valueForKey:@"_target"];
+        _navPanAction = NSSelectorFromString(@"handleNavigationTransition:");
 
-    _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 44)];
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+
+    _webView = [[DMWebView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
     _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    _webView.delegate = self;
-
+    _webView.webViewDelegate = self;
+    _webView.scalesPageToFit=YES;
+    
+    
+    NSString *oldAgent = [_webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
+    NSString *myAgent = [NSString stringWithFormat:@"%@damai",oldAgent];
+    NSDictionary *dictionnary = [[NSDictionary alloc] initWithObjectsAndKeys:myAgent, @"UserAgent", nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:dictionnary];
+    
     [self.view addSubview:_webView];
     if (self.htmlStr) {
         [_webView loadHTMLString:self.htmlStr baseURL:nil];
@@ -55,133 +58,73 @@
                                                cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                            timeoutInterval:5]];
     }
-    if (!_hiddenToolBar) {
-        self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
-        self.toolbar.barStyle = UIBarStyleDefault;
+    
+    _closeButtonItem = [[UIBarButtonItem alloc] initWithImage:nil style:UIBarButtonItemStylePlain target:self action:@selector(closeItem:)];
+    NSMutableArray *items = [[NSMutableArray alloc] initWithArray:self.navigationItem.leftBarButtonItems];
 
-        self.backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(goBackClicked:)];
-        self.backBarButtonItem.imageInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
-        self.backBarButtonItem.width = 18.0f;
-        
-        self.forwardBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"forward.png"] style:UIBarButtonItemStylePlain target:self action:@selector(goForwardClicked:)];
-        //    self.forwardBarButtonItem.imageInsets = UIEdgeInsetsMake(2.0f, 0.0f, -2.0f, 0.0f);
-        self.forwardBarButtonItem.width = 18.0f;
-        
-        self.refreshBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadClicked:)];
-        
-        self.stopBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(stopClicked:)];
-        
-        [self updateToolbarItems];
-        [self.view addSubview:self.toolbar];
-    } else {
-        _webView.height = CGRectGetHeight(self.view.bounds);
-    }
+    [_closeButtonItem setImageInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
     
-    _backBtn = [[UIButton alloc]initWithFrame:CGRectMake(10, 20, 32, 32)];
-    [_backBtn setImage:[UIImage imageNamed:@"btn_star_back.png"] forState:UIControlStateNormal];
-    [_backBtn setImage:[UIImage imageNamed:@"btn_star_back_click.png"] forState:UIControlStateHighlighted];
-    [_backBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_backBtn];
+    [items addObject:_closeButtonItem];
     
-    if (self.objectDic) {
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icons_share_white.png"]
-                                                                                  style:UIBarButtonItemStylePlain
-                                                                                 target:self
-                                                                                 action:@selector(shareAction)];
-    }
-}
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
+    self.navigationItem.leftBarButtonItems = items;
 }
 
--(void)viewWillLayoutSubviews {
-    
-    [super viewWillLayoutSubviews];
-    self.toolbar.frame = CGRectMake(0, _webView.bottom, kSeperatorWidth, 44);
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)updateToolbarItems {
-    
-    self.backBarButtonItem.enabled = _webView.canGoBack;
-    self.forwardBarButtonItem.enabled = _webView.canGoForward;
-    self.actionBarButtonItem.enabled = !_webView.isLoading;
-    
-    UIBarButtonItem *refreshStopBarButtonItem = _webView.isLoading ? self.stopBarButtonItem : self.refreshBarButtonItem;
-    
-    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    flexibleSpace.width = 40;
-    NSArray *items = [NSArray arrayWithObjects:
-                      flexibleSpace,
-                      self.backBarButtonItem,
-                      flexibleSpace,
-                      self.forwardBarButtonItem,
-                      flexibleSpace,
-                      refreshStopBarButtonItem,
-                      flexibleSpace,
-                      nil];
-    
-    [self.toolbar setItems:items];
-    
-}
 #pragma mark -
 #pragma mark ButtonClicked
--(void)backAction
+- (void)backButtonAction:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
--(void)shareAction
-{
-}
-
-- (void)goBackClicked:(UIBarButtonItem *)sender {
-    [_webView goBack];
-}
-
-- (void)goForwardClicked:(UIBarButtonItem *)sender {
-    [_webView goForward];
-}
-
-- (void)reloadClicked:(UIBarButtonItem *)sender {
-    [_webView reload];
-}
-
-- (void)stopClicked:(UIBarButtonItem *)sender {
-    [_webView stopLoading];
-	[self updateToolbarItems];
+    if (_webView.canGoBack) {
+        _closeButtonItem.image = [UIImage imageNamed:@"Login_close"];
+        [_webView goBack];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSLog(@"absoluteString:%@", request.URL.absoluteString);
     
 //    NSString *absoluteString = request.URL.absoluteString;
-//    if ([absoluteString containsString:[NSString stringWithFormat:@"%@/damaijump.a",DMAPIBaseURL] options:NSCaseInsensitiveSearch]) {
-//        NSDictionary *dic = [self dictionaryFromQuery:[[NSURL URLWithString:absoluteString] query] usingEncoding:NSUTF8StringEncoding];
-//        return NO;
-//    }
     
-       return YES;
+    return YES;
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView {
-    [self updateToolbarItems];
+/**
+ *  关闭按钮回到RootViewController
+ *
+ *  @param item 按钮对象
+ */
+- (void)closeItem:(UIBarButtonItem *)item
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)DMWebView:(DMWebView *)webView panPopGesture:(UIPanGestureRecognizer *)pan{
+    if (_navPanTarget && [_navPanTarget respondsToSelector:_navPanAction]) {
+        
+        [_navPanTarget performSelector:_navPanAction withObject:pan];
+    }
+}
+
+- (void)DMWebViewBeginDragging:(DMWebView *)webView {
+    self.navigationController.navigationBar.userInteractionEnabled = NO;
+}
+
+- (void)DMWebViewEndDragging:(DMWebView *)webView {
+    
+}
+
+- (void)DMWebViewDidBack:(DMWebView *)webView {
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
+    if (webView.canGoBack) {
+        _closeButtonItem.image = [UIImage imageNamed:@"Login_close"];
+    }
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [self updateToolbarItems];
+    //    [self hideLoadingView];
     NSString *string = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     //    NSString *href = [webView stringByEvaluatingJavaScriptFromString:@"document.location.href"];
-    
     
     NSRange range = [string rangeOfString:@"-"];
     if (range.location != NSNotFound && range.location + 1 != NSNotFound ) {
@@ -191,21 +134,24 @@
     if (self.titleString.length > 0 ) {
         string = self.titleString;
     }
-    if (self.externalNet) {
-        self.title = string;
-    }
-    if (self.objectDic) {
-        self.title = [self.objectDic objectForKey:@"maintitle"];
-    }
+    self.title = string;
     self.shareTitle = string;
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-//    [self showErrorViewWithText:kNetworkErrorText];
-    [self updateToolbarItems];
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+
 }
 
-
+//- (NSDictionary*)dictionaryFromQuery:(NSString*)query {
+//    NSURLComponents*wxNASAURLComponents = [NSURLComponents componentsWithString:query];
+//    NSMutableDictionary *queryItemDict = [NSMutableDictionary dictionary];
+//    NSArray* queryItems = wxNASAURLComponents.queryItems;
+//    for (NSURLQueryItem* item in queryItems) {
+//            [queryItemDict setObject:item.value forKey:item.name];
+//    }
+//    return queryItemDict;
+//}
 - (NSDictionary*)dictionaryFromQuery:(NSString*)query usingEncoding:(NSStringEncoding)encoding {
     NSCharacterSet* delimiterSet = [NSCharacterSet characterSetWithCharactersInString:@"&;"];
     NSMutableDictionary* pairs = [NSMutableDictionary dictionary];
@@ -226,4 +172,5 @@
     
     return [NSDictionary dictionaryWithDictionary:pairs];
 }
+
 @end
