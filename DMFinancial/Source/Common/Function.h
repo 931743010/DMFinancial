@@ -15,8 +15,8 @@
 #define DMLOG(fmt, ...)             NSLog((@"[File:%s],[Function:%s],[Line:%d]::: " fmt), __FILE__,__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #define DMLOGDATA(data)             DMLOG(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding])
 #define RGBA(r,g,b,a)               [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-#define FONT(f)                     [UIFont fontWithName:@"Helvetica-Light" size:AUTOSIZE(f)]
-#define BOLDFONT(f)                 [UIFont boldSystemFontOfSize:AUTOSIZE(f)]
+#define FONT(f)                     [UIFont fontWithName:@"Helvetica-Light" size:f]
+#define BOLDFONT(f)                 [UIFont boldSystemFontOfSize:f]
 
 
 #define PATH_AT_APPDIR(name)        [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:name]

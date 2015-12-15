@@ -72,7 +72,7 @@
     _userInfoView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 95)];
     _userInfoView.backgroundColor = kDMPinkColor;
 
-    _userHeadImageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.width - 48)/2, 9, 48, 48)];
+    _userHeadImageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.view.width - 48)/2, _userInfoView.bottom - 48 - 25, 48, 48)];
     _userHeadImageView.backgroundColor = kDMDefaultBlackStringColor;
     _userHeadImageView.clipsToBounds = YES;
     _userHeadImageView.userInteractionEnabled = YES;
@@ -90,10 +90,12 @@
         _userNameLabel.textColor = [UIColor whiteColor];
         [_userInfoView addSubview:_userNameLabel];
     } else {
-        DMButton *loginButton = [[DMButton alloc] initWithFrame:CGRectMake(20, _userHeadImageView.bottom + 5, 60, 20)];
+        DMButton *loginButton = [[DMButton alloc] initWithFrame:CGRectMake(186/2, _userHeadImageView.bottom + 5, AUTOSIZE(70), AUTOSIZE(60))];
+        loginButton.bottom = _userInfoView.bottom;
+        loginButton.right = _userHeadImageView.left;
         [loginButton setTitle:@"登录" forState:UIControlStateNormal];
         [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [loginButton.titleLabel setFont:FONT(13)];
+        [loginButton.titleLabel setFont:BOLDFONT(20)];
         [loginButton buttonClickedcompletion:^(id returnData) {
             DMUserLoginViewController *controller = [[DMUserLoginViewController alloc] init];
             controller.hidesBottomBarWhenPushed = YES;
@@ -106,10 +108,12 @@
 
         [_userInfoView addSubview:loginButton];
         
-        DMButton *registButton = [[DMButton alloc] initWithFrame:CGRectMake(150, _userHeadImageView.bottom + 5, 60, 20)];
+        DMButton *registButton = [[DMButton alloc] initWithFrame:CGRectMake(self.view.width/2 + 40, _userHeadImageView.bottom + 5, AUTOSIZE(70), AUTOSIZE(60))];
+        registButton.left = _userHeadImageView.right;
+        registButton.bottom = _userInfoView.bottom;
         [registButton setTitle:@"注册" forState:UIControlStateNormal];
         [registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [registButton.titleLabel setFont:FONT(13)];
+        [registButton.titleLabel setFont:BOLDFONT(20)];
         [registButton buttonClickedcompletion:^(id returnData) {
             DMUserRegisterViewController *controller = [[DMUserRegisterViewController alloc] init];
             controller.hidesBottomBarWhenPushed = YES;

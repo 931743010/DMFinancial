@@ -16,6 +16,8 @@
 #import "UIImage+Blur.h"
 #import "UIImageAdditions.h"
 
+#import "DMLoginTextField.h"
+
 #import "DMForgetPwdViewController.h"
 
 #import "DMUserLoginParser.h"
@@ -29,8 +31,8 @@
     DMButton *_forgotPwdButton;//忘记密码按钮
     UILabel *_remindLabel;//提示
     
-    UITextField *_phoneTextField;
-    UITextField *_passwordTextField;
+    DMLoginTextField *_phoneTextField;
+    DMLoginTextField *_passwordTextField;
     UIView *_otherLoginTypeView;
 }
 
@@ -54,34 +56,8 @@
                                                object:nil];
     
     
-    UIButton * rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [rightBtn setTitle:@"注册" forState:UIControlStateNormal];
-    rightBtn.titleLabel.font = FONT(14);
-    [rightBtn setTitleColor:kDMDefaultBlackStringColor forState:UIControlStateNormal];
-    [rightBtn addTarget:self action:@selector(activityButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(activityButtonClicked)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
-
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Login_close.png"] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-//    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-//        self.edgesForExtendedLayout = UIRectEdgeNone;
-//    }
-}
--(void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-//    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-//        self.edgesForExtendedLayout = UIRectEdgeAll;
-//    }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark -------界面布局---------
@@ -91,32 +67,32 @@
 -(void)createSubViews {
     //标题
     
-    _phoneTextField = [[UITextField alloc]initWithFrame:CGRectMake(32, 20, self.view.width - 62, AUTOSIZE(45))];
-    _phoneTextField.placeholder =@"手机号";
-    _phoneTextField.font = FONT(14);
-    _phoneTextField.textColor = kDMDefaultBlackStringColor;
-    _phoneTextField.returnKeyType = UIReturnKeyDone;
-    _phoneTextField.keyboardType = UIKeyboardTypeEmailAddress;
+    _phoneTextField = [[DMLoginTextField alloc]initWithFrame:CGRectMake(40, 20, self.view.width - 80, 44)];
+    _phoneTextField.title = @"手机号:";
     //[_phoneConment becomeFirstResponder];
     [self.view addSubview:_phoneTextField];
-    [_phoneTextField drawSolidLineWithFrame:CGRectMake(0, _phoneTextField.height - 0.5, _phoneTextField.width, 0.5)];
     
     
-    _passwordTextField = [[UITextField alloc]initWithFrame:CGRectMake(32, _phoneTextField.bottom, self.view.width - 62, AUTOSIZE(45))];
-    _passwordTextField.placeholder =@"密 码";
-    _passwordTextField.font = FONT(14);
-    _passwordTextField.secureTextEntry = YES;
-    _passwordTextField.textColor = kDMDefaultBlackStringColor;
-    _passwordTextField.returnKeyType = UIReturnKeyDone;
-    _passwordTextField.keyboardType = UIKeyboardTypeEmailAddress;
-    //[_phoneConment becomeFirstResponder];
+    _passwordTextField = [[DMLoginTextField alloc]initWithFrame:CGRectMake(40, _phoneTextField.bottom + 20, self.view.width - 80, 44)];
+    _passwordTextField.title = @"密码:";
     [self.view addSubview:_passwordTextField];
     [_passwordTextField drawSolidLineWithFrame:CGRectMake(0, _passwordTextField.height - 0.5, _passwordTextField.width, 0.5)];
     
+    
+    //忘记密码按钮
+    _forgotPwdButton = [[DMButton alloc] initWithFrame:CGRectMake(self.view.width - 82 - 32, _passwordTextField.bottom, 82, 40)];
+    [_forgotPwdButton setTitle:@"忘记密码?" forState:UIControlStateNormal];
+    [_forgotPwdButton setTitleColor:kDMPinkColor forState:UIControlStateNormal];
+    [_forgotPwdButton buttonClickedcompletion:^(id returnData) {
+        [self gotoForgotPwdPage];
+    }];
+    [_forgotPwdButton.titleLabel setFont:FONT(13)];
+    [self.view addSubview:_forgotPwdButton];
+
     //登录按钮
-    _loginButton = [[DMButton alloc] initWithFrame:CGRectMake(32, _passwordTextField.bottom + 14, self.view.width - 64, 40)];
+    _loginButton = [[DMButton alloc] initWithFrame:CGRectMake(40, _passwordTextField.bottom + 50, self.view.width - 80, 40)];
     [_loginButton.titleLabel setFont:BOLDFONT(17)];
-    _loginButton.layer.cornerRadius = 20;
+    _loginButton.layer.cornerRadius = 3;
     _loginButton.clipsToBounds = YES;
     
     UIImage *normalImage = [UIImage imageWithColor:kDMPinkColor size:_loginButton.frame.size];
@@ -129,15 +105,6 @@
     }];
     [self.view addSubview:_loginButton];
     
-    //忘记密码按钮
-    _forgotPwdButton = [[DMButton alloc] initWithFrame:CGRectMake(self.view.width - 82 - 32, _loginButton.bottom + 7, 82, 40)];
-    [_forgotPwdButton setTitle:@"忘记密码?" forState:UIControlStateNormal];
-    [_forgotPwdButton setTitleColor:kDMPinkColor forState:UIControlStateNormal];
-    [_forgotPwdButton buttonClickedcompletion:^(id returnData) {
-        [self gotoForgotPwdPage];
-    }];
-    [_forgotPwdButton.titleLabel setFont:FONT(14)];
-    [self.view addSubview:_forgotPwdButton];
     
     
 //    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"hiddenSomeThings"]) {
@@ -268,11 +235,11 @@
  *  点击登录按钮的事件
  */
 - (void)loginButonAction {
-    if (_phoneTextField.text.length == 0) {
+    if (_phoneTextField.textField.text.length == 0) {
         [self showAlertViewWithText:@"请输入账号!"];
         return;
     }
-    if (_passwordTextField.text.length == 0) {
+    if (_passwordTextField.textField.text.length == 0) {
         [self showAlertViewWithText:@"请输入密码!"];
         return;
     }
@@ -302,8 +269,8 @@
 
 -(void)requestLogin {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setSafetyObject:_phoneTextField.text forKey:@"phone"];
-    [params setSafetyObject:_passwordTextField.text forKey:@"passwd"];
+    [params setSafetyObject:_phoneTextField.textField.text forKey:@"phone"];
+    [params setSafetyObject:_passwordTextField.textField.text forKey:@"passwd"];
     
     [self showLoadingViewWithText:kLoadingText];
     [DMUserLoginService serviceUserLoginWithParameters:params success:^(id returnData) {

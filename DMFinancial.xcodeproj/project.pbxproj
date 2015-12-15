@@ -88,6 +88,7 @@
 		3E95B6591C1A7081009D5909 /* btn_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E95B6581C1A7081009D5909 /* btn_delete@2x.png */; };
 		3E95B6641C1AB197009D5909 /* DMSearchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E95B6631C1AB197009D5909 /* DMSearchObject.m */; };
 		3E98EE0D1C167F3A008D6DFF /* DMPageState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E98EE0C1C167F3A008D6DFF /* DMPageState.m */; };
+		3EB476D21C1FAE3500DE6987 /* DMLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB476D11C1FAE3500DE6987 /* DMLoginTextField.m */; };
 		3EBC02311C0447BE006F1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02301C0447BE006F1C35 /* main.m */; };
 		3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02331C0447BE006F1C35 /* AppDelegate.m */; };
 		3EBC023D1C0447BE006F1C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC023B1C0447BE006F1C35 /* Main.storyboard */; };
@@ -403,6 +404,8 @@
 		3E95B6631C1AB197009D5909 /* DMSearchObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSearchObject.m; sourceTree = "<group>"; };
 		3E98EE0B1C167F3A008D6DFF /* DMPageState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPageState.h; sourceTree = "<group>"; };
 		3E98EE0C1C167F3A008D6DFF /* DMPageState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPageState.m; sourceTree = "<group>"; };
+		3EB476D01C1FAE3500DE6987 /* DMLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoginTextField.h; sourceTree = "<group>"; };
+		3EB476D11C1FAE3500DE6987 /* DMLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoginTextField.m; sourceTree = "<group>"; };
 		3EBC022C1C0447BE006F1C35 /* DMFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC02301C0447BE006F1C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EBC02321C0447BE006F1C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1985,6 +1988,8 @@
 				3EBC04171C0457AB006F1C35 /* DMMyMoneyCell.m */,
 				3EBC04181C0457AB006F1C35 /* DMUserInfoView.h */,
 				3EBC04191C0457AB006F1C35 /* DMUserInfoView.m */,
+				3EB476D01C1FAE3500DE6987 /* DMLoginTextField.h */,
+				3EB476D11C1FAE3500DE6987 /* DMLoginTextField.m */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -2371,6 +2376,7 @@
 				3EBC042F1C0457AB006F1C35 /* DMActivityParser.m in Sources */,
 				3EBC04D31C0457AC006F1C35 /* THLabel.m in Sources */,
 				3EBC041D1C0457AB006F1C35 /* DMRequestParser.m in Sources */,
+				3EB476D21C1FAE3500DE6987 /* DMLoginTextField.m in Sources */,
 				3EBC043C1C0457AB006F1C35 /* JFDictionaryToStringTransformer.m in Sources */,
 				3EBC041B1C0457AB006F1C35 /* DMObject+JsonParser.m in Sources */,
 				3EBC04D61C0457AC006F1C35 /* DMBirthdayPicker.m in Sources */,
