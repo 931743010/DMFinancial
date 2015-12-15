@@ -85,6 +85,8 @@
 		3E832EB41C0C55B600FE4C58 /* DMIndexPageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E832EB31C0C55B600FE4C58 /* DMIndexPageService.m */; };
 		3E8CE4A41C0EE90D00471B37 /* DMBookkeepingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */; };
 		3E8CE4A81C0EEA1900471B37 /* DMBookkeepingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */; };
+		3E95B6591C1A7081009D5909 /* btn_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E95B6581C1A7081009D5909 /* btn_delete@2x.png */; };
+		3E95B6641C1AB197009D5909 /* DMSearchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E95B6631C1AB197009D5909 /* DMSearchObject.m */; };
 		3E98EE0D1C167F3A008D6DFF /* DMPageState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E98EE0C1C167F3A008D6DFF /* DMPageState.m */; };
 		3EBC02311C0447BE006F1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02301C0447BE006F1C35 /* main.m */; };
 		3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02331C0447BE006F1C35 /* AppDelegate.m */; };
@@ -248,6 +250,8 @@
 		3EDDC4EA1C070973008AAF91 /* DMFeedBackService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4E91C070973008AAF91 /* DMFeedBackService.m */; };
 		3EDDC4ED1C070CCE008AAF91 /* DMProjectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4EC1C070CCE008AAF91 /* DMProjectListCell.m */; };
 		3EDDC4F11C070D75008AAF91 /* DMProjectListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDC4F01C070D75008AAF91 /* DMProjectListItem.m */; };
+		3EF9213D1C1AC36F0066889A /* DMTableViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF9213C1C1AC36F0066889A /* DMTableViewHeaderView.m */; };
+		3EF921431C1ACF110066889A /* DMJijinDetailChartsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF921421C1ACF110066889A /* DMJijinDetailChartsCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,6 +398,9 @@
 		3E8CE4A31C0EE90D00471B37 /* DMBookkeepingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBookkeepingViewController.m; path = Management/Bookkeeping/DMBookkeepingViewController.m; sourceTree = "<group>"; };
 		3E8CE4A61C0EEA1900471B37 /* DMBookkeepingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMBookkeepingCollectionView.h; path = Management/Bookkeeping/DMBookkeepingCollectionView.h; sourceTree = "<group>"; };
 		3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMBookkeepingCollectionView.m; path = Management/Bookkeeping/DMBookkeepingCollectionView.m; sourceTree = "<group>"; };
+		3E95B6581C1A7081009D5909 /* btn_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_delete@2x.png"; sourceTree = "<group>"; };
+		3E95B6621C1AB197009D5909 /* DMSearchObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMSearchObject.h; sourceTree = "<group>"; };
+		3E95B6631C1AB197009D5909 /* DMSearchObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMSearchObject.m; sourceTree = "<group>"; };
 		3E98EE0B1C167F3A008D6DFF /* DMPageState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPageState.h; sourceTree = "<group>"; };
 		3E98EE0C1C167F3A008D6DFF /* DMPageState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPageState.m; sourceTree = "<group>"; };
 		3EBC022C1C0447BE006F1C35 /* DMFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -720,6 +727,10 @@
 		3EDDC4EC1C070CCE008AAF91 /* DMProjectListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMProjectListCell.m; path = IndexPage/DMProjectListCell.m; sourceTree = "<group>"; };
 		3EDDC4EF1C070D75008AAF91 /* DMProjectListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DMProjectListItem.h; path = IndexPage/DMProjectListItem.h; sourceTree = "<group>"; };
 		3EDDC4F01C070D75008AAF91 /* DMProjectListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DMProjectListItem.m; path = IndexPage/DMProjectListItem.m; sourceTree = "<group>"; };
+		3EF9213B1C1AC36F0066889A /* DMTableViewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMTableViewHeaderView.h; sourceTree = "<group>"; };
+		3EF9213C1C1AC36F0066889A /* DMTableViewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMTableViewHeaderView.m; sourceTree = "<group>"; };
+		3EF921411C1ACF110066889A /* DMJijinDetailChartsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMJijinDetailChartsCell.h; sourceTree = "<group>"; };
+		3EF921421C1ACF110066889A /* DMJijinDetailChartsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMJijinDetailChartsCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -739,6 +750,7 @@
 		3E13BD9A1C0DCCDD0075E439 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3E95B6581C1A7081009D5909 /* btn_delete@2x.png */,
 				3E13BDBA1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png */,
 				3E13BDAE1C0DDE3D0075E439 /* icon_pagecontrol_normal@2x.png */,
 				3E13BDAF1C0DDE3D0075E439 /* icon_pagecontrol_selected@2x.png */,
@@ -802,6 +814,8 @@
 				3E1C826F1C17CBB000C72E6F /* DMDetailTopView.m */,
 				3E1C82741C17FFA000C72E6F /* DMDetailPageCell.h */,
 				3E1C82751C17FFA000C72E6F /* DMDetailPageCell.m */,
+				3EF921411C1ACF110066889A /* DMJijinDetailChartsCell.h */,
+				3EF921421C1ACF110066889A /* DMJijinDetailChartsCell.m */,
 			);
 			name = Detail;
 			path = IndexPage/Detail;
@@ -1124,6 +1138,16 @@
 				3E8CE4A71C0EEA1900471B37 /* DMBookkeepingCollectionView.m */,
 			);
 			name = Bookkeeping;
+			sourceTree = "<group>";
+		};
+		3E95B6611C1AB16E009D5909 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3E95B6621C1AB197009D5909 /* DMSearchObject.h */,
+				3E95B6631C1AB197009D5909 /* DMSearchObject.m */,
+			);
+			name = Search;
+			path = IndexPage/Search;
 			sourceTree = "<group>";
 		};
 		3EBC02231C0447BE006F1C35 = {
@@ -1944,6 +1968,8 @@
 				3EBC03F71C0457AB006F1C35 /* THLabel.m */,
 				3EBC03F81C0457AB006F1C35 /* UIView+Common.h */,
 				3EBC03F91C0457AB006F1C35 /* UIView+Common.m */,
+				3EF9213B1C1AC36F0066889A /* DMTableViewHeaderView.h */,
+				3EF9213C1C1AC36F0066889A /* DMTableViewHeaderView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -2118,6 +2144,7 @@
 		3EDDC4EE1C070D49008AAF91 /* IndexPage */ = {
 			isa = PBXGroup;
 			children = (
+				3E95B6611C1AB16E009D5909 /* Search */,
 				3E832E891C0C525C00FE4C58 /* Yangmao */,
 				3E832E7E1C0C515100FE4C58 /* HotList */,
 				3E832E7F1C0C515100FE4C58 /* P2PLib */,
@@ -2201,6 +2228,7 @@
 				3EBC02421C0447BE006F1C35 /* LaunchScreen.storyboard in Resources */,
 				3EBC023F1C0447BE006F1C35 /* Assets.xcassets in Resources */,
 				3E13BDAA1C0DCCF20075E439 /* nearby@2x.png in Resources */,
+				3E95B6591C1A7081009D5909 /* btn_delete@2x.png in Resources */,
 				3EBC04A71C0457AC006F1C35 /* icons_back_dark@3x.png in Resources */,
 				3E13BDA81C0DCCF20075E439 /* mark@2x.png in Resources */,
 				3E13BDBB1C0DE1B40075E439 /* icon_refresh_arrow_down@2x.png in Resources */,
@@ -2279,6 +2307,7 @@
 				3E1C82661C17CA6100C72E6F /* DMBaoxianDetailViewController.m in Sources */,
 				3EBC04741C0457AB006F1C35 /* UIImage+MultiFormat.m in Sources */,
 				3E8CE4A81C0EEA1900471B37 /* DMBookkeepingCollectionView.m in Sources */,
+				3EF921431C1ACF110066889A /* DMJijinDetailChartsCell.m in Sources */,
 				3E527D121C102D7200C7269C /* DMManagementService.m in Sources */,
 				3ED4AADB1C1955B300714335 /* DMForgetPwdViewController.m in Sources */,
 				3E832E931C0C52CA00FE4C58 /* DMYangmaoItem.m in Sources */,
@@ -2385,6 +2414,7 @@
 				3E527CC61C101C6400C7269C /* DMManageBaobaoListViewController.m in Sources */,
 				3E527CDE1C101E2200C7269C /* DMManageGuozhaiDetailViewController.m in Sources */,
 				3E7ECB771C1440C600BB5C0D /* DMCustomizeViewController.m in Sources */,
+				3E95B6641C1AB197009D5909 /* DMSearchObject.m in Sources */,
 				3EDDC4E71C0707D7008AAF91 /* DMUserCollectionListViewController.m in Sources */,
 				3EBC04CF1C0457AC006F1C35 /* DMTableViewCell.m in Sources */,
 				3E832E991C0C52FB00FE4C58 /* DMP2PLibObject.m in Sources */,
@@ -2405,6 +2435,7 @@
 				3E832E731C0C4FED00FE4C58 /* DMNewcomerCell.m in Sources */,
 				3EBC04431C0457AB006F1C35 /* NSString+LLDBQuickLook.m in Sources */,
 				3E527CCC1C101CA400C7269C /* DMManageBaobaoEditViewController.m in Sources */,
+				3EF9213D1C1AC36F0066889A /* DMTableViewHeaderView.m in Sources */,
 				3EC62B9F1C0BF6D100D1F2B9 /* DMMessageListViewController.m in Sources */,
 				3EBC04A91C0457AC006F1C35 /* DMBaseViewController+Addition.m in Sources */,
 				3EC62BB61C0C411700D1F2B9 /* DMYangmaoViewController.m in Sources */,
@@ -2504,7 +2535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2541,7 +2572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -2552,6 +2583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2575,6 +2607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

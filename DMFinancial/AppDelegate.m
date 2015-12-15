@@ -70,17 +70,16 @@
     DMIndexPageViewController *indexPageController = [[DMIndexPageViewController alloc] init];
     indexPageController.hideBackButton = YES;
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:indexPageController];
-//    [nav1.navigationBar drawSolidLineWithFrame:CGRectMake(0, nav1.navigationBar.bottom - 0.5, nav1.navigationBar.width, 0.5)];
-//    for (UIView *view in nav1.navigationBar.subviews) {
-//        for (UIView *view2 in view.subviews) {
-//            if ([view2 isKindOfClass:[UIImageView class]]) {
-//                [view2 removeFromSuperview];
+    for (UIView *view in nav1.navigationBar.subviews) {
+        for (UIView *view2 in view.subviews) {
+            if ([view2 isKindOfClass:[UIImageView class]]) {
+                [view2 removeFromSuperview];
 //                UIImageView *lineView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64 - 0.5, view.width, 0.5)];
 //                lineView.backgroundColor = [UIColor colorWithHexString:@"dddddd"];
 //                [view addSubview:lineView];
-//            }
-//        }
-//    }
+            }
+        }
+    }
     
 //    DMManagementViewController *managementViewController = [[DMManagementViewController alloc] init];
 //    managementViewController.hideBackButton = YES;

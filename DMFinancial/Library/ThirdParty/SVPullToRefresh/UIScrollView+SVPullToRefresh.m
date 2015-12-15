@@ -288,16 +288,10 @@ static char UIScrollViewPullToRefreshView;
         NSString *subtitle = [self.subtitles objectAtIndex:self.state];
         self.subtitleLabel.text = subtitle.length > 0 ? subtitle : nil;
         
-        
-        CGSize titleSize = [self.titleLabel.text sizeWithFont:self.titleLabel.font
-                                            constrainedToSize:CGSizeMake(labelMaxWidth,self.titleLabel.font.lineHeight)
-                                                lineBreakMode:self.titleLabel.lineBreakMode];
-        
-        
-        CGSize subtitleSize = [self.subtitleLabel.text sizeWithFont:self.subtitleLabel.font
-                                                  constrainedToSize:CGSizeMake(labelMaxWidth,self.subtitleLabel.font.lineHeight)
-                                                      lineBreakMode:self.subtitleLabel.lineBreakMode];
-        
+        CGSize titleSize = [self.titleLabel.text boundingRectWithSize:CGSizeMake(labelMaxWidth,self.titleLabel.font.lineHeight) options:(NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName: self.titleLabel.font} context:nil].size;
+
+        CGSize subtitleSize = [self.subtitleLabel.text boundingRectWithSize:CGSizeMake(labelMaxWidth,self.subtitleLabel.font.lineHeight) options:(NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName: self.subtitleLabel.font} context:nil].size;
+
         CGFloat maxLabelWidth = MAX(titleSize.width,subtitleSize.width);
         
         CGFloat totalMaxWidth;

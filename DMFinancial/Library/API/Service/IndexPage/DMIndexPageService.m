@@ -146,4 +146,47 @@
 
 }
 
+/**
+ *  获取热门搜索
+ */
+
++ (void)getSearchHotWordListWithParams:(NSDictionary *)params
+                           cachePolicy:(CLCachePolicy *)policy
+                            success:(void(^)(id returnData))success
+                               fail:(void(^)(NSError *error))fail {
+    DMRequest *request = [DMRequest new];
+    [request requestWithUrl:kP2PLib
+                 parameters:params
+                cachePolicy:policy
+                     parser:[DMP2PLibParser new]
+                    success:^(id returnData){
+                        success(returnData);
+                    }
+                       fail:^(NSError *error){
+                           fail(error);
+                       }];
+    
+}
+/**
+ *  获取搜索结果
+ */
+
++ (void)getSearchListWithParams:(NSDictionary *)params
+                    cachePolicy:(CLCachePolicy *)policy
+                               success:(void(^)(id returnData))success
+                                  fail:(void(^)(NSError *error))fail {
+    DMRequest *request = [DMRequest new];
+    [request requestWithUrl:kP2PLib
+                 parameters:params
+                cachePolicy:policy
+                     parser:[DMP2PLibParser new]
+                    success:^(id returnData){
+                        success(returnData);
+                    }
+                       fail:^(NSError *error){
+                           fail(error);
+                       }];
+    
+}
+
 @end

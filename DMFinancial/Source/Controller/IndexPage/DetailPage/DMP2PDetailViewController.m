@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _detailTopView = [[DMDetailTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 150)];
+    _detailTopView = [[DMDetailTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kDetailTopViewHight)];
     _detailTopView.item = self.item;
 
 
@@ -55,7 +55,6 @@
     _tableView.dataSource = self;
     _tableView.userInteractionEnabled = YES;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_tableView setSeparatorInset:UIEdgeInsetsZero];
     [self.view addSubview:_tableView];
     
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, DMPageBottomButtonViewHeight)];
@@ -170,9 +169,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 1) {
-        return 30;
+        return kTableViewHeaderViewHight;
     }
-    return 0.001;
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -180,14 +179,14 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    DMTableViewHeaderView *view = [[DMTableViewHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTableViewHeaderViewHight)];
     if (section == 1) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth, 30)];
-        label.text = @"     理财师点评";
-        label.textColor = kDMDefaultBlackStringColor;
-        label.font = FONT(13);
-        return label;
+        view.title = @"理财师点评";
+    } else {
+        view.title = @"";
     }
-    return nil;
+
+    return view;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

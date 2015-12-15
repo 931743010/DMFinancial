@@ -38,6 +38,7 @@
 #import "DMTableViewCell.h"
 #import "UIView+Extension.h"
 #import "DMPageDataInfo.h"
+#import "DMTableViewHeaderView.h"
 
 //
 #import "UIView+Common.h"

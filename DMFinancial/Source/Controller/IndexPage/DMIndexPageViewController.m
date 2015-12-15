@@ -22,6 +22,7 @@
 #import "DMP2PViewController.h"
 #import "DMHotListViewController.h"
 #import "DMP2PDetailViewController.h"
+#import "DMJijinDetailViewController.h"
 #import "DMSearchViewController.h"
 
 #import "DMIndexPageService.h"
@@ -307,6 +308,14 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 #pragma mark - SwipeView Delegate
 #pragma mark - SwipeView Datasource
 
+- (void)swipeView:(JFSwipeView *)swipeView didSelectedAtIndex:(NSInteger)index
+{
+    
+    if (swipeView.tag == DMIndexSwipeViewTypeHeader) {
+        if (index != self.categoryContentView.currentIndex) {
+            self.categoryContentView.currentIndex = index;
+        }
+    }}
 
 - (void)swipeView:(JFSwipeView *)swipeView willDisplayView:(UIView *)view atIndex:(NSInteger)index
 {
@@ -456,7 +465,7 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    DMP2PDetailViewController *controller = [[DMP2PDetailViewController alloc] init];
+    DMJijinDetailViewController *controller = [[DMJijinDetailViewController alloc] init];
     controller.hidesBottomBarWhenPushed = YES;
     controller.item = [_listArray objectAt:indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];

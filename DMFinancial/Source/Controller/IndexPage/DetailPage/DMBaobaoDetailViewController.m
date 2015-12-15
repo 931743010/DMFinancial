@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _detailTopView = [[DMDetailTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 150)];
+    _detailTopView = [[DMDetailTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kDetailTopViewHight)];
     _detailTopView.item = self.item;
     self.title = self.item.name;
     [self createSubViews];

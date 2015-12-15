@@ -74,6 +74,7 @@
 /**
  *  通用提示信息
  */
+static NSString * const kPlaceholderOfSearchBar = @"请输入演出，艺人，场馆的名称";
 static NSString * const kLoadingText = @"努力加载中";
 static NSString * const kLocationDenyError = @"定位功能被关闭！请在设置中开启";
 static NSString * const kLocationError = @"定位失败！请稍后再试";
@@ -115,8 +116,6 @@ static NSString * const kMemberHeadPlaceholderImage        = @"bg_headPlaceHolde
 #define kDMDefaultLightGrayStringColor [UIColor colorWithRed:180.0/255.0 green:180.0/255.0 blue:180.0/255.0 alpha:1]//浅灰色(b4b4b4)
 #define kSeperatorColor [UIColor colorWithRed:206.0/255.0 green:206.0/255.0 blue:206.0/255.0 alpha:1]//分割线颜色(cecece)
 
-static float kSeperatorWidth = 0.5;
-static int const kPageSize = 20;
 
 
 static NSString * const kWeiXinUrlScheme = @"weixin://";              //微信
@@ -127,10 +126,16 @@ static NSString * const kAddAssetsNotification = @"AddAssetsNotification";
 /**
  *  常用目录
  */
+static NSString * const kHistoryWordsFile = @"/Account/historyWords.dat";
 static NSString * const kUserGuideFile = @"/Account/userguide.dat";
 //static NSString * const kDMLauchImageDir = @"/LaunchImage";
 #define kDMLauchImageDir PATH_AT_CACHEDIR(@"/LaunchImage")
 
-static int const DMPageBottomButtonViewHeight = 56;
+static CGFloat const DMPageBottomButtonViewHeight = 56;
+
+static CGFloat const kSeperatorWidth = 0.5;
+static CGFloat const kPageSize = 20;
+static CGFloat const kTableViewHeaderViewHight = 43;
+static CGFloat const kDetailTopViewHight = 200;
 
 #endif

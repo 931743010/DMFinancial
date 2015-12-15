@@ -8,6 +8,13 @@
 
 #import "DMObject.h"
 
+@interface DMProjectList : DMObject
+
+@property (nonatomic, strong) NSArray *projectsData;
+@property (nonatomic, assign) NSInteger totalCount;
+
+@end
+
 @interface DMProjectListItem : DMObject
 
 @property (nonatomic, strong) NSString *itemId;

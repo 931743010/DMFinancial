@@ -12,6 +12,7 @@
 #import "DMDetailPageCell.h"
 #import "DMWebViewController.h"
 #import "DMPageBottomButtonView.h"
+#import "DMJijinDetailChartsCell.h"
 
 @interface DMJijinDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -23,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _detailTopView = [[DMDetailTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 150)];
+    _detailTopView = [[DMDetailTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kDetailTopViewHight)];
     _detailTopView.item = self.item;
     
     
@@ -58,6 +59,9 @@
     [_tableView setSeparatorInset:UIEdgeInsetsZero];
     [self.view addSubview:_tableView];
     
+    [_tableView registerClass:[DMJijinDetailChartsCell class] forCellReuseIdentifier:@"DMJijinDetailChartsCell"];
+    [_tableView registerClass:[DMDetailPageCell class] forCellReuseIdentifier:@"DMDetailPageCell"];
+
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, DMPageBottomButtonViewHeight)];
     _tableView.tableHeaderView = _detailTopView;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
@@ -107,19 +111,25 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     switch (section) {
         case 0:
-            return 8;
-            break;
-        case 1:
             return 1;
             break;
-            
+        case 1:
+            return 4;
+            break;
+        case 2:
+            return 5;
+            break;
+        case 3:
+            return 1;
+            break;
+
         default:
             return 0;
             break;
@@ -128,10 +138,12 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMDetailPageCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"DMDetailPageCell"];
-    if (!cell) {
-        cell = [[DMDetailPageCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"DMDetailPageCell"];
+    if (indexPath.section == 0) {
+        DMJijinDetailChartsCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"DMJijinDetailChartsCell"];
+        
+        return cell;
     }
+    DMDetailPageCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"DMDetailPageCell"];
     
     cell.textLabel.textColor = kDMDefaultBlackStringColor;
     cell.textLabel.font = FONT(13);
@@ -139,43 +151,52 @@
     cell.detailTextLabel.font = FONT(12);
     cell.accessoryType = UITableViewCellAccessoryNone;
     
-    if (indexPath.section == 0) {
+    if (indexPath.section == 1) {
         switch (indexPath.row) {
             case 0:
-                cell.textLabel.text = @"发行方";
-                cell.detailTextLabel.text = @"国华人寿";
+                cell.textLabel.text = @"收费方式";
+                cell.detailTextLabel.text = @"红岭创投";
                 break;
             case 1:
-                cell.textLabel.text = @"产品类型";
-                cell.detailTextLabel.text = @"万能型";
+                cell.textLabel.text = @"起购金额";
+                cell.detailTextLabel.text = @"按月等额";
                 break;
             case 2:
-                cell.textLabel.text = @"起投金额";
+                cell.textLabel.text = @"赎回到账时间";
                 cell.detailTextLabel.text = @"500";
                 break;
             case 3:
-                cell.textLabel.text = @"销售平台";
-                cell.detailTextLabel.text = @"微重银行";
+                cell.textLabel.text = @"最低赎回份额";
+                cell.detailTextLabel.text = @"500";
+                break;
+                
+            default:
+                break;
+        }
+    } else if (indexPath.section == 2) {
+        switch (indexPath.row) {
+            case 0:
+                cell.textLabel.text = @"基金规模";
+                cell.detailTextLabel.text = @"红岭创投";
+                break;
+            case 1:
+                cell.textLabel.text = @"成立时间";
+                cell.detailTextLabel.text = @"按月等额";
+                break;
+            case 2:
+                cell.textLabel.text = @"资产配置";
+                cell.detailTextLabel.text = @"500";
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                break;
+            case 3:
+                cell.textLabel.text = @"基金经理";
+                cell.detailTextLabel.text = @"500";
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 break;
             case 4:
-                cell.textLabel.text = @"销售平台";
-                cell.detailTextLabel.text = @"微重银行";
-                break;
-            case 5:
-                cell.textLabel.text = @"销售平台";
-                cell.detailTextLabel.text = @"微重银行";
-                break;
-            case 6:
-                cell.textLabel.text = @"销售平台";
-                cell.detailTextLabel.text = @"微重银行";
-                break;
-            case 7:
-                cell.textLabel.text = @"销售平台";
-                cell.detailTextLabel.text = @"微重银行";
-                break;
-            case 8:
-                cell.textLabel.text = @"销售平台";
-                cell.detailTextLabel.text = @"微重银行";
+                cell.textLabel.text = @"基金公司";
+                cell.detailTextLabel.text = @"500";
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
                 break;
                 
             default:
@@ -192,10 +213,10 @@
 #pragma mark----------------UITableViewDelegate---------------------
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 1) {
-        return 30;
+    if (section == 0) {
+        return 10;
     }
-    return 0.001;
+    return kTableViewHeaderViewHight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -203,19 +224,26 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    DMTableViewHeaderView *view = [[DMTableViewHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTableViewHeaderViewHight)];
     if (section == 1) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth, 30)];
-        label.text = @"     理财师点评";
-        label.textColor = kDMDefaultBlackStringColor;
-        label.font = FONT(13);
-        return label;
+        view.title = @"买入须知";
+    } else if (section == 2) {
+        view.title = @"基金档案";
+    } else if (section == 3) {
+        view.title = @"理财师点评";
+    } else {
+        view.title = @"";
     }
-    return nil;
+    
+    return view;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1) {
+    if (indexPath.section == 0) {
+        return 380;
+    }
+    if (indexPath.section == 3) {
         NSString *content = @"金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额额金额金额金额金额金额金额金额金额金额金额金额金额金额";
         CGSize size = [content boundingRectWithSize:CGSizeMake(kScreenWidth - 20, 111111) options:(NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName: FONT(13)} context:nil].size;
         
@@ -228,7 +256,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (indexPath.section == 0 && indexPath.row == 0) {
+    if (indexPath.section == 1 && indexPath.row == 0) {
         DMWebViewController *controller = [[DMWebViewController alloc] init];
         controller.httpUrl = @"http://www.damai.cn";
         [self.navigationController pushViewController:controller animated:YES];

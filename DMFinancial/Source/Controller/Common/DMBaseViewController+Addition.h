@@ -10,15 +10,8 @@
 
 @interface DMBaseViewController (Addition)
 
-//- (void)pushWithSubjectType:(DMSubjectType)type params:(NSString *)params object:(NSDictionary *)object;
-//
-//- (void)payWithParam:(NSString *)param
-//             payType:(DMPayType)payType
-//             orderId:(NSString *)orderId
-//            delegate:(id)delegate
-//   isBackToOrderInfo:(BOOL)isBackToOrderInfo
-//          completion:(void (^)(id resultDic))completion;
-//
+- (void)pushWithSubjectType:(DMSubjectType)type params:(NSDictionary *)params;
+
 //登录统一入口
 - (void)userLoginWithDelegate:(UIViewController *)target
                  success:(void (^)(id returnData))success

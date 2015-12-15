@@ -8,6 +8,24 @@
 
 #import "DMProjectListItem.h"
 
+@implementation DMProjectList
+
+- (NSDictionary *)propertyNameMapping {
+    return @{
+             @"id":@"projectsData",
+             @"url1":@"totalCount",
+             };
+}
+
+- (NSDictionary *)propertyTypeFormat
+{
+    return @{
+             @"projectsData":@"DMProjectListItem",
+             };
+}
+
+@end
+
 @implementation DMProjectListItem
 
 - (NSDictionary *)propertyNameMapping {

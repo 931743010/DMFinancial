@@ -26,6 +26,7 @@
         self.textField = [[UITextField alloc] init];
         _textField.frame = CGRectMake(0, 0, self.width, frame.size.height);
         _textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        _textField.placeholder = kPlaceholderOfSearchBar;
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.backgroundColor = [UIColor clearColor];
         _textField.textColor = [UIColor blackColor];
@@ -33,14 +34,13 @@
         _textField.returnKeyType = UIReturnKeySearch;
         [self addSubview:_textField];
         
-        UIImage *searchImage = [UIImage imageWithResourcesPathCompontent:@"icon_search.png"];
-        self.searchImageView =[[UIImageView alloc] initWithFrame:CGRectMake(9, 2, searchImage.size.width/2, searchImage.size.height/2)];
-        self.searchImageView.image = searchImage;
+        self.searchImageView =[[UIImageView alloc] initWithFrame:CGRectMake(3.5, 3, 18, 18)];
+        self.searchImageView.image = [UIImage imageNamed:@"icon_search"];
         UIView *leftView = [[UIView alloc] initWithFrame:CGRectZero];
         leftView.left = 0;
         leftView.top = 0;
         leftView.width = 25;
-        leftView.height = 16;
+        leftView.height = 25;
         [leftView addSubview:self.searchImageView];
         
         self.rightLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -56,10 +56,10 @@
         _textField.leftViewMode = UITextFieldViewModeAlways;
         _textField.rightViewMode = UITextFieldViewModeAlways;
         
-        self.clearButton = [[UIButton alloc] initWithFrame:CGRectMake(self.width - 25, (self.height - 25)/2, 25, 25)];
+        self.clearButton = [[UIButton alloc] initWithFrame:CGRectMake(self.width - 23, (self.height - 18)/2, 18, 18)];
         _clearButton.backgroundColor = [UIColor clearColor];
         _clearButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-        [_clearButton setImage:[UIImage imageNamed:@"btn_delete.png"] forState:UIControlStateNormal];
+        [_clearButton setImage:[UIImage imageNamed:@"icon_delect"] forState:UIControlStateNormal];
         [_clearButton addTarget:self
                         action:@selector(closeButtonAction:)
               forControlEvents:UIControlEventTouchUpInside];
@@ -80,7 +80,15 @@
     if (title != nil) {
         _rightLabel.width = 50;
         _rightLabel.text = title;
-        _rightLabel.width = [title sizeWithFont:FONT(16) constrainedToSize:CGSizeMake(MAXFLOAT, 20)].width;
+//        _rightLabel.width = [title sizeWithFont:FONT(16) constrainedToSize:CGSizeMake(MAXFLOAT, 20)].width;
+        NSDictionary *attribute = @{NSFontAttributeName:FONT(16)};
+        CGSize rightLabelSize = [title
+                                 boundingRectWithSize:CGSizeMake(MAXFLOAT, 20)
+                                 options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin
+                                 attributes:attribute
+                                 context:nil].size;
+        _rightLabel.width = rightLabelSize.width;
+
     }
 }
 

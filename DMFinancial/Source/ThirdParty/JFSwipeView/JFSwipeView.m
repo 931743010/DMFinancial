@@ -746,7 +746,7 @@ typedef NS_ENUM(NSInteger, JFSwipeTowards) {
         return;
     }
     
-    [self scrollToItemAtIndex:currentIndex animated:NO];
+    [self scrollToItemAtIndex:currentIndex animated:YES];
 //    [self scrollIndicateViewToIndex:currentIndex animate:NO];
     
 //    CGFloat offsetX = [self.originsXForItemsCaches[_currentIndex] floatValue];

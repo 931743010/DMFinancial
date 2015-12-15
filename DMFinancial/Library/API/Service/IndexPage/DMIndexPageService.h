@@ -59,4 +59,21 @@
                         success:(void(^)(id returnData))success
                            fail:(void(^)(NSError *error))fail;
 
+/**
+ *  获取搜索结果
+ */
++ (void)getSearchListWithParams:(NSDictionary *)params
+                    cachePolicy:(CLCachePolicy *)policy
+                        success:(void(^)(id returnData))success
+                           fail:(void(^)(NSError *error))fail;
+
+/**
+ *  获取热门搜索
+ */
+
++ (void)getSearchHotWordListWithParams:(NSDictionary *)params
+                           cachePolicy:(CLCachePolicy *)policy
+                               success:(void(^)(id returnData))success
+                                  fail:(void(^)(NSError *error))fail;
+
 @end

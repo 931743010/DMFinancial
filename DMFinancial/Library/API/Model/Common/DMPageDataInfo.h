@@ -13,16 +13,16 @@
 /**
  *  查询结果总数量
  */
-@property (nonatomic, assign) int totalCount;
+@property (nonatomic, assign) NSInteger totalCount;
 /**
  *  下次查询的页数
  */
-@property (nonatomic, assign) int pageNo;
+@property (nonatomic, assign) NSInteger pageNo;
 
 /**
  *  每页查询的数目
  */
-@property (nonatomic, assign) int size;
+@property (nonatomic, assign) NSInteger size;
 
 /**
  *  返回默认的分页实例
