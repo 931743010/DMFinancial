@@ -29,7 +29,7 @@
     
     self.title = self.item.name;
     [self createSubViews];
-    DMPageBottomButtonView *_bottomButtonView = [[DMPageBottomButtonView alloc] initWithFrame:CGRectMake(0, self.view.height - AUTOSIZE(DMPageBottomButtonViewHeight), self.view.width, AUTOSIZE(DMPageBottomButtonViewHeight))];
+    DMPageBottomButtonView *_bottomButtonView = [[DMPageBottomButtonView alloc] initWithFrame:CGRectMake(0, self.view.height - DMPageBottomButtonViewHeight, self.view.width, DMPageBottomButtonViewHeight)];
     
     _bottomButtonView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
     __weak typeof(&*self) weakSelf = self;
@@ -47,18 +47,17 @@
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0,
                                                                0,
                                                                self.view.width,
-                                                               self.view.height)
+                                                               self.view.height - DMPageBottomButtonViewHeight)
                                               style:UITableViewStyleGrouped];
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.userInteractionEnabled = YES;
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_tableView setSeparatorInset:UIEdgeInsetsZero];
     [self.view addSubview:_tableView];
     
-    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, DMPageBottomButtonViewHeight)];
     _tableView.tableHeaderView = _detailTopView;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
     
@@ -172,10 +171,10 @@
 #pragma mark----------------UITableViewDelegate---------------------
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 1) {
-        return 30;
+    if (section == 0) {
+        return 10;
     }
-    return 0.001;
+    return kTableViewHeaderViewHight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -183,14 +182,14 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    DMTableViewHeaderView *view = [[DMTableViewHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTableViewHeaderViewHight)];
     if (section == 1) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth, 30)];
-        label.text = @"     理财师点评";
-        label.textColor = kDMDefaultBlackStringColor;
-        label.font = FONT(13);
-        return label;
+        view.title = @"理财师点评";
+    } else {
+        view.title = @"";
     }
-    return nil;
+    
+    return view;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

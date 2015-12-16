@@ -27,7 +27,7 @@
     _detailTopView.item = self.item;
     self.title = self.item.name;
     [self createSubViews];
-    DMPageBottomButtonView *_bottomButtonView = [[DMPageBottomButtonView alloc] initWithFrame:CGRectMake(0, self.view.height - AUTOSIZE(DMPageBottomButtonViewHeight), self.view.width, AUTOSIZE(DMPageBottomButtonViewHeight))];
+    DMPageBottomButtonView *_bottomButtonView = [[DMPageBottomButtonView alloc] initWithFrame:CGRectMake(0, self.view.height - DMPageBottomButtonViewHeight, self.view.width, DMPageBottomButtonViewHeight)];
     
     _bottomButtonView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
     __weak typeof(&*self) weakSelf = self;
@@ -45,14 +45,14 @@
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0,
                                                                0,
                                                                self.view.width,
-                                                               self.view.height)
+                                                               self.view.height - DMPageBottomButtonViewHeight)
                                               style:UITableViewStyleGrouped];
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.userInteractionEnabled = YES;
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_tableView setSeparatorInset:UIEdgeInsetsZero];
     [self.view addSubview:_tableView];
     
@@ -213,10 +213,10 @@
 #pragma mark----------------UITableViewDelegate---------------------
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 1 || section == 2 || section == 3) {
-        return 30;
+    if (section == 0) {
+        return 10;
     }
-    return 0.001;
+    return kTableViewHeaderViewHight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -224,26 +224,26 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return nil;
-    }
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth, 30)];
+    DMTableViewHeaderView *view = [[DMTableViewHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTableViewHeaderViewHight)];
     if (section == 1) {
-        label.text = @"     买入须知";
+        view.title = @"买入须知";
     } else if (section == 2) {
-        label.text = @"     基金档案";
+        view.title = @"基金档案";
     } else if (section == 3) {
-        label.text = @"     理财师点评";
+        view.title = @"理财师点评";
+    } else {
+        view.title = @"";
     }
-
-    label.textColor = kDMDefaultBlackStringColor;
-    label.font = FONT(13);
-    return label;
+    
+    return view;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 1) {
+    if (indexPath.section == 0) {
+        return 380;
+    }
+    if (indexPath.section == 3) {
         NSString *content = @"金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额额金额金额金额金额金额金额金额金额金额金额金额金额金额金额金额额金额金额金额金额金额金额金额金额金额金额金额金额金额";
         CGSize size = [content boundingRectWithSize:CGSizeMake(kScreenWidth - 20, 111111) options:(NSStringDrawingUsesFontLeading|NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName: FONT(13)} context:nil].size;
         

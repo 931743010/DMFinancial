@@ -10,4 +10,5 @@
 
 @interface DMJijinDetailChartsCell : DMTableViewCell
 
+@property (nonatomic, strong) NSString *item;
 @end

@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"消息";
+    self.view.backgroundColor = kTableViewBgColor;
     [self createSubViews];
 }
 
@@ -39,37 +40,46 @@
 }
 
 -(void)createSubViews {
-    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView.backgroundColor = kTableViewBgColor;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_tableView registerClass:[DMMessageCell class] forCellReuseIdentifier:@"DMMessageCell"];
     [self.view addSubview:_tableView];
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.001;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 108;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [self.dataArray count];
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.dataArray count];
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DMMessageCell *cell =[tableView dequeueReusableCellWithIdentifier:@"DMMessageCell"];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.item = [self.dataArray objectAt:indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.item = [self.dataArray objectAt:indexPath.section];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     //刷新列表 点击后的消息取消小红点
-    DMMessageItem *item = [self.dataArray objectAt:indexPath.row];
+    DMMessageItem *item = [self.dataArray objectAt:indexPath.section];
     item.isNewMessage = NO;
     [_tableView reloadData];
 }

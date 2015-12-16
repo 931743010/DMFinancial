@@ -89,6 +89,8 @@
 		3E95B6641C1AB197009D5909 /* DMSearchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E95B6631C1AB197009D5909 /* DMSearchObject.m */; };
 		3E98EE0D1C167F3A008D6DFF /* DMPageState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E98EE0C1C167F3A008D6DFF /* DMPageState.m */; };
 		3EB476D21C1FAE3500DE6987 /* DMLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB476D11C1FAE3500DE6987 /* DMLoginTextField.m */; };
+		3EB476D51C1FEF8B00DE6987 /* DMRiskPreferenceTestResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB476D41C1FEF8B00DE6987 /* DMRiskPreferenceTestResultViewController.m */; };
+		3EB476D81C20016F00DE6987 /* DMJijinDetailChartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB476D71C20016F00DE6987 /* DMJijinDetailChartsView.m */; };
 		3EBC02311C0447BE006F1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02301C0447BE006F1C35 /* main.m */; };
 		3EBC02341C0447BE006F1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC02331C0447BE006F1C35 /* AppDelegate.m */; };
 		3EBC023D1C0447BE006F1C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBC023B1C0447BE006F1C35 /* Main.storyboard */; };
@@ -406,6 +408,10 @@
 		3E98EE0C1C167F3A008D6DFF /* DMPageState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPageState.m; sourceTree = "<group>"; };
 		3EB476D01C1FAE3500DE6987 /* DMLoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLoginTextField.h; sourceTree = "<group>"; };
 		3EB476D11C1FAE3500DE6987 /* DMLoginTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLoginTextField.m; sourceTree = "<group>"; };
+		3EB476D31C1FEF8B00DE6987 /* DMRiskPreferenceTestResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMRiskPreferenceTestResultViewController.h; sourceTree = "<group>"; };
+		3EB476D41C1FEF8B00DE6987 /* DMRiskPreferenceTestResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMRiskPreferenceTestResultViewController.m; sourceTree = "<group>"; };
+		3EB476D61C20016F00DE6987 /* DMJijinDetailChartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMJijinDetailChartsView.h; sourceTree = "<group>"; };
+		3EB476D71C20016F00DE6987 /* DMJijinDetailChartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMJijinDetailChartsView.m; sourceTree = "<group>"; };
 		3EBC022C1C0447BE006F1C35 /* DMFinancial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMFinancial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC02301C0447BE006F1C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EBC02321C0447BE006F1C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -819,6 +825,8 @@
 				3E1C82751C17FFA000C72E6F /* DMDetailPageCell.m */,
 				3EF921411C1ACF110066889A /* DMJijinDetailChartsCell.h */,
 				3EF921421C1ACF110066889A /* DMJijinDetailChartsCell.m */,
+				3EB476D61C20016F00DE6987 /* DMJijinDetailChartsView.h */,
+				3EB476D71C20016F00DE6987 /* DMJijinDetailChartsView.m */,
 			);
 			name = Detail;
 			path = IndexPage/Detail;
@@ -996,6 +1004,8 @@
 				3E7ECB761C1440C600BB5C0D /* DMCustomizeViewController.m */,
 				3ECBF7C71C15C6B6004E9983 /* DMRiskPreferenceTestViewController.h */,
 				3ECBF7C81C15C6B6004E9983 /* DMRiskPreferenceTestViewController.m */,
+				3EB476D31C1FEF8B00DE6987 /* DMRiskPreferenceTestResultViewController.h */,
+				3EB476D41C1FEF8B00DE6987 /* DMRiskPreferenceTestResultViewController.m */,
 			);
 			path = Customize;
 			sourceTree = "<group>";
@@ -2272,6 +2282,7 @@
 				3EBC04621C0457AB006F1C35 /* CLParallaxView.m in Sources */,
 				3EBC047F1C0457AC006F1C35 /* WCAlertView.m in Sources */,
 				3EBC05041C056283006F1C35 /* DMManagementItem.m in Sources */,
+				3EB476D81C20016F00DE6987 /* DMJijinDetailChartsView.m in Sources */,
 				3EBC04661C0457AB006F1C35 /* JFReminderSwitchView.m in Sources */,
 				3EBC046F1C0457AB006F1C35 /* SDWebImageDownloaderOperation.m in Sources */,
 				3EBC04411C0457AB006F1C35 /* NSData+LLDBQuickLook.m in Sources */,
@@ -2477,6 +2488,7 @@
 				3EBC04D51C0457AC006F1C35 /* DMActivityCell.m in Sources */,
 				3E832E901C0C529D00FE4C58 /* DMNewcomerParser.m in Sources */,
 				3EBC044A1C0457AB006F1C35 /* NSMutableDictionary+Addition.m in Sources */,
+				3EB476D51C1FEF8B00DE6987 /* DMRiskPreferenceTestResultViewController.m in Sources */,
 				3E7A56481C0B2C5F009AFA89 /* JFSwipeUnderneathIndicateView.m in Sources */,
 				3EBC02311C0447BE006F1C35 /* main.m in Sources */,
 				3E7A565B1C0B3AC5009AFA89 /* DMPageDataInfo.m in Sources */,

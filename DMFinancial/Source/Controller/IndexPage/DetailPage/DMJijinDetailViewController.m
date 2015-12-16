@@ -30,7 +30,7 @@
     
     self.title = self.item.name;
     [self createSubViews];
-    DMPageBottomButtonView *_bottomButtonView = [[DMPageBottomButtonView alloc] initWithFrame:CGRectMake(0, self.view.height - AUTOSIZE(DMPageBottomButtonViewHeight), self.view.width, AUTOSIZE(DMPageBottomButtonViewHeight))];
+    DMPageBottomButtonView *_bottomButtonView = [[DMPageBottomButtonView alloc] initWithFrame:CGRectMake(0, self.view.height - DMPageBottomButtonViewHeight, self.view.width, DMPageBottomButtonViewHeight)];
     
     _bottomButtonView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
     __weak typeof(&*self) weakSelf = self;
@@ -48,21 +48,22 @@
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0,
                                                                0,
                                                                self.view.width,
-                                                               self.view.height)
+                                                               self.view.height - DMPageBottomButtonViewHeight)
                                               style:UITableViewStyleGrouped];
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.userInteractionEnabled = YES;
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    [_tableView setSeparatorColor:kSeperatorColor];
     [_tableView setSeparatorInset:UIEdgeInsetsZero];
     [self.view addSubview:_tableView];
     
     [_tableView registerClass:[DMJijinDetailChartsCell class] forCellReuseIdentifier:@"DMJijinDetailChartsCell"];
     [_tableView registerClass:[DMDetailPageCell class] forCellReuseIdentifier:@"DMDetailPageCell"];
 
-    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, DMPageBottomButtonViewHeight)];
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     _tableView.tableHeaderView = _detailTopView;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
     
@@ -140,7 +141,7 @@
 {
     if (indexPath.section == 0) {
         DMJijinDetailChartsCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"DMJijinDetailChartsCell"];
-        
+        cell.item = @"";
         return cell;
     }
     DMDetailPageCell *cell = [_tableView dequeueReusableCellWithIdentifier:@"DMDetailPageCell"];

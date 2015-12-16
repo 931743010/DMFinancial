@@ -6,11 +6,9 @@
 //  Copyright © 2015年 陈彦岐. All rights reserved.
 //
 
-#import "DMTableViewCell.h"
 #import "DMMessageItem.h"
 
-
-@interface DMMessageCell : DMTableViewCell
+@interface DMMessageCell : UITableViewCell
 
 @property (nonatomic, strong) DMMessageItem *item;
 @end

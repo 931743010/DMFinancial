@@ -29,7 +29,7 @@
 
     self.title = self.item.name;
     [self createSubViews];
-    DMPageBottomButtonView *_bottomButtonView = [[DMPageBottomButtonView alloc] initWithFrame:CGRectMake(0, self.view.height - AUTOSIZE(DMPageBottomButtonViewHeight), self.view.width, AUTOSIZE(DMPageBottomButtonViewHeight))];
+    DMPageBottomButtonView *_bottomButtonView = [[DMPageBottomButtonView alloc] initWithFrame:CGRectMake(0, self.view.height - DMPageBottomButtonViewHeight, self.view.width, DMPageBottomButtonViewHeight)];
     
     _bottomButtonView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
     __weak typeof(&*self) weakSelf = self;
@@ -54,7 +54,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.userInteractionEnabled = YES;
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
     
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, DMPageBottomButtonViewHeight)];

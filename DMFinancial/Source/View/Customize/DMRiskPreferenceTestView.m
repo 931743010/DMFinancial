@@ -28,48 +28,64 @@
     
 }
 
--(void)setItem:(DMRiskPreferenceTestItem *)item {
-    _item = item;
-    [self removeSubviews];
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.width, 0)];
-    _titleLabel.textColor = kDMDefaultBlackStringColor;
-    _titleLabel.numberOfLines = 0;
-    _titleLabel.font = FONT(13);
-    _titleLabel.text = item.question;
-    [_titleLabel adjustFontWithMaxSize:CGSizeMake(_titleLabel.width, 1111)];
-    [self addSubview:_titleLabel];
+-(void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+//    UIColor *color = [UIColor whiteColor];
+//    [color set];  //设置线条颜色
+//    
+//    UIBezierPath* aPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(150, 150)
+//                                                         radius:75
+//                                                     startAngle:0
+//                                                       endAngle:150
+//                                                      clockwise:YES];
+//    
+//    aPath.lineWidth = 5.0;
+//    aPath.lineCapStyle = kCGLineCapRound;  //线条拐角
+//    aPath.lineJoinStyle = kCGLineCapRound;  //终点处理
+//    
+//    [aPath stroke];
     
-    CGFloat top = _titleLabel.bottom + 5;
-    for (NSUInteger i = 0; i < item.answerList.count; i++) {
-        UILabel *answerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, top, self.width, 20)];
-        answerLabel.textColor = kDMDefaultBlackStringColor;
-        answerLabel.numberOfLines = 0;
-        answerLabel.font = FONT(13);
-        answerLabel.text = [item.answerList objectAt:i];
-        [answerLabel adjustFontWithMaxSize:CGSizeMake(answerLabel.width, 1111)];
-        answerLabel.height += 5;
-        answerLabel.width = self.width;
-        answerLabel.tag = i;
-        answerLabel.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                              action:@selector(selectAnswer:)];
-        [answerLabel addGestureRecognizer:tap];
-        [self addSubview:answerLabel];
-        top += answerLabel.height + 10;
-    }
-    self.height = top + 5;
-}
+//    UIColor *color = [UIColor whiteColor];
+//    [color set];  //设置线条颜色
+//    
+//    UIBezierPath* aPath = [UIBezierPath bezierPath];
+//    
+//    aPath.lineWidth = 5.0;
+//    aPath.lineCapStyle = kCGLineCapRound;  //线条拐角
+//    aPath.lineJoinStyle = kCGLineCapRound;  //终点处理
+//    
+//    [aPath moveToPoint:CGPointMake(20, 100)];
+//    
+//    [aPath addQuadCurveToPoint:CGPointMake(120, 100) controlPoint:CGPointMake(70, 0)];
+//    
+//    [aPath stroke];
+    
+    UIColor *color = [UIColor whiteColor];
+    [color set];  //设置线条颜色
+    
+    UIBezierPath* aPath = [UIBezierPath bezierPath];
+    aPath.lineWidth = 1.0;
+    
+    aPath.lineCapStyle = kCGLineCapRound;  //线条拐角
+    aPath.lineJoinStyle = kCGLineCapRound;  //终点处理
+    
+    // Set the starting point of the shape.
+    [aPath moveToPoint:CGPointMake(0, 200.0)];
+    
+    // Draw the lines
+    CGFloat xTickMark = kScreenWidth/30;
+    CGFloat x = 0;
+    CGFloat y = 0;
+    for (NSUInteger i = 0; i < 30; i++) {
+        x += xTickMark;
+        y = 200 - (arc4random() % 30)*5;
+        [aPath addLineToPoint:CGPointMake(x, y)];
 
--(void)selectAnswer:(UITapGestureRecognizer *)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(selectedAnswer:tag:)]) {
-        [self.delegate selectedAnswer:sender.view.tag tag:self.item.index.integerValue];
     }
-    _titleLabel.text = [NSString stringWithFormat:@"%@%@",_item.question,[self getIndex:sender.view.tag]];
-    _titleLabel.width = self.width;
-    [_titleLabel adjustFontWithMaxSize:CGSizeMake(_titleLabel.width, 1111)];
-}
--(NSString *)getIndex:(NSInteger)index {
-    NSArray *array = @[@"A",@"B",@"C",@"D",@"E",@"F"];
-    return [array objectAt:index];
+    [aPath addLineToPoint:CGPointMake(kScreenWidth + 1, 200)];
+    [aPath closePath]; //第五条线通过调用closePath方法得到的
+    
+    [aPath fill]; //Draws line 根据坐标点连线
+
 }
 @end

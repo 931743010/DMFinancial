@@ -21,8 +21,13 @@
 #import "DMYangmaoViewController.h"
 #import "DMP2PViewController.h"
 #import "DMHotListViewController.h"
+
 #import "DMP2PDetailViewController.h"
+#import "DMBaobaoDetailViewController.h"
+#import "DMBaoxianDetailViewController.h"
+#import "DMYinhanglicaiDetailViewController.h"
 #import "DMJijinDetailViewController.h"
+
 #import "DMSearchViewController.h"
 
 #import "DMIndexPageService.h"
@@ -464,11 +469,41 @@ typedef NS_ENUM(NSUInteger, DMIndexSwipeViewType) {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    DMJijinDetailViewController *controller = [[DMJijinDetailViewController alloc] init];
-    controller.hidesBottomBarWhenPushed = YES;
-    controller.item = [_listArray objectAt:indexPath.row];
-    [self.navigationController pushViewController:controller animated:YES];
+    if (indexPath.row == 2) {
+        DMJijinDetailViewController *controller = [[DMJijinDetailViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        controller.item = [_listArray objectAt:indexPath.row];
+        [self.navigationController pushViewController:controller animated:YES];
+
+    } else if  (indexPath.row == 3){
+        DMP2PDetailViewController *controller = [[DMP2PDetailViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        controller.item = [_listArray objectAt:indexPath.row];
+        [self.navigationController pushViewController:controller animated:YES];
+
+    } else if  (indexPath.row == 4){
+        DMBaobaoDetailViewController *controller = [[DMBaobaoDetailViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        controller.item = [_listArray objectAt:indexPath.row];
+        [self.navigationController pushViewController:controller animated:YES];
+
+    } else if  (indexPath.row == 5){
+        DMJijinDetailViewController *controller = [[DMJijinDetailViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        controller.item = [_listArray objectAt:indexPath.row];
+        [self.navigationController pushViewController:controller animated:YES];
+
+    } else if (indexPath.row == 6){
+        DMYinhanglicaiDetailViewController *controller = [[DMYinhanglicaiDetailViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        controller.item = [_listArray objectAt:indexPath.row];
+        [self.navigationController pushViewController:controller animated:YES];
+    } else {
+        DMBaoxianDetailViewController *controller = [[DMBaoxianDetailViewController alloc] init];
+        controller.hidesBottomBarWhenPushed = YES;
+        controller.item = [_listArray objectAt:indexPath.row];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
